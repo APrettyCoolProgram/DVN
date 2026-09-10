@@ -1,9 +1,9 @@
 ﻿// 250806_code
 // 260617_documentation
 
-using dvn.Du;
 using dvn.Core;
 using dvn.Core.Resources;
+using dvn.Du;
 
 namespace dvn.Manifest;
 
@@ -44,7 +44,7 @@ internal class DvnEnvironment
 
         foreach (var manifestFile in manifestFiles)
         {
-            DvnManifest manifest = DuJson.ImportFromFile<DvnManifest>(manifestFile);
+            DvnManifest manifest = DuJson.ImportFromLocalFile<DvnManifest>(manifestFile);
 
             environmentDetails[manifest.DevelopmentEnvironment.Name] = manifest.DevelopmentEnvironment.Description;
         }
@@ -95,7 +95,7 @@ internal class DvnEnvironment
     /// <param name="excludedFolders">A list of folder names to exclude from backup operations.</param>
     internal static void Launch(string manifestFolder, string manifestName, string manifestExtension, string stagingPath, List<string> dvnOptions, List<string> excludedFiles, List<string> excludedFolders)
     {
-        DvnManifest dvnManifest = DuJson.ImportFromFile<DvnManifest>($@"{manifestFolder}\{manifestName}{manifestExtension}");
+        DvnManifest dvnManifest = DuJson.ImportFromLocalFile<DvnManifest>($@"{manifestFolder}\{manifestName}{manifestExtension}");
 
         Console.WriteLine($"{Environment.NewLine}  Launching environment: {dvnManifest.DevelopmentEnvironment.Description}");
 
@@ -111,6 +111,6 @@ internal class DvnEnvironment
         DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
         DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
 
-        Session.Stop(UsrMsg.msg_ExitDvn());
+        Session.Stop(UsrMsg.MsgExitDvn());
     }
 }

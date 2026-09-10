@@ -14,8 +14,4 @@
     <DocumentationFile>.\AppData\XMLDoc\generated.xml</DocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Blueprint\" />
-  </ItemGroup>
-
 </Project>

@@ -43,11 +43,11 @@ internal static class Arguments
         switch (dvnSession.CommandLine.Command)
         {
             case "about":
-                Console.WriteLine(UsrMsg.msg_About);
+                Console.WriteLine(UsrMsg.MsgAbout);
                 break;
 
             case "help":
-                Console.WriteLine(UsrMsg.msg_Help);
+                Console.WriteLine(UsrMsg.MsgHelp);
                 break;
 
             case "list":

@@ -1,9 +1,9 @@
 ﻿// 250806_code
 // 260617_documentation
 
-using dvn.Du;
 using dvn.Core;
 using dvn.Core.Resources;
+using dvn.Du;
 
 namespace dvn.Manifest;
 
@@ -50,9 +50,9 @@ internal class DvnManifest
 
         //TODO Split this out into a separate method.
 
-        DuJson.ExportToFile(dvnManifest, $@"{manifestFolder}\{manifestName}{manifestExtension}");
+        DuJson.ExportToLocalFile(dvnManifest, $@"{manifestFolder}\{manifestName}{manifestExtension}");
 
-        Console.WriteLine(UsrMsg.msg_CreateManifest(manifestName));
+        Console.WriteLine(UsrMsg.MsgCreateManifest(manifestName));
 
         Session.Stop();
     }

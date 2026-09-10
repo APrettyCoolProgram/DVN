@@ -28,7 +28,7 @@ internal class Framework
     {
         if (!Directory.Exists(frameworkBase))
         {
-            Console.WriteLine(UsrMsg.msg_WelcomeToDvn);
+            Console.WriteLine(UsrMsg.MsgWelcomeToDvn);
 
             var dvnFramework = BuildNew();
 

@@ -40,7 +40,7 @@ internal class Configuration
             CreateNew(dvnConfigPath);
         }
 
-        return Du.DuJson.ImportFromFile<Configuration>(dvnConfigPath);
+        return Du.DuJson.ImportFromLocalFile<Configuration>(dvnConfigPath);
     }
 
     /// <summary>Creates a new dvn configuration file using default settings at the specified path.</summary>
@@ -54,6 +54,6 @@ internal class Configuration
             ExcludedFolders   = Catalog.LstIgnoredFolders()
         };
 
-        Du.DuJson.ExportToFile<Configuration>(config, $@"{dvnConfigPath}");
+        Du.DuJson.ExportToLocalFile<Configuration>(config, $@"{dvnConfigPath}");
     }
 }
