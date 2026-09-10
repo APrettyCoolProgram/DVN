@@ -82,7 +82,7 @@ When a new manifest file is created, it looks like this:
 ```json
 {
   "DevelopmentEnvironment": {
-    "Name": "MyProject",
+    "Name": "myproj",
     "Description": "The MyProject project.",
     "BackupEnabled": false,
     "BackupSources": null,
@@ -115,7 +115,7 @@ Manifest files contain the following components:
 The name of the environment (e.g., "myproj").
 
 * `Description`  
-The description of the environment (e.g., "My project environment").
+The description of the environment (e.g., "The MyProject project").
 
 * `BackupEnabled`  
 Determines if the data backup functionality is *enabled* ("true"), or *disabled* ("false").
@@ -155,7 +155,7 @@ This is what a completed manifest file looks like:
 {
   "DevelopmentEnvironment": {
     "Name": "myproj",
-    "Description": "My project environment",
+    "Description": "The MyProject project",
     "BackupEnabled": true,
     "BackupSources": [
       "C:\\repositories\\MyProject",
@@ -239,15 +239,15 @@ dvn <command> [-option01 -option02 ...]
 
 **DVN** *requires* that you pass a valid `command`.
 
-In general, you'll use the `%environment%` command, which will start the specified development environment (or create a blank [manifest file](), if one doesn't exist).
+In general, you'll use the `%environment%` command, which will start the specified development environment (or create a blank [manifest file](#the-manifest-file), if one doesn't exist).
 
-For example, to start/create the `myproj` environment, you would type
+For example, to start/create the `myproj` environment, you would type:
 
 ```bash
 $ dvn myproj
 ```
 
-To get a list of valid commands, type
+To get a list of valid commands, type:
 
 ```bash
 $ dvn help
@@ -263,13 +263,13 @@ Options:
 * Start with the `-` (dash) character
 * Are separated by a space
 
-For example, you can force the data for the `myproj` environment to be backed up by typing
+For example, you can force the data for the `myproj` environment to be backed up by typing:
 
 ```bash
 $ dvn myproj -b
 ```
 
-To get a list of valid options, type
+To get a list of valid options, type:
 
 ```bash
 $ dvn help
