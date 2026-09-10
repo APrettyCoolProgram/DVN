@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dvn: Scratchpad</h1>
+  <h1>DVN: Scratchpad</h1>
 
 </div>
 

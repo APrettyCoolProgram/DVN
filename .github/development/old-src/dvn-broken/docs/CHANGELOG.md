@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dvn: Changelog</h1>
+  <h1>DVN: Changelog</h1>
 
 </div>
 

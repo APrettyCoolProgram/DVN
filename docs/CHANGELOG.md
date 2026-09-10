@@ -1,12 +1,12 @@
 <div align="center">
 
-  <h1>dvn: Changelog</h1>
+  <h1>DVN: Changelog</h1>
 
 </div>
 
 ## Version 1.3
 
-> Please see the [release notes](release-notes/V1.3-release-notes.md) for more details.
+> Please see the [release notes](release-notes/1.3.md) for more details.
 
 * Update to .NET 10
 * Add [Scoop](https://scoop.sh/) support
@@ -16,7 +16,7 @@
 
 ## Version 1.2
 
-> Please see the [release notes](rel/V1.2-release-notes.md) for more details.
+> Please see the [release notes](release-notes/1.2.md) for more details.
 
 * Update XML documentation
 * Code cleanup and refactoring
@@ -25,7 +25,7 @@
 
 ## Version 1.1
 
-> Please see the [release notes](release-notes/V1.1-release-notes.md) for more details.
+> Please see the [release notes](release-notes/1.1.md) for more details.
 
 * Can now open web pages in Chrome, Firefox, and Edge.
 
@@ -33,6 +33,6 @@
 
 ## Version 1.0
 
-> Please see the [release notes](release-notes/V1.0-release-notes.md) for more details.
+> Please see the [release notes](release-notes/1.0.md) for more details.
 
 * Initial release of dvn.

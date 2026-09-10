@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dvn: Development - Version History</h1>
+  <h1>DVN: Development - Version History</h1>
 
 </div>
 

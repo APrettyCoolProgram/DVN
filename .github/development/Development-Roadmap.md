@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dvn: Development - Roadmap</h1>
+  <h1>DVN: Development - Roadmap</h1>
 
 </div>
 
@@ -35,7 +35,3 @@
 * Main functionality
 
 ***
-
-<br>
-
-<sub>Last updated: 260419</sub>

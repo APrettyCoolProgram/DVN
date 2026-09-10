@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dvn: Notices</h1>
+  <h1>DVN: Notices</h1>
 
 </div>
 

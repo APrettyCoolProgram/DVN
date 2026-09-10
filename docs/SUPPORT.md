@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dvn: Support</h1>
+  <h1>DVN: Support</h1>
 
 </div>
 

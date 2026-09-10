@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dvn: RYY.MM Release Notes</h1>
+  <h1>DVN: RYY.MM Release Notes</h1>
 
 </div>
 

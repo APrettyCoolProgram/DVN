@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>dvn: Contributors</h1>
+  <h1>DVN: Contributors</h1>
 
 </div>
 
