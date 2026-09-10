@@ -7,6 +7,7 @@
   <h2>Version 1.2 Release Notes</h2>
 
 </div>
+
 > [!NOTE]
 > This release focuses on:
 >

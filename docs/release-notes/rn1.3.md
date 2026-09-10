@@ -32,7 +32,7 @@
 
 ## Framework updates
 
-* Renamed rn
+* Renamed release notes
 
 ## UPDATED
 
