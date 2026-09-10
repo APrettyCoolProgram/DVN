@@ -1,9 +1,8 @@
 ﻿// 250801_code
 // 260617_documentation
 
-using dvn.App;
-using dvn.Manifest;
 using dvn.Core.Resources;
+using dvn.Manifest;
 
 namespace dvn.Core;
 
@@ -24,13 +23,13 @@ namespace dvn.Core;
 /// </remarks>
 internal class Session
 {
-    /// <summary>The <see cref="App.Configuration"/> instance.</summary>
+    /// <summary>The <see cref="Core.Configuration"/> instance.</summary>
     internal Configuration Configuration { get; set; }
 
-    /// <summary>The <see cref="App.CommandLine"/> component.</summary>
+    /// <summary>The <see cref="Core.CommandLine"/> component.</summary>
     internal CommandLine CommandLine { get; set; }
 
-    /// <summary>The <see cref="App.Framework"/> component.</summary>
+    /// <summary>The <see cref="Core.Framework"/> component.</summary>
     internal Framework Framework { get; set; }
 
     /// <summary>A list of the available environment names and descriptions.</summary>
