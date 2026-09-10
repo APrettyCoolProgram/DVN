@@ -1,7 +1,6 @@
 <div align="center">
 
-  <h1>DVN: 1.2 Release Notes</h1>
-
+  <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 </div>
 
 > [!NOTE]
