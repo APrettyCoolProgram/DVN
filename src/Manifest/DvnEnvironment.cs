@@ -71,15 +71,15 @@ internal class DvnEnvironment
     /// <param name="dvnSession">The session instance.</param>
     internal static void LoadFromManifest(Session dvnSession)
     {
-        if (File.Exists($@"{dvnSession.Framework.Folders["Manifests"]}\{dvnSession.CommandLine.Command}{dvnSession.Configuration.ManifestExtension}"))
+        if (File.Exists($@"{dvnSession.Framework.RequiredFolders["Manifests"]}\{dvnSession.CommandLine.Command}{dvnSession.Configuration.ManifestExtension}"))
         {
-            Launch(dvnSession.Framework.Folders["Manifests"], dvnSession.CommandLine.Command, dvnSession.Configuration.ManifestExtension,
-                   dvnSession.Framework.Folders["Staging"], dvnSession.CommandLine.Options, dvnSession.Configuration.ExcludedFiles,
+            Launch(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.Configuration.ManifestExtension,
+                   dvnSession.Framework.RequiredFolders["Staging"], dvnSession.CommandLine.Options, dvnSession.Configuration.ExcludedFiles,
                    dvnSession.Configuration.ExcludedFolders);
         }
         else
         {
-            DvnManifest.CreateDefault(dvnSession.Framework.Folders["Manifests"], dvnSession.CommandLine.Command, dvnSession.Configuration.ManifestExtension);
+            DvnManifest.CreateDefault(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.Configuration.ManifestExtension);
 
             Session.Stop();
         }
@@ -111,6 +111,6 @@ internal class DvnEnvironment
         DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
         DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
 
-        Session.Stop(UsrMsg.MsgExitDvn());
+        Session.Stop(UsrMsg.MsgExit());
     }
 }

@@ -42,7 +42,7 @@ internal class Session
     {
         Console.Clear();
 
-        Console.WriteLine(UsrMsg.MsgStartDvn);
+        Console.WriteLine(UsrMsg.MsgStart);
 
         Framework.VerifyExists(@".\.dvn");
 
@@ -63,11 +63,11 @@ internal class Session
         var dvnSession = new Session
         {
             CommandLine = CommandLine.GetComponents(passedArguments),
-            Framework   = Framework.BuildNew()
+            Framework   = Framework.Build()
         };
 
-        dvnSession.Configuration         = Configuration.LoadFromFile(dvnSession.Framework.Files["ConfigFile"]);
-        dvnSession.AvailableEnvironments = DvnEnvironment.GetEnvironmentDetails(dvnSession.Framework.Folders["Manifests"], dvnSession.Configuration.ManifestExtension);
+        dvnSession.Configuration         = Configuration.LoadFromFile(dvnSession.Framework.RequiredFiles["ConfigFile"]);
+        dvnSession.AvailableEnvironments = DvnEnvironment.GetEnvironmentDetails(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.Configuration.ManifestExtension);
 
         Framework.Validate(dvnSession.Framework);
 

@@ -9,7 +9,7 @@ namespace dvn.Core.Resources;
 internal static class UsrMsg
 {
     /// <summary>The DVN start message.</summary>
-    internal static string MsgStartDvn =
+    internal static string MsgStart =
     $"""
        ================
          DVN v{Assembly.GetExecutingAssembly().GetName().Version}
@@ -18,7 +18,7 @@ internal static class UsrMsg
     """;
 
     /// <summary>The message displayed when DVN is executed for the first time.</summary>
-    internal static string MsgWelcomeToDvn =
+    internal static string MsgCreateFramework =
     $"""
         The DVN framework has been created.
 
@@ -26,20 +26,20 @@ internal static class UsrMsg
         
         For more information, please refer to the documentation:
         https://github.com/APrettyCoolProgram/DVN
-        {MsgExitDvn()}
+        {MsgExit()}
      """;
 
     /// <summary>The message displayed when command-line arguments are missing.</summary>
     internal static string MsgMissingArguments =>
     $"""
         ERROR: Missing arguments.
-        {MsgExitDvn()}
+        {MsgExit()}
      """;
 
     /// <summary>The exit message template for DVN.</summary>
     /// <param name="exitMessage">A customizable exit message.</param>
     /// <returns>The formatted exit message.</returns>
-    internal static string MsgExitDvn(string exitMessage = "Exiting DVN...") =>
+    internal static string MsgExit(string exitMessage = "Exiting DVN...") =>
     $"""
 
         {exitMessage}
@@ -55,7 +55,7 @@ internal static class UsrMsg
 
         For more information, please refer to the documentation:
         https://github.com/APrettyCoolProgram/DVN
-        {MsgExitDvn()}
+        {MsgExit()}
      """;
 
     /// <summary>The help message.</summary>
@@ -90,7 +90,7 @@ internal static class UsrMsg
 
         For more information, please refer to the documentation:
         https://github.com/APrettyCoolProgram/DVN
-        {MsgExitDvn()}
+        {MsgExit()}
      """;
 
     /// <summary>The about message.</summary>
@@ -110,7 +110,7 @@ internal static class UsrMsg
 
            Copyright © 2026 A Pretty Cool Program
            Distributed under the Apache 2.0 License
-           {MsgExitDvn()}
+           {MsgExit()}
         """;
 
     /// <summary>The message that displays the list of available environments.</summary>
@@ -123,6 +123,6 @@ internal static class UsrMsg
            ----------------
 
            {environmentList}
-           {MsgExitDvn()}
+           {MsgExit()}
         """;
 }
