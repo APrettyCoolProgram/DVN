@@ -2,6 +2,8 @@
 
   <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
+  <h2>Version 1.3 Release Notes</h2>
+
 </div>
 
 > [!NOTE]
