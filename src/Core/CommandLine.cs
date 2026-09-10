@@ -1,17 +1,17 @@
-﻿// 250801_code
-// 260617_documentation
+﻿// 260910_code
+// 260910_documentation
 
 namespace dvn.Core;
 
 /// <summary>Represents parsed <c>dvn</c> command-line input.</summary>
 /// <remarks>
-/// The <c>dvn</c> syntax is: <c>dvn &lt;command&gt; [-option01 -option02 ...]</c><br/>
+/// The <c>dvn</c> syntax is: <c>"dvn %command% [-option01 -option02 ...]"</c><br/>
 /// <br/>
-/// Example: <c>dvn %myEnvironment% -b</c>
+/// Example: <c>"dvn myEnvironment -b"</c>
 /// </remarks>
 internal class CommandLine
 {
-    /// <summary>The <c>dvn</c> command.</summary>
+    /// <summary>The dvn  command.</summary>
     /// <remarks>There can only be one command, and it is always the first argument.</remarks>
     /// <value>The command portion of the input.</value>
     internal string Command { get; set; }

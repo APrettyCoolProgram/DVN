@@ -8,7 +8,7 @@ namespace dvn.Core.Resources;
 /// <summary>Provides predefined user messages.</summary>
 internal static class UsrMsg
 {
-    /// <summary>The dvn start message.</summary>
+    /// <summary>The DVN start message.</summary>
     internal static string MsgStartDvn =
     $"""
        ================
@@ -36,7 +36,7 @@ internal static class UsrMsg
         {MsgExitDvn()}
      """;
 
-    /// <summary>The exit message template for dvn.</summary>
+    /// <summary>The exit message template for DVN.</summary>
     /// <param name="exitMessage">A customizable exit message.</param>
     /// <returns>The formatted exit message.</returns>
     internal static string MsgExitDvn(string exitMessage = "Exiting DVN...") =>
@@ -46,7 +46,7 @@ internal static class UsrMsg
      """;
 
     // TODO pass extension
-    /// <summary>The message displayed when creating a new dvn manifest.</summary>
+    /// <summary>The message displayed when creating a new DVN manifest.</summary>
     /// <param name="environmentName">The name of the environment.</param>
     /// <returns>The new manifest message.</returns>
     public static string MsgCreateManifest(string environmentName) =>

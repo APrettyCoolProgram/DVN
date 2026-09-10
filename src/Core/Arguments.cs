@@ -1,11 +1,10 @@
-﻿// 250801_code
-// 250801_documentation
+﻿// 260910_code
+// 260910_documentation
 
-using dvn.Core;
 using dvn.Core.Resources;
 using dvn.Manifest;
 
-namespace dvn.App;
+namespace dvn.Core;
 
 /// <summary>Methods for handling and processing arguments passed via the <see cref="CommandLine"/>.</summary>
 /// <remarks>
@@ -13,8 +12,8 @@ namespace dvn.App;
 /// <list type="bullet">
 /// <item><c>%environment%</c> - Loads or creates a <c>%environment%.dvn.manifest</c> file.</item>
 /// <item><c>about</c> - Displays information about dvn.</item>
-/// <item><c>help</c>  - Displays help information.</item>
-/// <item><c>list</c>  - Lists all available development environments.</item>
+/// <item><c>help</c> - Displays help information.</item>
+/// <item><c>list</c> - Lists all available development environments.</item>
 /// </list>
 /// Valid <see cref="CommandLine.Options"> options</see>:
 /// <list type="bullet">
@@ -23,18 +22,17 @@ namespace dvn.App;
 /// </remarks>
 internal static class Arguments
 {
-    /// <summary>Determines whether any arguments were passed via the command-line.</summary>
-    /// <param name="passedArguments">The arguments, if any, that were passed via the command-line.</param>
+    /// <summary>Determines whether any arguments were passed via the command line.</summary>
+    /// <param name="passedArguments">Passed arguments.</param>
     /// <returns><see langword="true"/> if one or more arguments were provided; otherwise, <see langword="false"/>.</returns>
-    internal static bool DoExist(string[] passedArguments) =>
-        passedArguments != null && passedArguments.Length != 0;
+    internal static bool DoExist(string[] passedArguments) => passedArguments != null && passedArguments.Length != 0;
 
     /// <summary>Parses the command component of the arguments passed via the command-line.</summary>
     /// <remarks>
     /// Entering a command that does not match any of the case statements will either:
     /// <list type="bullet">
-    /// <item>Start the <c>&lt;command&gt;</c> environment, if a <c>&lt;command&gt;.dvn.manifest</c> file exists.</item>
-    /// <item>If a <c>&lt;command&gt;.dvn.manifest</c> does not exist, create a new file with default values.</item>
+    /// <item>Start the <c>%command%</c> environment, if a <c>"%command%.dvn"</c> file exists.</item>
+    /// <item>If a <c>"%command%.dvn"</c> file does not exist, create it with default values.</item>
     /// </list>
     /// </remarks>
     /// <param name="dvnSession">The <see cref="App.Session"/> instance.</param>
