@@ -4,10 +4,9 @@
 -->
 <div align="center">
 
-  <img src="./.github/logo/dvn-Logo-768x369.png" alt="Tingen Web Service">
+  <img src="./.github/logo/dvn-Logo-576x277.png" alt="Tingen Web Service">
 
-  ![RELEASE](https://img.shields.io/badge/version-1.2-teal)&nbsp;
-  ![STAGE](https://img.shields.io/badge/stable-green)&nbsp; <!-- Alpha = Red, Beta = Yellow, Stable = Green -->
+  ![RELEASE](https://img.shields.io/badge/version-1.3-teal)&nbsp;
   ![LICENSE](https://img.shields.io/badge/license-apache-blue)&nbsp;
   ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)&nbsp;
 
