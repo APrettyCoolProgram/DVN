@@ -15,11 +15,11 @@
 
 ---
 
-<h5 align="center">
+<h4 align="center">
 
   [Manual](docs/man/README.md)&nbsp;&bull;&nbsp;[Changelog](docs/CHANGELOG.md)&nbsp;&bull;&nbsp;[Roadmap](docs/ROADMAP.md)&nbsp;&bull;&nbsp;[Known Issues](docs/KNOWN-ISSUES.md)
 
-</h5>
+</h4>
 
 ---
 
