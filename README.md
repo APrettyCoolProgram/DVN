@@ -4,14 +4,7 @@
 -->
 <div align="center">
 
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/.github/repository/logo/dvn-306x407.png">
-    <source media="(prefers-color-scheme: light)" srcset="/.github/repository/logo/dvn-306x407.png">
-    <img alt="Fallback image description" src="/.github/repository/logo/dvn-306x407.png">
-  </picture>
-
-  <br/>
-  <br/>
+  <img src="./.github/logo/dvn-Logo-1024x1024.png" alt="Tingen Web Service">
 
   ![RELEASE](https://img.shields.io/badge/version-1.2-teal)&nbsp;
   ![STAGE](https://img.shields.io/badge/stable-green)&nbsp; <!-- Alpha = Red, Beta = Yellow, Stable = Green -->
