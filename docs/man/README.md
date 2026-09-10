@@ -15,10 +15,13 @@
 
 ---
 
-| CONTENTS |
-|----------|
-| [About DVN](#about-dvn) |
-| [Installing](#installing) |
+| CONTENTS                                |
+|-----------------------------------------|
+| [About DVN](#about-dvn)                 |
+| [Installing](#installing)               |
+| [Configuring](#configuring)             |
+| [The manifest file](#the-manifest-file) |
+| [Usage](#usage)                         |
 
 # About DVN
 
