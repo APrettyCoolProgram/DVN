@@ -61,7 +61,7 @@ For more information about **DVN**, including detailed usage instructions, pleas
 
 # License
 
-Distributed under the [Apache 2.0 License](LICENSE).  
+Distributed under the [Apache 2.0 License](LICENSE)  
 Copyright &copy; 2026 [A Pretty Cool Program](https://github.com/APrettyCoolProgram)
 
 ---
