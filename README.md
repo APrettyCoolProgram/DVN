@@ -22,24 +22,22 @@
 
 ---
 
-### CONTENTS
-
-| CONTENTS                                    |
-|---------------------------------------------|
-| [About DVN](#about-dvn)                     |
-| [How It Works](#how-it-works)               |
-| [Getting Started](#getting-started)         |
-| [Installing](#installing)                   |
-| [Usage](#usage)                             |
-| [Acknowledgements](#acknowledgements)       |
-| [Related Projects](#related-projects)       |
-| [License](#license)                         |
+| CONTENTS                              |
+|---------------------------------------|
+| [About DVN](#about-dvn)               |
+| [How It Works](#how-it-works)         |
+| [Getting Started](#getting-started)   |
+| [Installing](#installing)             |
+| [Usage](#usage)                       |
+| [Acknowledgements](#acknowledgements) |
+| [Related Projects](#related-projects) |
+| [License](#license)                   |
 
 ---
 
-## ABOUT DVN
+## About DVN
 
-**dvn** is a command-line utility for managing development environments.
+**DVN** is a command-line utility for managing development environments.
 
 Let's say you are working something called "MyProject", which requires:
 
@@ -77,12 +75,12 @@ A blurb describing how the project works at a high level.
 
 -->
 
-## INSTALLING
+## Installing
 
 > [!IMPORTANT]
-> dvn requires the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)!
+> DVN requires the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)!
 
-**dvn** is a portable application, so "installing" is simple:
+**DVN** is a portable application, so "installing" is simple:
 
 1. Download the [latest release]()
 2. Extract the contents of the downloaded file to a folder of your choice
@@ -91,9 +89,9 @@ You'll notice that the folder you extracted to contains a single item: `dvn.exe`
 
 ## CREATING THE DVN FRAMEWORK
 
-The **dvn framework** is comprised of the files and folders that are required by **dvn**. This framework doesn't exist yet, so we need to create it.
+The **DVN framework** is comprised of the files and folders that are required by **DVN**. This framework doesn't exist yet, so we need to create it.
 
-To create the **dvn** framework:
+To create the **DVN** framework:
 
 1. Open a terminal in the the folder that contains `dvn.exe`
 2. Type
@@ -102,11 +100,11 @@ To create the **dvn** framework:
 $ dvn
 ```
 
-Since this is the first time you are executing **dvn**, you will see a message letting you know that the **dvn framework** will be created.
+Since this is the first time you are executing **DVN**, you will see a message letting you know that the **DVN framework** will be created.
 
 ## CONFIGURING DVN
 
-The `.\.dvn\configs\dvn.config` file contains the configuration settings for **dvn**.
+The `.\.dvn\configs\dvn.config` file contains the configuration settings for **DVN**.
 
 Currently this file only contains a list of files and folders that are ignored when the data backup functionality is enabled (to keep file sizes are kept to a minimum), so their isn't much to configure.
 
@@ -118,7 +116,7 @@ When you start an environment by typing...
 $ dvn myproj
 ```
 
-...**dvn** looks for a manifest file named `.\.dvn\manifests\myproj.dvn.manifest`, which contains all of the information **dvn** needs to start the environment.
+...**DVN** looks for a manifest file named `.\.dvn\manifests\myproj.dvn.manifest`, which contains all of the information **DVN** needs to start the environment.
 
 If the file does not exist, it is created using the default settings, which you will need to modify.
 
@@ -177,7 +175,7 @@ Absolute paths to data that will be backed up, if the data backup functionality 
 The absolute path where backups are created.
 
 * `EnvironmentApplication`  
-Each application that will be launched by **dvn** has it's own block with the following data:
+Each application that will be launched by **DVN** has it's own block with the following data:
 
   * `Name`  
   The name of the application
@@ -279,7 +277,7 @@ The above manifest file will:
 
 ## USAGE
 
-This is the **dvn** syntax:
+This is the **DVN** syntax:
 
 ```bash
 dvn <command> [-option01 -option02 ...]
@@ -287,7 +285,7 @@ dvn <command> [-option01 -option02 ...]
 
 ### Commands
 
-**dvn** *requires* that you pass a valid `command`.
+**DVN** *requires* that you pass a valid `command`.
 
 In general, you'll use the `%environment%` command, which will start the specified development environment (or create a blank [manifest file](), if one doesn't exist).
 
@@ -305,7 +303,7 @@ $ dvn help
 
 ### Options
 
-**dvn** also accepts `options`, which are...optional
+**DVN** also accepts `options`, which are...optional
 
 Options:
 
