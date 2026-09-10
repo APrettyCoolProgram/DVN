@@ -3,7 +3,7 @@
   260617_documentation
 -->
 
-[Back to DVN repository](../../README.md)
+[❰ Back to DVN repository](../../README.md)
 
 <div align="center">
 
@@ -279,4 +279,4 @@ $ dvn help
 
 ***
 
-[Back to DVN repository](../../README.md)
+[❰ Back to DVN repository](../../README.md)
