@@ -277,6 +277,8 @@ To get a list of valid options, type:
 $ dvn help
 ```
 
+<br/>
+
 ***
 
 [❰ Back to DVN repository](../../README.md)

@@ -1,3 +1,5 @@
+[❰ Back to DVN repository](../../README.md)
+
 <div align="center">
 
   <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
@@ -28,11 +30,9 @@
   * `lst_` to `Lst` in `dvn.Core.Resources.UsrMsg.cs`
   * `msg_` to `Msg` in `dvn.Core.Resources.UsrMsg.cs`
 
-
 ## Framework updates
 
 * Renamed rn
-
 
 ## UPDATED
 
@@ -62,3 +62,9 @@ No changes.
 
 * Changed the release from RYY.MM to VX.y format.  
   This was mostly an internal change.
+  
+<br/>
+
+***
+
+[❰ Back to DVN repository](../../README.md)
