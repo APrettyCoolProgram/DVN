@@ -27,7 +27,7 @@
 
 ## Misc
 
-* XML Documentation updates
+* XML documentation updates
 
 <br/>
 

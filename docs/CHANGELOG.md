@@ -8,9 +8,10 @@
 
 > Please see the [release notes](release-notes/rn1.3.md) for more details.
 
+* Code refactors
+* Basic [Scoop](https://scoop.sh/) support
+* Framework updates
 * Update to .NET 10
-* Add [Scoop](https://scoop.sh/) support
-* Code cleanup and refactoring
 
 ***
 
@@ -18,8 +19,8 @@
 
 > Please see the [release notes](release-notes/rn1.2.md) for more details.
 
-* Update XML documentation
-* Code cleanup and refactoring
+* Code refactors
+* Framework updates
 
 ***
 
@@ -27,7 +28,7 @@
 
 > Please see the [release notes](release-notes/1.1.md) for more details.
 
-* Can now open web pages in Chrome, Firefox, and Edge.
+* Additional web browser support
 
 ***
 
@@ -35,4 +36,4 @@
 
 > Please see the [release notes](release-notes/rn1.0.md) for more details.
 
-* Initial release of dvn.
+* Initial release of DVN.
