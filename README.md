@@ -17,7 +17,7 @@
 
 <h6 align="center">
 
-  [MANUAL](docs/man/README.md)&nbsp;&bull;&nbsp;[CHANGELOG](docs/CHANGELOG.md)&nbsp;&bull;&nbsp;[ROADMAP](docs/ROADMAP.md)&nbsp;&bull;&nbsp;[KNOWN ISSUES](docs/KNOWN-ISSUES.md)
+  [Manual](docs/man/README.md)&nbsp;&bull;&nbsp;[Changelog](docs/CHANGELOG.md)&nbsp;&bull;&nbsp;[Roadmap](docs/ROADMAP.md)&nbsp;&bull;&nbsp;[Known Issues](docs/KNOWN-ISSUES.md)
 
 </h6>
 
@@ -27,14 +27,14 @@
 
 | CONTENTS                                    |
 |---------------------------------------------|
-| [ABOUT DVN](#about-dvn)                     |
-| [HOW IT WORKS](#how-it-works)               |
-| [GETTING STARTED](#getting-started)         |
-| [INSTALLING](#installing)                   |
-| [USAGE](#usage)                             |
-| [ACKNOWLEDGEMENTS](#acknowledgements)       |
-| [RELATED PROJECTS](#related-projects)       |
-| [LICENSE](#license)                         |
+| [About DVN](#about-dvn)                     |
+| [How It Works](#how-it-works)               |
+| [Getting Started](#getting-started)         |
+| [Installing](#installing)                   |
+| [Usage](#usage)                             |
+| [Acknowledgements](#acknowledgements)       |
+| [Related Projects](#related-projects)       |
+| [License](#license)                         |
 
 ---
 
