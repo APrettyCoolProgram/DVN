@@ -18,7 +18,7 @@ internal static class UsrMsg
         """;
 
     /// <summary>The message displayed when dvn is executed for the first time.</summary>
-    internal static string msg_WelcomeToDvn =>
+    internal static string MsgWelcomeToDvn =>
         $"""
           -------------------
             Welcome to dvn!
@@ -33,7 +33,7 @@ internal static class UsrMsg
 
           For more detailed information, please refer to the dvn documentation:
               https://github.com/APrettyCoolProgram/dvn
-          {msg_ExitDvn()}
+          {MsgExitDvn()}
         """;
 
     /// <summary>The message displayed when command-line arguments are missing.</summary>

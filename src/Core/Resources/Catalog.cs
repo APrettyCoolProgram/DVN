@@ -1,12 +1,12 @@
 ﻿// 260910_code
-// 260617_documentation
+// 260910_documentation
 
 namespace dvn.Core.Resources;
 
 /// <summary>Provides predefined data structures.</summary>
 internal static class Catalog
 {
-    /// <summary>A list of repository files that should be ignored when copying.</summary>
+    /// <summary>Repository files that should not be backed up.</summary>
     internal static List<string> LstRepositoryIgnoredFiles =>
     [
         ".DS_Store",
@@ -18,12 +18,12 @@ internal static class Catalog
         "npm-shrinkwrap.json"
     ];
 
-    /// <summary>A list of other files that should be ignored when copying.</summary>
+    /// <summary>Other files that should not be backed up.</summary>
     internal static List<string> LstOtherIgnoredFiles =>
-        [
-        ];
+    [
+    ];
 
-    /// <summary>A list of repository folders that should be ignored when copying.</summary>
+    /// <summary>Repository folders that should not be backed up.</summary>
     internal static List<string> LstRepositoryIgnoredFolders =>
     [
         "node_modules",
@@ -36,12 +36,13 @@ internal static class Catalog
         "packages"
     ];
 
-    /// <summary>A list of other folders that should be ignored when copying.</summary>
-    internal static List<string> LstOtherIgnoredolders =>
+    /// <summary>Other folders that should not be backed up.</summary>
+    internal static List<string> LstOtherIgnoredFolders =>
     [
     ];
 
     /// <summary>Combines the configured file ignore lists.</summary>
+    /// <remarks>This is the list that is stored in the dvn.config file.</remarks>
     /// <returns>A list of file names that should be ignored when copying.</returns>
     internal static List<string> LstIgnoredFiles() =>
     [.. LstRepositoryIgnoredFiles
@@ -50,10 +51,11 @@ internal static class Catalog
     ];
 
     /// <summary>Combines the configured folder ignore lists.</summary>
+    /// <remarks>This is the list that is stored in the dvn.config file.</remarks>
     /// <returns>A list of folder names that should be ignored when copying.</returns>
     internal static List<string> LstIgnoredFolders() =>
     [.. LstRepositoryIgnoredFolders
-        .Concat(LstOtherIgnoredolders)
+        .Concat(LstOtherIgnoredFolders)
         .Distinct()
     ];
 }
