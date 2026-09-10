@@ -87,7 +87,7 @@ A blurb describing how the project works at a high level.
 
 You'll notice that the folder you extracted to contains a single item: `dvn.exe`
 
-## CREATING THE DVN FRAMEWORK
+## Creating the DVN framework
 
 The **DVN framework** is comprised of the files and folders that are required by **DVN**. This framework doesn't exist yet, so we need to create it.
 
@@ -102,13 +102,13 @@ $ dvn
 
 Since this is the first time you are executing **DVN**, you will see a message letting you know that the **DVN framework** will be created.
 
-## CONFIGURING DVN
+## Configuring DVN
 
 The `.\.dvn\configs\dvn.config` file contains the configuration settings for **DVN**.
 
 Currently this file only contains a list of files and folders that are ignored when the data backup functionality is enabled (to keep file sizes are kept to a minimum), so their isn't much to configure.
 
-## MANIFEST FILES
+## The manifest file
 
 When you start an environment by typing...
 
@@ -275,7 +275,7 @@ The above manifest file will:
 6. Start the "**GitHub Desktop**" application
 7. Open various web pages in various web browsers
 
-## USAGE
+## Usage
 
 This is the **DVN** syntax:
 
@@ -342,4 +342,4 @@ Copyright &copy; 2026 [A Pretty Cool Program](https://github.com/APrettyCoolProg
 
 ---
 
-<sub>Last updated: 260419</sub>
+<sub>Last updated: 260910</sub>
