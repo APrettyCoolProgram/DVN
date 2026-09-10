@@ -23,20 +23,7 @@
 
 ---
 
-| CONTENTS                              |
-|---------------------------------------|
-| [About DVN](#about-dvn)               |
-| [How It Works](#how-it-works)         |
-| [Getting Started](#getting-started)   |
-| [Installing](#installing)             |
-| [Usage](#usage)                       |
-| [Acknowledgements](#acknowledgements) |
-| [Related Projects](#related-projects) |
-| [License](#license)                   |
-
----
-
-## About DVN
+# About DVN
 
 **DVN** is a command-line utility for managing development environments.
 
@@ -68,38 +55,9 @@ You could do all of the above steps manually, ***or*** you could let **dvn** do 
 
 -->
 
-<!--
+For more information about **DVN**, including detailed usage instructions, please refer to the [Manual](docs/man/README.md).
 
-## How It Works
-
-A blurb describing how the project works at a high level.
-
--->
-
-## Installing
-
-
-
-
-
-## Configuring DVN
-
-
-
-## The manifest file
-
-
-## Usage
-
-
-
-
-
-## Documentation
-
-Coming soon.
-
-## License
+# License
 
 Distributed under the [Apache 2.0 License](LICENSE).  
 Copyright &copy; 2026 [A Pretty Cool Program](https://github.com/APrettyCoolProgram)
@@ -111,7 +69,3 @@ Copyright &copy; 2026 [A Pretty Cool Program](https://github.com/APrettyCoolProg
   [FAQ](docs/FAQ.md)&nbsp;&bull;&nbsp;[DEVELOPMENT](docs/DEVELOPMENT.md)&nbsp;&bull;&nbsp;[API](docs/api/README.md)&nbsp;&bull;&nbsp;[TESTING](docs/TESTING.md)&nbsp;&bull;&nbsp;[SUPPORT](docs/SUPPORT.md)&nbsp;&bull;&nbsp;[NOTICES](docs/NOTICES.md)
   
 </h6>
-
----
-
-<sub>Last updated: 260910</sub>
