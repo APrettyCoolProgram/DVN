@@ -34,14 +34,14 @@
 
 **DVN** is a portable application, so "installing" is simple:
 
-1. Download the [latest release](https://github.com/APrettyCoolProgram/dvn/releases)
-2. Extract the contents of the downloaded file to a folder of your choice
+1. Download the [latest release](https://github.com/APrettyCoolProgram/dvn/releases).
+2. Extract the contents of the downloaded file to a folder of your choice.
 
 You'll notice that the folder you extracted to contains a single item: `dvn.exe`
 
 ## Creating the DVN framework
 
-The **DVN framework** is comprised of the files and folders that are required by **DVN**. This framework doesn't exist yet, so we need to create it.
+The **DVN *framework*** is comprised of the files and folders that are required by **DVN**. This framework doesn't exist yet, so we need to create it.
 
 To create the **DVN** framework:
 
@@ -68,7 +68,7 @@ When you start an environment by typing...
 $ dvn myproj
 ```
 
-...**DVN** looks for a manifest file named `.\.dvn\manifests\myproj.dvn.manifest`, which contains all of the information **DVN** needs to start the environment.
+...**DVN** looks for a manifest file named `.\.dvn\mnfst\myproj.mnfst`, which contains all of the information **DVN** needs to start the environment.
 
 If the file does not exist, it is created using the default settings, which you will need to modify.
 
@@ -82,8 +82,8 @@ When a new manifest file is created, it looks like this:
 ```json
 {
   "DevelopmentEnvironment": {
-    "Name": "test2",
-    "Description": "Default environment description.",
+    "Name": "MyProject",
+    "Description": "The MyProject project.",
     "BackupEnabled": false,
     "BackupSources": null,
     "BackupLocation": null
