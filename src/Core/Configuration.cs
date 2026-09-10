@@ -1,6 +1,8 @@
 ﻿// 250801_code
 // 260617_documentation
 
+using dvn.Core.Resources;
+
 namespace dvn.Core;
 
 /// <summary>Provides logic for <c>dvn</c> configuration settings.</summary>
@@ -48,8 +50,8 @@ internal class Configuration
         var config = new Configuration()
         {
             ManifestExtension = ".mnfst",
-            ExcludedFiles     = Blueprint.Catalog.lst_IgnoredFiles(),
-            ExcludedFolders   = Blueprint.Catalog.lst_IgnoredFolders()
+            ExcludedFiles     = Catalog.LstIgnoredFiles(),
+            ExcludedFolders   = Catalog.LstIgnoredFolders()
         };
 
         Du.DuJson.ExportToFile<Configuration>(config, $@"{dvnConfigPath}");

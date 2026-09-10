@@ -4,17 +4,26 @@
 
 </div>
 
-## Version 1.2 (YYYY-MM-DD)
+## Version 1.3
 
-> Please see the [release notes](rel/V1.2-release-notes.md) for more details.
+> Please see the [release notes](rel/V1.3-release-notes.md) for more details.
 
-* Updated to .NET 10
-* Updated XML documentation
-* General code cleanup and refactoring
+* Update to .NET 10
+* Add [Scoop](https://scoop.sh/) support
+* Code cleanup and refactoring
 
 ***
 
-## Version 1.1 (YYYY-MM-DD)
+## Version 1.2
+
+> Please see the [release notes](rel/V1.2-release-notes.md) for more details.
+
+* Update XML documentation
+* Code cleanup and refactoring
+
+***
+
+## Version 1.1
 
 > Please see the [release notes](rel/V1.1-release-notes.md) for more details.
 
@@ -22,7 +31,7 @@
 
 ***
 
-## Version 1.0 (YYYY-MM-DD)
+## Version 1.0
 
 > Please see the [release notes](rel/V1.0-release-notes.md) for more details.
 

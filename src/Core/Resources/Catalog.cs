@@ -1,13 +1,13 @@
-﻿// 260617_code
+﻿// 260910_code
 // 260617_documentation
 
-namespace dvn.Blueprint;
+namespace dvn.Core.Resources;
 
 /// <summary>Provides predefined data structures.</summary>
 internal static class Catalog
 {
     /// <summary>A list of repository files that should be ignored when copying.</summary>
-    internal static List<string> lst_RepositoryIgnoredFiles =>
+    internal static List<string> LstRepositoryIgnoredFiles =>
     [
         ".DS_Store",
         "Thumbs.db",
@@ -19,12 +19,12 @@ internal static class Catalog
     ];
 
     /// <summary>A list of other files that should be ignored when copying.</summary>
-    internal static List<string> lst_OtherIgnoredFiles =>
+    internal static List<string> LstOtherIgnoredFiles =>
         [
         ];
 
     /// <summary>A list of repository folders that should be ignored when copying.</summary>
-    internal static List<string> lst_RepositoryIgnoredFolders =>
+    internal static List<string> LstRepositoryIgnoredFolders =>
     [
         "node_modules",
         "bin",
@@ -37,23 +37,23 @@ internal static class Catalog
     ];
 
     /// <summary>A list of other folders that should be ignored when copying.</summary>
-    internal static List<string> lst_OtherIgnoredolders =>
+    internal static List<string> LstOtherIgnoredolders =>
     [
     ];
 
     /// <summary>Combines the configured file ignore lists.</summary>
     /// <returns>A list of file names that should be ignored when copying.</returns>
-    internal static List<string> lst_IgnoredFiles() =>
-    [.. lst_RepositoryIgnoredFiles
-        .Concat(lst_OtherIgnoredFiles)
+    internal static List<string> LstIgnoredFiles() =>
+    [.. LstRepositoryIgnoredFiles
+        .Concat(LstOtherIgnoredFiles)
         .Distinct()
     ];
 
     /// <summary>Combines the configured folder ignore lists.</summary>
     /// <returns>A list of folder names that should be ignored when copying.</returns>
-    internal static List<string> lst_IgnoredFolders() =>
-    [.. lst_RepositoryIgnoredFolders
-        .Concat(lst_OtherIgnoredolders)
+    internal static List<string> LstIgnoredFolders() =>
+    [.. LstRepositoryIgnoredFolders
+        .Concat(LstOtherIgnoredolders)
         .Distinct()
     ];
 }

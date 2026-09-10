@@ -1,15 +1,15 @@
-﻿// 250801_code
+﻿// 260910_code
 // 260617_documentation
 
 using System.Reflection;
 
-namespace dvn.Blueprint;
+namespace dvn.Core.Resources;
 
 /// <summary>Provides predefined user messages.</summary>
-internal static class UserMessage
+internal static class UsrMsg
 {
     /// <summary>The dvn start message.</summary>
-    internal static string msg_StartDvn =>
+    internal static string MsgStartDvn =>
         """
         =======
           dvn
@@ -37,16 +37,16 @@ internal static class UserMessage
         """;
 
     /// <summary>The message displayed when command-line arguments are missing.</summary>
-    internal static string msg_MissingArguments =>
+    internal static string MsgMissingArguments =>
         $"""
           ERROR: Missing arguments.
-          {msg_ExitDvn()}
+          {MsgExitDvn()}
         """;
 
     /// <summary>The exit message template for dvn.</summary>
     /// <param name="exitMessage">A customizable exit message.</param>
     /// <returns>The formatted exit message.</returns>
-    internal static string msg_ExitDvn(string exitMessage = "Exiting dvn...") =>
+    internal static string MsgExitDvn(string exitMessage = "Exiting dvn...") =>
         $"""
 
 
@@ -59,7 +59,7 @@ internal static class UserMessage
     /// <summary>The message displayed when creating a new dvn manifest.</summary>
     /// <param name="environmentName">The name of the environment.</param>
     /// <returns>The new manifest message.</returns>
-    public static string msg_CreateManifest(string environmentName) =>
+    public static string MsgCreateManifest(string environmentName) =>
         $"""
            A "{environmentName}.dvn.manifest" file did not exist, so one was created.
 
@@ -67,11 +67,11 @@ internal static class UserMessage
 
            For more detailed information, please refer to the dvn documentation:
              https://github.com/APrettyCoolProgram/dvn
-           {msg_ExitDvn()}
+           {MsgExitDvn()}
          """;
 
     /// <summary>The help message.</summary>
-    public static string msg_Help =>
+    public static string MsgHelp =>
         $"""
           --------
             Help
@@ -103,11 +103,11 @@ internal static class UserMessage
 
           For more detailed information, please refer to the dvn documentation:
               https://github.com/APrettyCoolProgram/dvn
-          {msg_ExitDvn()}
+          {MsgExitDvn()}
         """;
 
     /// <summary>The about message.</summary>
-    public static string msg_About =>
+    public static string MsgAbout =>
         $"""
           -------------
             About dvn
@@ -118,7 +118,7 @@ internal static class UserMessage
           https://github.com/APrettyCoolProgram/dvn
           Developed by A Pretty Cool Program
           Licensed under Apache 2.0
-          {msg_ExitDvn()}
+          {MsgExitDvn()}
         """;
 
     /// <summary>The message that displays the list of available environments.</summary>
@@ -131,6 +131,6 @@ internal static class UserMessage
           --------------------------
 
            {environmentList}
-        {msg_ExitDvn()}
+        {MsgExitDvn()}
         """;
 }

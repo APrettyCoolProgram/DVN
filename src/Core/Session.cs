@@ -1,9 +1,9 @@
 ﻿// 250801_code
 // 260617_documentation
 
-using dvn.Blueprint;
 using dvn.App;
 using dvn.Manifest;
+using dvn.Core.Resources;
 
 namespace dvn.Core;
 
@@ -43,7 +43,7 @@ internal class Session
     {
         Console.Clear();
 
-        Console.WriteLine(UserMessage.msg_StartDvn);
+        Console.WriteLine(UsrMsg.MsgStartDvn);
 
         Framework.VerifyExists(@".\.dvn");
 
@@ -53,7 +53,7 @@ internal class Session
         }
         else
         {
-            Stop(UserMessage.msg_MissingArguments);
+            Stop(UsrMsg.MsgMissingArguments);
         }
     }
 

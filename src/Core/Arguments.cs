@@ -1,8 +1,8 @@
 ﻿// 250801_code
 // 250801_documentation
 
-using dvn.Blueprint;
 using dvn.Core;
+using dvn.Core.Resources;
 using dvn.Manifest;
 
 namespace dvn.App;
@@ -43,11 +43,11 @@ internal static class Arguments
         switch (dvnSession.CommandLine.Command)
         {
             case "about":
-                Console.WriteLine(UserMessage.msg_About);
+                Console.WriteLine(UsrMsg.msg_About);
                 break;
 
             case "help":
-                Console.WriteLine(UserMessage.msg_Help);
+                Console.WriteLine(UsrMsg.msg_Help);
                 break;
 
             case "list":

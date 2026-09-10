@@ -1,9 +1,9 @@
 ﻿// 250806_code
 // 260617_documentation
 
-using dvn.Blueprint;
 using dvn.Du;
 using dvn.Core;
+using dvn.Core.Resources;
 
 namespace dvn.Manifest;
 
@@ -58,11 +58,11 @@ internal class DvnEnvironment
     {
         if (availableEnvironments.Count == 0)
         {
-            Session.Stop(UserMessage.msg_EnvList("No environments found."));
+            Session.Stop(UsrMsg.msg_EnvList("No environments found."));
         }
         else
         {
-            Console.WriteLine(UserMessage.msg_EnvList(DuDictionary.ConvertToString(availableEnvironments, "    ", "")));
+            Console.WriteLine(UsrMsg.msg_EnvList(DuDictionary.ConvertToString(availableEnvironments, "    ", "")));
         }
     }
 
@@ -111,6 +111,6 @@ internal class DvnEnvironment
         DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
         DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
 
-        Session.Stop(UserMessage.msg_ExitDvn());
+        Session.Stop(UsrMsg.msg_ExitDvn());
     }
 }

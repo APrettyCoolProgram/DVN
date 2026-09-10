@@ -1,9 +1,9 @@
 ﻿// 250806_code
 // 260617_documentation
 
-using dvn.Blueprint;
 using dvn.Du;
 using dvn.Core;
+using dvn.Core.Resources;
 
 namespace dvn.Manifest;
 
@@ -52,7 +52,7 @@ internal class DvnManifest
 
         DuJson.ExportToFile(dvnManifest, $@"{manifestFolder}\{manifestName}{manifestExtension}");
 
-        Console.WriteLine(UserMessage.msg_CreateManifest(manifestName));
+        Console.WriteLine(UsrMsg.msg_CreateManifest(manifestName));
 
         Session.Stop();
     }

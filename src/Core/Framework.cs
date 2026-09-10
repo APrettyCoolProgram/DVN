@@ -1,7 +1,7 @@
 ﻿// 250806_code
 // 260617_documentation
 
-using dvn.Blueprint;
+using dvn.Core.Resources;
 
 namespace dvn.Core;
 
@@ -28,7 +28,7 @@ internal class Framework
     {
         if (!Directory.Exists(frameworkBase))
         {
-            Console.WriteLine(UserMessage.msg_WelcomeToDvn);
+            Console.WriteLine(UsrMsg.msg_WelcomeToDvn);
 
             var dvnFramework = BuildNew();
 
