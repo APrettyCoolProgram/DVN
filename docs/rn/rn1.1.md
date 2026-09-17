@@ -9,17 +9,39 @@
 </div>
 
 > [!NOTE]
-> This release focuses on:
->
-> * [Additional web browser support](#additional-web-browser-support)
+> DVN 1.1 is [available for download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.1).
 
-***
+| CONTENTS |
+|----------|
+| [This release](#this-release) |
+| [Known Issues](#known-issues) |
+| [Miscellaneous](#miscellaneous) |
 
-## Additional web browser support
+## This release
 
-**dvn** now works with the Chrome, Firefox, and Edge web browsers.
+This release of DVN includes additional web browser support.
 
-## Misc
+### Added
+
+* Support for Chrome, Firefox, and Edge web browsers.
+
+### Changed
+
+None.
+
+### Fixed
+
+None.
+
+### Removed
+
+None.
+
+## Known issues
+
+None.
+
+## Miscellaneous
 
 * XML documentation updates
 

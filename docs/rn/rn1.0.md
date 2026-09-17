@@ -9,7 +9,41 @@
 </div>
 
 > [!NOTE]
-> This is the initial release of **DVN**.
+> DVN 1.0 is [available for download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.0).
+
+| CONTENTS |
+|----------|
+| [This release](#this-release) |
+| [Known Issues](#known-issues) |
+| [Miscellaneous](#miscellaneous) |
+
+## This release
+
+This is the initial release of DVN.
+
+### Added
+
+None.
+
+### Changed
+
+None.
+
+### Fixed
+
+None.
+
+### Removed
+
+None.
+
+## Known issues
+
+None.
+
+## Miscellaneous
+
+None.
 
 <br/>
 
