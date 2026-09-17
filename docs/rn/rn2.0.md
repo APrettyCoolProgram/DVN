@@ -8,36 +8,52 @@
 
 </div>
 
-| CONTENTS                              |
-|:--------------------------------------|
-| [Summary](#summary)                   |
-| [New features](#new-features)         |
-| [Breaking changes](#breaking-changes) |
-| [Bug fixes](#bug-fixes)               |
-| [Known issues](#known-issues)         |
-| [Other changes](#other-changes)       |
-| [Miscellaneous](#miscellaneous)       |
-
 ***
-
-# Summary
 
 * Release date: 2026-9-17
 * [Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
 * [Manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
+***
+
 **DVN** 2.0 is a major update that focuses on simplifying the framework and integrating basic Scoop.sh functionality.
 
-# New features
+Please note that **DVN** 2.0 is not compatible with **DVN** 1.x.
 
-* Scoop.sh   
-  Basic integration with [Scoop](https://scoop.sh/) for easier installation and management of DVN.
+## Scoop.sh integration
 
-* Display version number is displayed when DVN is executed  
+* Basic integration with [Scoop.sh](https://scoop.sh/)
+
+## Console input changes
+
+* Added `Ns:dvn.Core.CommandLine`
+* Renamed `dvn.Core.Arguments.cs` -> `dvn.Core.CommandLine.Arguments.cs`
+
+## Console output changes
+
+* **DVN** now displays the version number when it is executed.
+
+* Added `Ns:dvn.Core.Resources`
+* Renamed `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
+* Renamed `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
+* Renamed `lst_` prefix -> `Lst` in dvn.Core.Resources.UsrMsg.cs
+* Renamed `msg_` prefix -> `Msg` in dvn.Core.Resources.UsrMsg.cs  
+* Updated text formatting in dvn.Core.Resources.UsrMsg.cs
+
+
+
+
+
+**CHANGED** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
+
+
+
+
+
 
 # Breaking changes
 
-**DVN** 2.0 is not compatible with **DVN** 1.x.
+
 
 # Bug fixes
 
@@ -48,7 +64,6 @@ None.
 None.
 
 # Miscellaneous
-
 
 * Variables:
 
@@ -81,16 +96,7 @@ None.
 
 
 ## Added
-**ADDED** `Ns:dvn.Core.Resources`  
-**ADDED** Ns:dvn.Core.Resources  
-**[  ADDED]** Ns:dvn.Core.CommandLine  
-**[CHANGED]** dvn.Blueprint.Catalog.cs -> dvn.Core.Resources.Catalog.cs  
-**CHANGED** dvn.Blueprint.UserMessage.cs -> dvn.Core.Resources.UsrMsg.cs  
-**CHANGED** dvn.Core.Arguments.cs -> dvn.Core.CommandLine.Arguments.cs  
-**CHANGED** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
-**CHANGED** The `lst_` prefix -> `Lst` in dvn.Core.Resources.UsrMsg.cs  
-**CHANGED** The `msg_` prefix -> `Msg` in dvn.Core.Resources.UsrMsg.cs  
-**CHANGED** Text formatting in dvn.Core.Resources.UsrMsg.cs  
+
 
 
 **`UPDATED`** Update from target framework from .NET 9 to .NET 10
