@@ -5,11 +5,13 @@
 
 <div align="center">
 
-  <img src="./.github/logo/dvn-Logo-384x184.png" alt="Tingen Web Service">
+  <img src="./.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
   ![RELEASE](https://img.shields.io/badge/version-1.3-teal)&nbsp;
   ![LICENSE](https://img.shields.io/badge/license-apache-blue)&nbsp;
   ![Platform](https://img.shields.io/badge/platform-windows-lightgrey)&nbsp;
+
+  <h3>DVN: Development Environment Manager</h3>
 
 </div>
 
