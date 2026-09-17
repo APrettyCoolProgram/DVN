@@ -6,11 +6,11 @@
 
   <h2>Version 2.0 Release notes</h2>
 
-</div>
+Release date: 2026-9-17  
+[Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)  
+[Manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
-* Release date: 2026-9-17
-* [Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
-* [Manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
+</div>
 
 ***
 
