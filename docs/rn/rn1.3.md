@@ -30,18 +30,15 @@ This release focuses on:
 
 ## Added
 
-* **Scoop integration**  
-  What this is.
+### `NEW` Scoop integration
 
-* **Namespaces:**
-  * `Ns:dvn.Core.Resources`
-  * `Ns:dvn.Core.CommandLine`
+What this is.
 
-## Changed
+### Other additions
 
-* Updated `Du.DuJson.cs` from `b250801` to `b260909`
 
-* Cleaned up the text formatting in `dvn.Core.Resources.UsrMsg.cs`
+
+## Changes
 
 * Classes:
   * `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
@@ -61,9 +58,7 @@ None.
 
 ## Removed
 
-* **`Ns:dvn.Blueprint`**  
-
-* **Simplified the DVN framework**  
+* **.dvn/**  
   I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
   * `dvn.exe`
   * `dvn.config`
@@ -80,9 +75,16 @@ None.
 
 # Miscellaneous
 
-* Version number is now displayed when DVN is executed
-* Updated from target framework from .NET 9 to .NET 10
-* XML documentation updates
+* **`NEW`** Namespace: `dvn.Core.Resources`
+* **`NEW`** Namespace: `dvn.Core.CommandLine`
+* **`NEW`** Display version number when DVN is executed
+* **`UPDATED`** Update from target framework from .NET 9 to .NET 10
+* **`UPDATED`** Update XML documentation
+* **`UPDATED`** `Du.DuJson.cs` from `b250801` to `b260909`
+* **`UPDATED`** Text formatting in `dvn.Core.Resources.UsrMsg.cs`
+* **`REMOVED`**  `Ns:dvn.Blueprint`
+* **`REMOVED`**  `dvn.Core.Framework.cs`
+
 
 # Repository
 
