@@ -14,17 +14,17 @@
 
 This is a major update that introduces several new features and improvements.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`NEW`** Basic Scoop integration  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`NEW`** Display version number when DVN is executed  
-&nbsp;&nbsp;&nbsp;&nbsp;**`ADDED`** Ns:dvn.Core.Resources  
-&nbsp;&nbsp;&nbsp;&nbsp;**`ADDED`** Ns:dvn.Core.CommandLine
-**`CHANGED`** dvn.Blueprint.Catalog.cs -> dvn.Core.Resources.Catalog.cs  
-**`CHANGED`** dvn.Blueprint.UserMessage.cs -> dvn.Core.Resources.UsrMsg.cs  
-**`CHANGED`** dvn.Core.Arguments.cs -> dvn.Core.CommandLine.Arguments.cs  
-**`CHANGED`** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
-**`CHANGED`** The `lst_` prefix -> `Lst` in dvn.Core.Resources.UsrMsg.cs
-**`CHANGED`** The `msg_` prefix -> `Msg` in dvn.Core.Resources.UsrMsg.cs
-**`CHANGED`** Text formatting in dvn.Core.Resources.UsrMsg.cs
+**`[    NEW]`** Basic Scoop integration  
+**`[    NEW]`** Display version number when DVN is executed  
+**`[  ADDED]`** Ns:dvn.Core.Resources  
+**`[  ADDED]`** Ns:dvn.Core.CommandLine
+**`[CHANGED]`** dvn.Blueprint.Catalog.cs -> dvn.Core.Resources.Catalog.cs  
+**`[CHANGED]`** dvn.Blueprint.UserMessage.cs -> dvn.Core.Resources.UsrMsg.cs  
+**`[CHANGED]`** dvn.Core.Arguments.cs -> dvn.Core.CommandLine.Arguments.cs  
+**`[CHANGED]`** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
+**`[CHANGED]`** The `lst_` prefix -> `Lst` in dvn.Core.Resources.UsrMsg.cs
+**`[CHANGED]`** The `msg_` prefix -> `Msg` in dvn.Core.Resources.UsrMsg.cs
+**`[CHANGED]`** Text formatting in dvn.Core.Resources.UsrMsg.cs
 
 
 ***
