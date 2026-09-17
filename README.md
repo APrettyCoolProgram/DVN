@@ -15,19 +15,19 @@
 
 </div>
 
-<h3 align="center">
+<h4 align="center">
 
   [Manual](docs/man/README.md)&nbsp;&bull;&nbsp;[Changelog](docs/CHANGELOG.md)&nbsp;&bull;&nbsp;[Roadmap](docs/ROADMAP.md)&nbsp;&bull;&nbsp;[Known Issues](docs/KNOWN-ISSUES.md)
 
-</h3>
+</h4>
 
 ***
 
-| CONTENTS |
-|:--------|
-| [About DVN](#about-dvn) |
+| CONTENTS                          |
+|:----------------------------------|
+| [About DVN](#about-dvn)           |
 | [The DVN manual](#the-dvn-manual) |
-| [License](#license) |
+| [License](#license)               |
 
 # About DVN
 
