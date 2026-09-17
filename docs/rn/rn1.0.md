@@ -17,9 +17,9 @@
 ***
 # About this release
 
-[Download DVN 1.0](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.0)
-
 This is the initial release of DVN.
+
+[Download DVN 1.0](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.0)
 
 ## Added
 

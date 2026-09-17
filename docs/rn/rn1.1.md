@@ -18,9 +18,9 @@
 
 ## About this release
 
-[Download DVN 1.1](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.1)
-
 This release of DVN includes additional web browser support.
+
+[Download DVN 1.1](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.1)
 
 ### Added
 
