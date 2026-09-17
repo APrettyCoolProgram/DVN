@@ -1,9 +1,4 @@
-<!--
-  260910_code
-  260617_documentation
--->
-
-[❰ Back to DVN repository](../../README.md)
+❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 1.0
 
 <div align="center">
 
@@ -281,4 +276,4 @@ $ dvn help
 
 ***
 
-[❰ Back to DVN repository](../../README.md)
+❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 1.0
