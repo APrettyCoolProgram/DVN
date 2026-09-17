@@ -4,7 +4,7 @@
 using dvn.Core.Resources;
 using dvn.Manifest;
 
-namespace dvn.Core;
+namespace dvn.Core.CommandLine;
 
 /// <summary>Methods for handling and processing arguments passed via the <see cref="CommandLine"/>.</summary>
 /// <remarks>
@@ -46,10 +46,6 @@ internal static class Arguments
 
             case "help":
                 Console.WriteLine(UsrMsg.MsgHelp);
-                break;
-
-            case "list":
-                DvnEnvironment.DisplayAvailable(dvnSession.AvailableEnvironments);
                 break;
 
             default:

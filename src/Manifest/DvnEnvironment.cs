@@ -71,18 +71,18 @@ internal class DvnEnvironment
     /// <param name="dvnSession">The session instance.</param>
     internal static void LoadFromManifest(AppState dvnSession)
     {
-        if (File.Exists($@"{dvnSession.Framework.RequiredFolders["Manifests"]}\{dvnSession.CommandLine.Command}{dvnSession.AppConfig.ManifestExtension}"))
-        {
-            Launch(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.AppConfig.ManifestExtension,
-                   dvnSession.Framework.RequiredFolders["Staging"], dvnSession.CommandLine.Options, dvnSession.AppConfig.ExcludedFiles,
-                   dvnSession.AppConfig.ExcludedFolders);
-        }
-        else
-        {
-            DvnManifest.CreateDefault(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.AppConfig.ManifestExtension);
+        //if (File.Exists($@"{dvnSession.Framework.RequiredFolders["Manifests"]}\{dvnSession.CommandLine.Command}{dvnSession.AppConfig.ManifestExtension}"))
+        //{
+        //    Launch(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.AppConfig.ManifestExtension,
+        //           dvnSession.Framework.RequiredFolders["Staging"], dvnSession.CommandLine.Options, dvnSession.AppConfig.ExcludedFiles,
+        //           dvnSession.AppConfig.ExcludedFolders);
+        //}
+        //else
+        //{
+        //    DvnManifest.CreateDefault(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.AppConfig.ManifestExtension);
 
-            AppState.Stop();
-        }
+        //    AppState.Stop();
+        //}
     }
 
     /// <summary>Launches a development environment.</summary>

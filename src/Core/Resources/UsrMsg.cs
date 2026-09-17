@@ -23,7 +23,7 @@ internal static class UsrMsg
         The DVN framework has been created.
 
         Type "dvn help" to get started.
-        
+
         For more information, please refer to the documentation:
         https://github.com/APrettyCoolProgram/DVN
         {MsgExit()}
@@ -80,9 +80,8 @@ internal static class UsrMsg
         Commands:
 
           %environment%   Start/create a development environment manifest
-          help            Display the dvn help screen
-          about           Display information about dvn
-          list            Display the available development environments
+          help            Display the DVN help screen
+          about           Display information about DVN
 
         Options:
 
@@ -90,7 +89,7 @@ internal static class UsrMsg
 
         Examples:
 
-          To list the available environments:
+          To learn more about DVN:
 
               "dvn list"
 

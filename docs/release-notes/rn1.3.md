@@ -33,11 +33,9 @@ This release focuses on:
 * **Scoop integration**  
   What this is.
 
-* **Version number is now displayed**  
-  The version number is now displayed when running **DVN**.
-
-* **`Ns:dvn.Core.Resources`**  
-  This is the standard location for blueprints, catalogs, etc.
+* **Namespaces:**
+  * `Ns:dvn.Core.Resources`
+  * `Ns:dvn.Core.CommandLine`
 
 ## Changed
 
@@ -48,6 +46,7 @@ This release focuses on:
 * Classes:
   * `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
   * `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
+  * `dvn.Core.Arguments.cs` -> `dvn.Core.CommandLine.Arguments.cs`
 
 * Methods:
   * `AppConfig.LoadFromLocalFile()` -> `AppConfig.Load()`
@@ -63,12 +62,17 @@ None.
 ## Removed
 
 * **`Ns:dvn.Blueprint`**  
-  This is the standard location for blueprints, catalogs, etc.
 
 * **Simplified the DVN framework**  
   I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
   * `dvn.exe`
   * `dvn.config`
+
+* **`dvn.Core.Framework.cs`**  
+  This file has been removed as part of the simplification of the DVN framework.
+
+* **`list` command**  
+  DVN now stores environment information per-project, so the `list` command has been removed.
 
 # Known issues
 
@@ -76,10 +80,13 @@ None.
 
 # Miscellaneous
 
-* Renamed release notes to `rnX.y.md`
-* Changed the release from `RYY.MM` to `VX.y` format.
+* Version number is now displayed when DVN is executed
 * Updated from target framework from .NET 9 to .NET 10
 * XML documentation updates
+
+# Repository
+
+* Updated to the current release of [Repsitory-Template](https://github.com/APrettyCoolProgram/Repository-Template).
 
 <br/>
 
