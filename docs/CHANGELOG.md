@@ -14,7 +14,7 @@
 
 This is a major update that introduces several new features and improvements.
 
-**`[    NEW]`** Basic Scoop integration  
+**`      NEW`** Basic Scoop integration  
 **`[    NEW]`** Display version number when DVN is executed  
 **`[  ADDED]`** Ns:dvn.Core.Resources  
 **`[  ADDED]`** Ns:dvn.Core.CommandLine
