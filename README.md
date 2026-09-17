@@ -11,7 +11,7 @@
   ![LICENSE](https://img.shields.io/badge/license-apache-blue)&nbsp;
   ![Platform](https://img.shields.io/badge/platform-windows-lightgrey)&nbsp;
 
-  <h2>Development environment manager</h2>
+  <h2>A utility for managing development environments</h2>
 
 </div>
 
