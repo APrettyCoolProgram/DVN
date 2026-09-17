@@ -63,7 +63,7 @@ You could do all of the above steps manually, ***or*** you could let **dvn** do 
 
 # The DVN manual
 
-For more information about **DVN**, including detailed usage instructions, please refer to the [Manual](docs/man/README.md).
+For more information about **DVN**, including detailed usage instructions, please refer to the [manual](docs/man/README.md).
 
 # License
 
