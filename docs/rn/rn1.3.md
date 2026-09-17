@@ -20,21 +20,26 @@
 
 This release focuses on:
 
-* Added basic support for Scoop
-* Quality of life additions
-* Updated .NET version
-* Code refactors
+* Added basic Scoop integration
+* Various quality of life additions
+* Various code refactors
 * Framework updates
+* Updated target .NET framework
 
 [Download DVN 1.3](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
 
 ## Added
 
-* Scoop integration
+* **Scoop integration**  
+  What this is.
 
-* Version number is now displayed
+* **Version number is now displayed**  
+  What this is
 
-* Added the `dvn.Core.Resources` namespace, which is the new standard location for blueprints, catalogs, etc.
+* **`dvn.Core.Resources` namespace**  
+  Which is the new standard location for blueprints, catalogs, etc.
+
+## Changed
 
 * Moved the following files from `Ns:dvn.Blueprint` to `Ns:dvn.Core.Resources`:
   * `Catalog.cs`
@@ -46,9 +51,7 @@ This release focuses on:
 
 * Updated `Du.DuJson.cs` from `b250801` to `b260909`
 
-## Changed
-
-None.
+* Cleaned up the text formatting in `dvn.Core.Resources.UsrMsg.cs`
 
 ## Fixed
 
@@ -66,9 +69,7 @@ None.
 
 * Renamed release notes to `rnX.y.md`
 * Changed the release from `RYY.MM` to `VX.y` format.
-* Cleaned up the text formatting in `dvn.Core.Resources.UsrMsg.cs`
-
-* Updated from .NET 9 to .NET 10
+* Updated from target framework from .NET 9 to .NET 10
 * XML documentation updates
 
 <br/>
