@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
+  <img src="../../.github/logo/dvn-Logo-192x92.png.png" alt="DVN">
 
   <h1>Version 1.0 Release notes</h1>
 

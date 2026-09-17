@@ -63,7 +63,7 @@ None.
 
 # Known issues
 
-None.
+Please see the [Known issues](../) documentation.
 
 # Miscellaneous
 
