@@ -1,35 +1,38 @@
-[❰ Back to DVN repository](../../README.md)
+❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 1.3
 
 <div align="center">
 
-  <img src="../../.github/logo/dvn-Logo-192x92.png" alt="DVN">
+  <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  <h2>Version 1.3 Release Notes</h2>
+  <h2>Version 1.3 Release notes</h2>
 
 </div>
 
-> [!NOTE]
-> This release focuses on:
->
-> * [Added basic support for Scoop](#scoop)
-> * [Quality of life additions](#quality-of-life-additions)
-> * [Updated .NET version](#updated-to-net-10)
-> * [Code refactors](#code-refactors)
-> * [Framework updates](#framework-updates)
+| CONTENTS                                  |
+|:------------------------------------------|
+| [About this release](#about-this-release) |
+| [Known Issues](#known-issues)             |
+| [Miscellaneous](#miscellaneous)           |
 
 ***
 
-# Scoop
+# About this release
 
-# Quality of life additions
+This release focuses on:
+
+* Added basic support for Scoop
+* Quality of life additions
+* Updated .NET version
+* Code refactors
+* Framework updates
+
+[Download DVN 1.3](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
+
+## Added
+
+* Scoop integration
 
 * Version number is now displayed
-
-# Updated to .NET version
-
-* Updated from .NET 9 to .NET 10
-
-# Code refactors
 
 * Added the `dvn.Core.Resources` namespace, which is the new standard location for blueprints, catalogs, etc.
 
@@ -43,18 +46,33 @@
 
 * Updated `Du.DuJson.cs` from `b250801` to `b260909`
 
-# Framework updates
+## Changed
+
+None.
+
+## Fixed
+
+None.
+
+## Removed
+
+None.
+
+# Known issues
+
+None.
+
+# Miscellaneous
 
 * Renamed release notes to `rnX.y.md`
-
-# Misc
-
 * Changed the release from `RYY.MM` to `VX.y` format.
 * Cleaned up the text formatting in `dvn.Core.Resources.UsrMsg.cs`
-* XML documentation updates.
-  
+
+* Updated from .NET 9 to .NET 10
+* XML documentation updates
+
 <br/>
 
 ***
 
-[❰ Back to DVN repository](../../README.md)
+❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 1.3
