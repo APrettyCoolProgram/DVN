@@ -28,17 +28,17 @@ This release focuses on:
 [Download DVN 1.3](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)  
 [DVN 1.3 manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
-## Added
+# Added
 
-### `NEW` Scoop integration
+## `NEW` Scoop integration
 
 What this is.
 
-## Updates
+# Updates
 
 None.
 
-## Changes
+# Changes
 
 * `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
 * `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
@@ -51,13 +51,13 @@ None.
 * `lst_` to `Lst` in `dvn.Core.Resources.UsrMsg.cs`
 * `msg_` to `Msg` in `dvn.Core.Resources.UsrMsg.cs`
 
-## Fixed
+# Fixed
 
 None.
 
-## Removed
+# Removed
 
-### **`.dvn/`**
+## **`.dvn/`**
 
 I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
 * `dvn.exe`
