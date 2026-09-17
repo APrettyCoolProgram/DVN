@@ -1,6 +1,10 @@
+❰ [DVN](../README.md) ❬ Changelog
+
 <div align="center">
 
-  <h1>DVN: Changelog</h1>
+  <img src="../.github/logo/dvn-Logo-384x184.png" alt="DVN">
+
+  <h1>Changelog</h1>
 
 </div>
 
@@ -37,3 +41,9 @@
 > Please see the [release notes](rn/rn1.0.md) for more details.
 
 * Initial release of DVN.
+
+<br/>
+
+***
+
+❰ [DVN](../README.md) ❬ Changelog
