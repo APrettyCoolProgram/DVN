@@ -1,12 +1,12 @@
+❰ [DVN](../README.md) ❬ Development
+
 <div align="center">
 
-  <h1>DVN: Development</h1>
+  <img src="../.github/logo/dvn-Logo-384x184.png" alt="DVN">
+
+  <h1>Development</h1>
 
 </div>
-
-A blurb about development goes here.
-
-## Contributing
 
 If you are interested in contributing to this project, please see the:
 
@@ -33,6 +33,8 @@ Please follow these steps:
 * [Issue templates](https://github.com/APrettyCoolProgram/.github/blob/main/.github/ISSUE_TEMPLATE/)
 * [Pull request template](https://github.com/APrettyCoolProgram/.github/blob/main/.github/PULL_REQUEST_TEMPLATE/)
 
+<br/>
+
 ***
 
-<sub>Last updated:260617</sub>
+❰ [DVN](../README.md) ❬ Development
