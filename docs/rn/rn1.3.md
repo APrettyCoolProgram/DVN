@@ -26,16 +26,15 @@
 
 This release focuses on:
 
-* Basic Scoop integration
+* Basic Scoop.sh integration
 * Quality of life additions
 * Code refactors
 * .NET framework upgrade
 
 # New features
 
-## Scoop integration
-
-What this is.
+* **Scoop.sh integration**  
+  Basic integration with [Scoop](https://scoop.sh/) for easier installation and management of DVN.
 
 # Bug fixes
 
