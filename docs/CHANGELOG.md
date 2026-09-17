@@ -8,14 +8,24 @@
 
 </div>
 
-## Version 1.3
+## Version 2.0 (June 6, 2024)
 
-> Please see the [release notes](rn/rn1.3.md) for more details.
+> Please see the [release notes](rn/rn2.0.md) for more details.
 
-* Basic Scoop integration
-* Quality of life additions
-* Code refactors
-* .NET framework upgrade
+This is a major update that introduces several new features and improvements.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`NEW`** Basic Scoop integration  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`NEW`** Display version number when DVN is executed  
+&nbsp;&nbsp;&nbsp;&nbsp;**`ADDED`** Ns:dvn.Core.Resources  
+&nbsp;&nbsp;&nbsp;&nbsp;**`ADDED`** Ns:dvn.Core.CommandLine
+**`CHANGED`** dvn.Blueprint.Catalog.cs -> dvn.Core.Resources.Catalog.cs  
+**`CHANGED`** dvn.Blueprint.UserMessage.cs -> dvn.Core.Resources.UsrMsg.cs  
+**`CHANGED`** dvn.Core.Arguments.cs -> dvn.Core.CommandLine.Arguments.cs  
+**`CHANGED`** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
+**`CHANGED`** The `lst_` prefix -> `Lst` in dvn.Core.Resources.UsrMsg.cs
+**`CHANGED`** The `msg_` prefix -> `Msg` in dvn.Core.Resources.UsrMsg.cs
+**`CHANGED`** Text formatting in dvn.Core.Resources.UsrMsg.cs
+
 
 ***
 

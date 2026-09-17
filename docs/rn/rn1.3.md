@@ -1,20 +1,21 @@
-❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 1.3
+❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 2.0
 
 <div align="center">
 
   <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  <h2>Version 1.3 Release notes</h2>
+  <h2>Version 2.0 Release notes</h2>
 
 </div>
 
-| CONTENTS                                  |
-|:------------------------------------------|
-| [Summary](#summary) |
-| [New features](#new-features)             |
-| [Bug fixes](#bug-fixes) |
-| [Known issues](#known-issues) |
-| [Miscellaneous](#miscellaneous)           |
+| CONTENTS                              |
+|:--------------------------------------|
+| [Summary](#summary)                   |
+| [New features](#new-features)         |
+| [Breaking changes](#breaking-changes) |
+| [Bug fixes](#bug-fixes)               |
+| [Known issues](#known-issues)         |
+| [Miscellaneous](#miscellaneous)       |
 
 ***
 
@@ -24,36 +25,32 @@
 * [Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
 * [Manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
-This release focuses on:
-
-* Basic Scoop.sh integration
-* Quality of life additions
-* Code refactors
-* .NET framework upgrade
+**DVN** 2.0 is a major update that focuses on simplifying the framework and integrating basic Scoop.sh functionality.
 
 # New features
 
-* **Scoop.sh integration**  
+* **Scoop.sh**  
   Basic integration with [Scoop](https://scoop.sh/) for easier installation and management of DVN.
 
+# Breaking changes
+
+**DVN** 2.0 is not compatible with **DVN** 1.x.
+
 # Bug fixes
+
+None.
 
 # Known issues
 
 None.
 
-# Changes
+# Miscellaneous
 
-* `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
-* `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
-* `dvn.Core.Arguments.cs` -> `dvn.Core.CommandLine.Arguments.cs`
+## Changes from the **DVN** 1.x codebase
 
-* Methods:
-* `AppConfig.LoadFromLocalFile()` -> `AppConfig.Load()`
+
 
 * Variables:
-* `lst_` to `Lst` in `dvn.Core.Resources.UsrMsg.cs`
-* `msg_` to `Msg` in `dvn.Core.Resources.UsrMsg.cs`
 
 # Fixed
 
@@ -82,11 +79,9 @@ None.
 
 # Miscellaneous
 
-**`ADDED`** Namespace: `dvn.Core.Resources`  
-**`ADDED`** Namespace: `dvn.Core.CommandLine`  
-**`ADDED`** Display version number when DVN is executed  
+
 **`FIXED`**  
-**`CHANGED`** Text formatting in `dvn.Core.Resources.UsrMsg.cs`
+
 **`UPDATED`** Update from target framework from .NET 9 to .NET 10
 **`UPDATED`** Update XML documentation
 **`UPDATED`** `Du.DuJson.cs` from `b250801` to `b260909`
@@ -104,4 +99,4 @@ None.
 
 ***
 
-❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 1.3
+❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 2.0
