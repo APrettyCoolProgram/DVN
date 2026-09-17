@@ -20,8 +20,8 @@
 **NEW** Display version number when DVN is executed  
 **ADDED** `Ns:dvn.Core.Resources`  
 **ADDED** Ns:dvn.Core.Resources  
-**ADDED** Ns:dvn.Core.CommandLine  
-**CHANGED** dvn.Blueprint.Catalog.cs -> dvn.Core.Resources.Catalog.cs  
+**[  ADDED]** Ns:dvn.Core.CommandLine  
+**[CHANGED]** dvn.Blueprint.Catalog.cs -> dvn.Core.Resources.Catalog.cs  
 **CHANGED** dvn.Blueprint.UserMessage.cs -> dvn.Core.Resources.UsrMsg.cs  
 **CHANGED** dvn.Core.Arguments.cs -> dvn.Core.CommandLine.Arguments.cs  
 **CHANGED** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
