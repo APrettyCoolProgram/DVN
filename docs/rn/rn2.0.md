@@ -22,7 +22,7 @@ Please note that **DVN** 2.0 is not compatible with **DVN** 1.x.
 
 ## Scoop.sh integration
 
-* Basic integration with [Scoop.sh](https://scoop.sh/)
+**DVN** now has basic integration with [Scoop.sh](https://scoop.sh/)    x cvbnm,
 
 ## Console input changes
 
@@ -31,7 +31,7 @@ Please note that **DVN** 2.0 is not compatible with **DVN** 1.x.
 
 ## Console output changes
 
-* **DVN** now displays the version number when it is executed.
+**DVN** now displays the version number when it is executed.
 
 * Added `Ns:dvn.Core.Resources`
 * Renamed `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`

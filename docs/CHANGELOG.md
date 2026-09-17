@@ -17,8 +17,6 @@
 **`NEW`** Basic Scoop.sh integration  
 **`NEW`** Display version number is displayed when DVN is executed  
 
-
-
 ***
 
 ## Version 1.2
