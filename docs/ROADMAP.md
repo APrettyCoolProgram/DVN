@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="../.github/logo/dvn-Logo-192x92.png" alt="DVN">
+  <img src="../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
   <h1>Roadmap</h1>
 
