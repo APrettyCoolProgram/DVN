@@ -8,7 +8,7 @@
 
 </div>
 
-# Version 2.0 - 2026-9-17
+## Version 2.0 - 2026-9-17
 
 > This is a major update that focuses on simplifying the framework and integrating basic Scoop.sh functionality.
 >
@@ -36,26 +36,27 @@
 
 ## Version 1.2
 
+> This is a minor update with code refactors and framework updates.
+>
 > Please see the [release notes](rn/rn1.2.md) for more details.
-
-* Code refactors
-* Framework updates
 
 ***
 
 ## Version 1.1
 
-> Please see the [release notes](rn/rn1.1.md) for more details.
+> This is a minor update with additional web browser support.
+>
+Please see the [release notes](rn/rn1.1.md) for more details.
 
-* Additional web browser support
+* **ADDED** Additional web browser support
 
 ***
 
 ## Version 1.0
 
+> This is the initial release of DVN.
+>
 > Please see the [release notes](rn/rn1.0.md) for more details.
-
-* Initial release of DVN.
 
 <br/>
 
