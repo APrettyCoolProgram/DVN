@@ -4,24 +4,23 @@
 
 </div>
 
-System.Management.Automation.CommandNotFoundException
-  HResult=0x80131501
-  Message=The term 'irm get.scoop.sh -outfile 'v:\install.ps1'' is not recognized as a name of a cmdlet, function, script file, or executable program.
-Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
-  Source=System.Management.Automation
-  StackTrace:
-   at System.Management.Automation.Runspaces.PipelineBase.Invoke(IEnumerable input)
-   at System.Management.Automation.Runspaces.Pipeline.Invoke()
-   at System.Management.Automation.PowerShell.Worker.ConstructPipelineAndDoWork(Runspace rs, Boolean performSyncInvoke)
-   at System.Management.Automation.PowerShell.Worker.CreateRunspaceIfNeededAndDoWork(Runspace rsToUse, Boolean isSync)
-   at System.Management.Automation.PowerShell.CoreInvokeHelper[TInput,TOutput](PSDataCollection`1 input, PSDataCollection`1 output, PSInvocationSettings settings)
-   at System.Management.Automation.PowerShell.CoreInvoke[TInput,TOutput](PSDataCollection`1 input, PSDataCollection`1 output, PSInvocationSettings settings)
-   at System.Management.Automation.PowerShell.CoreInvoke[TOutput](IEnumerable input, PSDataCollection`1 output, PSInvocationSettings settings)
-   at System.Management.Automation.PowerShell.Invoke(IEnumerable input, PSInvocationSettings settings)
-   at System.Management.Automation.PowerShell.Invoke()
-   at dvn.Scooper.Install.Scoop(String drive) in D:\Repositories\GitHub\APrettyCoolProgram\dvn\src\Scooper\Install.cs:line 22
-   at dvn.Program.Main(String[] args) in D:\Repositories\GitHub\APrettyCoolProgram\dvn\src\Program.cs:line 20
-
+* **NEW** Basic Scoop.sh integration
+* **NEW** Display version number is displayed when DVN is executed
+* **ADDED** `Ns:dvn.Core.CommandLine`
+* **ADDED** `Ns:dvn.Core.Resources`
+* **CHANGED** `dvn.Core.Arguments.cs` -> `dvn.Core.CommandLine.Arguments.cs`
+* **CHANGED** `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
+* **CHANGED** `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
+* **CHANGED** `lst_` prefix -> `Lst` in `dvn.Core.Resources.UsrMsg.cs`
+* **CHANGED** `msg_` prefix -> `Msg` in `dvn.Core.Resources.UsrMsg.cs`
+* **CHANGED** `AppConfig.LoadFromLocalFile()` -> `AppConfig.Load()`
+* **CHANGED** Text formatting in `dvn.Core.Resources.UsrMsg.cs`
+* **UPDATED** Target framework from `.NET 9` to `.NET 10`
+* **UPDATED** XML documentation
+* **UPDATED** `Du.DuJson.cs` from `b250801` to `b260909`
+* **REMOVED** `Ns:dvn.Blueprint`
+* **REMOVED** `dvn.Core.Framework.cs`
+* **REMOVED** `List` command
 
 
 

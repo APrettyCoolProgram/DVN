@@ -1,6 +1,7 @@
 ﻿// 250801_code
 // 260617_documentation
 
+using dvn.Core.CommandLine;
 using dvn.Core.Resources;
 using dvn.Manifest;
 
@@ -26,8 +27,8 @@ internal class AppState
     /// <summary>The <see cref="Core.AppConfig"/> instance.</summary>
     internal AppConfig AppConfig { get; set; }
 
-    /// <summary>The <see cref="Core.CommandLine"/> component.</summary>
-    internal CommandLine CommandLine { get; set; }
+    /// <summary>The <see cref="Core.CommandLine.CmdLn"/> component.</summary>
+    internal CmdLn CmdLine { get; set; }
 
     /// <summary>A list of the available environment names and descriptions.</summary>
     internal Dictionary<string, string> AvailableEnvironments { get; set; }
@@ -43,7 +44,7 @@ internal class AppState
 
         AppConfig.Load(@".\dvn.config");
 
-        if (Arguments.DoExist(passedArguments))
+        if (CommandLine.Arguments.DoExist(passedArguments))
         {
             InitializeNew(passedArguments);
         }
@@ -59,7 +60,7 @@ internal class AppState
     {
         var dvnSession = new AppState
         {
-            CommandLine = CommandLine.GetComponents(passedArguments),
+            CmdLine = CmdLn.GetComponents(passedArguments),
         };
 
         Arguments.ParseCommand(dvnSession);

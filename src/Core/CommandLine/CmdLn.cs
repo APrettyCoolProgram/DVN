@@ -1,7 +1,7 @@
 ﻿// 260910_code
 // 260910_documentation
 
-namespace dvn.Core;
+namespace dvn.Core.CommandLine;
 
 /// <summary>Represents parsed <c>dvn</c> command-line input.</summary>
 /// <remarks>
@@ -9,7 +9,7 @@ namespace dvn.Core;
 /// <br/>
 /// Example: <c>"dvn myEnvironment -b"</c>
 /// </remarks>
-internal class CommandLine
+internal class CmdLn
 {
     /// <summary>The dvn  command.</summary>
     /// <remarks>There can only be one command, and it is always the first argument.</remarks>
@@ -32,9 +32,9 @@ internal class CommandLine
 
     /// <summary>Parses the specified command-line arguments into a <see cref="CommandLine"/> object.</summary>
     /// <param name="passedArguments">The arguments passed via the command line.</param>
-    /// <returns>A <see cref="CommandLine"/> object containing the parsed command and, potentially, options.</returns>
-    internal static CommandLine GetComponents(string[] passedArguments) =>
-        new CommandLine()
+    /// <returns>A <see cref="CmdLn"/> object containing the parsed command and, potentially, options.</returns>
+    internal static CmdLn GetComponents(string[] passedArguments) =>
+        new CmdLn()
         {
             Command = passedArguments[0].ToLower().Trim(),
             Options = passedArguments.Length < 2

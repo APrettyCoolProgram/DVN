@@ -8,7 +8,7 @@ namespace dvn.Core.CommandLine;
 
 /// <summary>Methods for handling and processing arguments passed via the <see cref="CommandLine"/>.</summary>
 /// <remarks>
-/// Valid <see cref="CommandLine.Command"> commands</see>:
+/// Valid <see cref="CommandLine.CmdLn"> commands</see>:
 /// <list type="bullet">
 /// <item><c>%environment%</c> - Loads or creates a <c>%environment%.dvn.manifest</c> file.</item>
 /// <item><c>about</c> - Displays information about dvn.</item>
@@ -38,7 +38,7 @@ internal static class Arguments
     /// <param name="dvnSession">The <see cref="App.Session"/> instance.</param>
     internal static void ParseCommand(AppState dvnSession)
     {
-        switch (dvnSession.CommandLine.Command)
+        switch (dvnSession.CmdLine.Command)
         {
             case "about":
                 Console.WriteLine(UsrMsg.MsgAbout);
