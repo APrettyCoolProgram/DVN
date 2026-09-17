@@ -8,16 +8,18 @@
 
 </div>
 
-| CONTENTS |
-|----------|
-| [This release](#this-release) |
-| [Known Issues](#known-issues) |
-| [Miscellaneous](#miscellaneous) |
+| CONTENTS                                  |
+|:------------------------------------------|
+| [About this release](#about-this-release) |
+| [Known Issues](#known-issues)             |
+| [Miscellaneous](#miscellaneous)           |
 
 ***
-# This release
+# About this release
 
 This is the initial release of DVN.
+
+[Download DVN 1.0](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.0)
 
 ## Added
 
