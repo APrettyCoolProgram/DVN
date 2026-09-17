@@ -1,11 +1,10 @@
-﻿// 250806_code
-// 260617_documentation
+﻿// 260917_code
+// 260917_documentation
 
-using dvn.Core;
 using dvn.Core.Resources;
 using dvn.Du;
 
-namespace dvn.Manifest;
+namespace dvn.Core.Manifest;
 
 /// <summary>Logic for development environments.</summary>
 internal class DvnEnvironment

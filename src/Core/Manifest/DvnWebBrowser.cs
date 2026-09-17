@@ -1,9 +1,9 @@
-﻿// 250806_code
-// 260617_documentation
+﻿// 260917_code
+// 260917_documentation
 
 using System.Diagnostics;
 
-namespace dvn.Manifest;
+namespace dvn.Core.Manifest;
 
 /// <summary>Represents browser page configuration for a dvn manifest.</summary>
 internal class DvnWebBrowser

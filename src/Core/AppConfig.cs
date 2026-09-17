@@ -1,5 +1,5 @@
-﻿// 260910_code
-// 260910_documentation
+﻿// 260917_code
+// 260917_documentation
 
 using dvn.Core.Resources;
 
@@ -17,6 +17,9 @@ namespace dvn.Core;
 /// </remarks>
 internal class AppConfig
 {
+    /// <summary>The path to the manifest folder.</summary>
+    public string ManifestPath { get; set; } = @".\manifest";
+
     /// <summary>The file extension used for manifest files.</summary>
     public string ManifestExtension { get; set; } = ".dvn";
 

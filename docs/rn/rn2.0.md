@@ -27,6 +27,7 @@ Please note that **DVN** 2.0 is not compatible with **DVN** 1.x.
 I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
 * `dvn.exe`
 * `dvn.config`
+* `manifest/`
 
 ## Removal of `list` command
 

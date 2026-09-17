@@ -1,9 +1,9 @@
-﻿// 250801_code
-// 260617_documentation
+﻿// 260917_code
+// 260917_documentation
 
 using dvn.Core.CommandLine;
+using dvn.Core.Manifest;
 using dvn.Core.Resources;
-using dvn.Manifest;
 
 namespace dvn.Core;
 
@@ -27,15 +27,15 @@ internal class AppState
     /// <summary>The <see cref="Core.AppConfig"/> instance.</summary>
     internal AppConfig AppConfig { get; set; }
 
-    /// <summary>The <see cref="Core.CommandLine.CmdLn"/> component.</summary>
-    internal CmdLn CmdLine { get; set; }
+    /// <summary>The <see cref="Core.CommandLine.Arguments"/> component.</summary>
+    internal Arguments Arguments { get; set; }
 
     /// <summary>A list of the available environment names and descriptions.</summary>
     internal Dictionary<string, string> AvailableEnvironments { get; set; }
 
     /// <summary>Starts a new dvn session.</summary>
     /// <remarks>The <c>".\.dvn"</c> folder is hard-coded here, since the dvn framework hasn't been initialized yet.</remarks>
-    /// <param name="passedArguments">The dvn <see cref="CommandLine.CommandLine"/> arguments passed to dvn.</param>
+    /// <param name="passedArguments">The dvn <see cref="CommandLine.Arguments"/> arguments passed to dvn.</param>
     internal static void Start(string[] passedArguments)
     {
         Console.Clear();
@@ -44,7 +44,7 @@ internal class AppState
 
         AppConfig.Load(@".\dvn.config");
 
-        if (CommandLine.Arguments.DoExist(passedArguments))
+        if (Arguments.DoExist(passedArguments))
         {
             InitializeNew(passedArguments);
         }
@@ -58,12 +58,12 @@ internal class AppState
     /// <param name="passedArguments">The dvn <see cref="CommandLine.CommandLine"/> arguments passed to dvn.</param>
     internal static void InitializeNew(string[] passedArguments)
     {
-        var dvnSession = new AppState
+        var appState = new AppState
         {
-            CmdLine = CmdLn.GetComponents(passedArguments),
+            Arguments = Arguments.GetComponents(passedArguments),
         };
 
-        Arguments.ParseCommand(dvnSession);
+        Arguments.Parse(appState);
     }
 
     /// <summary>Terminates the application with an optional exit message.</summary>
