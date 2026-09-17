@@ -34,9 +34,11 @@ This release focuses on:
 
 What this is.
 
-* **`ADDED`** Namespace: `dvn.Core.Resources`
-* **`ADDED`** Namespace: `dvn.Core.CommandLine`
-* **`ADDED`** Display version number when DVN is executed
+### Other additions
+
+**`ADDED`** Namespace: `dvn.Core.Resources`  
+**`ADDED`** Namespace: `dvn.Core.CommandLine`  
+**`ADDED`** Display version number when DVN is executed  
 
 # Updates
 
