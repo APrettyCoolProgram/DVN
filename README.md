@@ -13,7 +13,7 @@
 
 </div>
 
----
+***
 
 <h4 align="center">
 
@@ -21,7 +21,13 @@
 
 </h4>
 
----
+***
+
+| CONTENTS |
+|:--------|
+| [About DVN](#about-dvn) |
+| [The DVN manual](#the-dvn-manual) |
+| [License](#license) |
 
 # About DVN
 
