@@ -6,8 +6,6 @@
 
   <h2>Version 1.3 Release notes</h2>
 
-  <h6>Release Date: June 6, 2024</h6>
-
 </div>
 
 | CONTENTS                                  |
@@ -22,18 +20,16 @@
 
 # Summary
 
-DVN 1.3 was release on June 6, 2024.
+* Release date: June 6, 2024
+* [Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
+* [Manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
 This release focuses on:
-
 
 * Basic Scoop integration
 * Quality of life additions
 * Code refactors
 * .NET framework upgrade
-
-[Download DVN 1.3](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)  
-[DVN 1.3 manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
 # New features
 
