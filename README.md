@@ -9,7 +9,7 @@
 
   ![RELEASE](https://img.shields.io/badge/version-1.3-teal)&nbsp;
   ![LICENSE](https://img.shields.io/badge/license-apache-blue)&nbsp;
-  ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)&nbsp;
+  ![Platform](https://img.shields.io/badge/platform-windows-lightgrey)&nbsp;
 
 </div>
 
@@ -61,7 +61,7 @@ For more information about **DVN**, including detailed usage instructions, pleas
 
 # License
 
-Copyright &copy; 2026 [A Pretty Cool Program](https://github.com/APrettyCoolProgram)
+Copyright &copy; 2026 [A Pretty Cool Program](https://github.com/APrettyCoolProgram)  
 Distributed under the [Apache 2.0 License](LICENSE)  
 
 ---
