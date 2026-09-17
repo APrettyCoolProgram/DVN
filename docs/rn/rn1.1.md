@@ -8,18 +8,17 @@
 
 </div>
 
-> [!NOTE]
-> DVN 1.1 is [available for download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.1).
-
-| CONTENTS |
-|----------|
-| [This release](#this-release) |
-| [Known Issues](#known-issues) |
-| [Miscellaneous](#miscellaneous) |
+| CONTENTS                                  |
+|:------------------------------------------|
+| [About this release](#about-this-release) |
+| [Known Issues](#known-issues)             |
+| [Miscellaneous](#miscellaneous)           |
 
 ***
 
-## This release
+## About this release
+
+[Download DVN 1.1](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.1)
 
 This release of DVN includes additional web browser support.
 
