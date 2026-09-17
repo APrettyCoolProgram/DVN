@@ -1,7 +1,17 @@
+❰ [DVN](../README.md) ❬ Troubleshooting
+
 <div align="center">
 
-  <h1>DVN: Troubleshooting</h1>
+  <img src="../.github/logo/dvn-Logo-384x184.png" alt="DVN">
+
+  <h1>Troubleshooting</h1>
 
 </div>
 
-<sub>Last updated:260617</sub>
+Nothing to see here.
+
+<br/>
+
+***
+
+❰ [DVN](../README.md) ❬ Troubleshooting

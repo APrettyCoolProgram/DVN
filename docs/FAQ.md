@@ -1,7 +1,17 @@
+❰ [DVN](../README.md) ❬ FAQ
+
 <div align="center">
 
-  <h1>DVN: Frequently Asked Questions</h1>
+  <img src="../.github/logo/dvn-Logo-384x184.png" alt="DVN">
+
+  <h1>Frequently Asked Questions</h1>
 
 </div>
 
-<sub>Last updated:260617</sub>
+<br/>
+
+Nothing to see here.
+
+***
+
+❰ [DVN](../README.md) ❬ FAQ
