@@ -26,7 +26,7 @@ This release focuses on:
 * Framework updates
 * Updated target .NET framework
 
-[Download DVN 1.3](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
+[Download DVN 1.3](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)  
 [DVN 1.3 manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
 ## Added
