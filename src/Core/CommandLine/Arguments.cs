@@ -66,6 +66,11 @@ internal class Arguments
                 Console.WriteLine(UsrMsg.MsgHelp);
                 break;
 
+            case "list":
+                var environmentList = DvnEnvironment.GetEnvironmentDetails(appState.AppConfig.ManifestPath, appState.AppConfig.ManifestExtension);
+                DvnEnvironment.DisplayAvailable(environmentList);
+                break;
+
             default:
                 DvnEnvironment.LoadFromManifest(appState);
                 break;

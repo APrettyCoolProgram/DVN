@@ -29,10 +29,6 @@ I've decided that I want DVN to focus on just managing environments, not handlin
 * `dvn.config`
 * `manifest/`
 
-## Removal of `list` command
-
-The `list` command has been removed in **DVN** 2.0 as part of the framework simplification.
-
 <br/>
 
 ***

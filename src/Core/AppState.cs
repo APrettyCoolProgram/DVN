@@ -9,18 +9,18 @@ namespace dvn.Core;
 
 /// <summary>Session logic.</summary>
 /// <remarks>
-///     A <c>session</c> is a single instance of dvn.<br/>
-///     <br/>
-///     When dvn is executed, a <i>Session instance</i> is created, which contains all the necessary
-///     components that dvn needs to do its job, including:
-///     <list type="bullet">
-///         <item>The dvn <see cref="App.Configuration">configuration</see></item>
-///         <item>The <see cref="App.CommandLine">arguments</see> passed to dvn</item>
-///         <item>The dvn <see cref="App.Framework">framework</see> information</item>
-///         <item>The list of available <see cref="DvnEnvironment">environments</see></item>
-///     </list>
-///     <br/>
-///     When dvn is closed, the <i>Session instance</i> is disposed of.
+/// A <c>session</c> is a single instance of DVN.<br/>
+/// <br/>
+/// When DVN is executed, a <i>Session instance</i> is created, which contains all the necessary components that DVN
+/// needs to do its job, including:
+/// <list type="bullet">
+/// <item>The DVN <see cref="App.Configuration">configuration</see></item>
+/// <item>The <see cref="App.CommandLine">arguments</see> passed to DVN</item>
+/// <item>The DVN <see cref="App.Framework">framework</see> information</item>
+/// <item>The list of available <see cref="DvnEnvironment">environments</see></item>
+/// </list>
+/// <br/>
+/// When DVN is closed, the <i>Session instance</i> is disposed of.
 /// </remarks>
 internal class AppState
 {
@@ -33,9 +33,9 @@ internal class AppState
     /// <summary>A list of the available environment names and descriptions.</summary>
     internal Dictionary<string, string> AvailableEnvironments { get; set; }
 
-    /// <summary>Starts a new dvn session.</summary>
-    /// <remarks>The <c>".\.dvn"</c> folder is hard-coded here, since the dvn framework hasn't been initialized yet.</remarks>
-    /// <param name="passedArguments">The dvn <see cref="CommandLine.Arguments"/> arguments passed to dvn.</param>
+    /// <summary>Starts a new DVN session.</summary>
+    /// <remarks>The <c>".\.dvn"</c> folder is hard-coded here, since the DVN framework hasn't been initialized yet.</remarks>
+    /// <param name="passedArguments">The DVN <see cref="CommandLine.Arguments"/> arguments passed to DVN.</param>
     internal static void Start(string[] passedArguments)
     {
         Console.Clear();
@@ -54,8 +54,8 @@ internal class AppState
         }
     }
 
-    /// <summary>Initializes a new dvn session.</summary>
-    /// <param name="passedArguments">The dvn <see cref="CommandLine.CommandLine"/> arguments passed to dvn.</param>
+    /// <summary>Initializes a new DVN session.</summary>
+    /// <param name="passedArguments">The DVN <see cref="CommandLine.CommandLine"/> arguments passed to DVN.</param>
     internal static void InitializeNew(string[] passedArguments)
     {
         var appState = new AppState

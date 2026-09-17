@@ -125,7 +125,7 @@ internal static class UsrMsg
     /// <summary>The message that displays the list of available environments.</summary>
     /// <param name="environmentList">The list of available environments.</param>
     /// <returns>The available environments message.</returns>
-    public static string msg_EnvList(string environmentList) =>
+    public static string MsgEnvList(string environmentList) =>
        $"""
            ----------------
              Environments

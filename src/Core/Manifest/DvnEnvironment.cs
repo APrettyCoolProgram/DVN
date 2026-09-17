@@ -57,11 +57,11 @@ internal class DvnEnvironment
     {
         if (availableEnvironments.Count == 0)
         {
-            AppState.Stop(UsrMsg.msg_EnvList("No environments found."));
+            AppState.Stop(UsrMsg.MsgEnvList("No environments found."));
         }
         else
         {
-            Console.WriteLine(UsrMsg.msg_EnvList(DuDictionary.ConvertToString(availableEnvironments, "    ", "")));
+            Console.WriteLine(UsrMsg.MsgEnvList(DuDictionary.ConvertToString(availableEnvironments, "    ", "")));
         }
     }
 
