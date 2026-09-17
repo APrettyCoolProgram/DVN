@@ -6,19 +6,26 @@
 
   <h2>Version 1.3 Release notes</h2>
 
+  <h6>Release Date: June 6, 2024</h6>
+
 </div>
 
 | CONTENTS                                  |
 |:------------------------------------------|
-| [About this release](#about-this-release) |
-| [Known Issues](#known-issues)             |
+| [Summary](#summary) |
+| [New features](#new-features)             |
+| [Bug fixes](#bug-fixes) |
+| [Known issues](#known-issues) |
 | [Miscellaneous](#miscellaneous)           |
 
 ***
 
-# About this release
+# Summary
+
+DVN 1.3 was release on June 6, 2024.
 
 This release focuses on:
+
 
 * Basic Scoop integration
 * Quality of life additions
@@ -34,13 +41,9 @@ This release focuses on:
 
 What this is.
 
-### Other additions
+# Bug fixes
 
-**`ADDED`** Namespace: `dvn.Core.Resources`  
-**`ADDED`** Namespace: `dvn.Core.CommandLine`  
-**`ADDED`** Display version number when DVN is executed  
-
-# Updates
+# Known issues
 
 None.
 
@@ -84,11 +87,17 @@ None.
 
 # Miscellaneous
 
-
-* **`CHANGED`** Text formatting in `dvn.Core.Resources.UsrMsg.cs`
-* **`UPDATED`** Update from target framework from .NET 9 to .NET 10
-* **`UPDATED`** Update XML documentation
-* **`UPDATED`** `Du.DuJson.cs` from `b250801` to `b260909`
+**`ADDED`** Namespace: `dvn.Core.Resources`  
+**`ADDED`** Namespace: `dvn.Core.CommandLine`  
+**`ADDED`** Display version number when DVN is executed  
+**`FIXED`**  
+**`CHANGED`** Text formatting in `dvn.Core.Resources.UsrMsg.cs`
+**`UPDATED`** Update from target framework from .NET 9 to .NET 10
+**`UPDATED`** Update XML documentation
+**`UPDATED`** `Du.DuJson.cs` from `b250801` to `b260909`
+**`DEPRECIATED`**  
+**`REMOVED`**  
+**`SECURITY`**
 
 
 
