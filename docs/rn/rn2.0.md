@@ -22,95 +22,13 @@ Please note that **DVN** 2.0 is not compatible with **DVN** 1.x.
 
 ## Scoop.sh integration
 
-**DVN** now has basic integration with [Scoop.sh](https://scoop.sh/)    x cvbnm,
+**DVN** now has basic integration with [Scoop.sh](https://scoop.sh/).
 
-## Console input changes
-
-* Added `Ns:dvn.Core.CommandLine`
-* Renamed `dvn.Core.Arguments.cs` -> `dvn.Core.CommandLine.Arguments.cs`
-
-## Console output changes
-
-**DVN** now displays the version number when it is executed.
-
-* Added `Ns:dvn.Core.Resources`
-* Renamed `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
-* Renamed `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
-* Renamed `lst_` prefix -> `Lst` in dvn.Core.Resources.UsrMsg.cs
-* Renamed `msg_` prefix -> `Msg` in dvn.Core.Resources.UsrMsg.cs  
-* Updated text formatting in dvn.Core.Resources.UsrMsg.cs
-
-
-
-
-
-**CHANGED** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
-
-
-
-
-
-
-# Breaking changes
-
-
-
-# Bug fixes
-
-None.
-
-# Known issues
-
-None.
-
-# Miscellaneous
-
-* Variables:
-
-# Fixed
-
-None.
-
-# Removed
-
-## **`.dvn/`**
+## Framework simplification
 
 I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
 * `dvn.exe`
 * `dvn.config`
-
-**`dvn.Core.Framework.cs`**  
-  This file has been removed as part of the simplification of the DVN framework.
-
-* **`list` command**  
-  DVN now stores environment information per-project, so the `list` command has been removed.
-
-* **`REMOVED`**  `Ns:dvn.Blueprint`
-* **`REMOVED`**  `dvn.Core.Framework.cs`
-
-# Known issues
-
-None.
-
-# Miscellaneous
-
-
-## Added
-
-
-
-**`UPDATED`** Update from target framework from .NET 9 to .NET 10
-**`UPDATED`** Update XML documentation
-**`UPDATED`** `Du.DuJson.cs` from `b250801` to `b260909`
-**`DEPRECIATED`**  
-**`REMOVED`**  
-**`SECURITY`**
-
-
-
-# Repository
-
-* Updated to the current release of [Repsitory-Template](https://github.com/APrettyCoolProgram/Repository-Template).
 
 <br/>
 
