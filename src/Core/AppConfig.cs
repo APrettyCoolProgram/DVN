@@ -7,7 +7,7 @@ namespace dvn.Core;
 
 /// <summary>Provides logic for DVN configuration settings.</summary>
 /// <remarks>
-/// The <see cref="Configuration"/> class defines the structure of the DVN configuration file.
+/// The <see cref="AppConfig"/> class defines the structure of the DVN configuration file.
 /// It includes:
 /// <list type="bullet">
 /// <item><see cref="ManifestExtension"/> used for DVN manifest files.</item>
@@ -15,7 +15,7 @@ namespace dvn.Core;
 /// <item><see cref="ExcludedFolders"/> excluded during backup operations.</item>
 /// </list>
 /// </remarks>
-internal class Configuration
+internal class AppConfig
 {
     /// <summary>The file extension used for manifest files.</summary>
     public string ManifestExtension { get; set; } = ".dvn";
@@ -32,21 +32,23 @@ internal class Configuration
     /// The newly created file is then loaded.
     /// </remarks>
     /// <param name="configFile">The path to the DVN configuration file.</param>
-    /// <returns>A <see cref="Configuration"/> object representing the DVN configuration.</returns>
-    internal static Configuration LoadFromFile(string configFile)
+    /// <returns>A <see cref="AppConfig"/> object representing the DVN configuration.</returns>
+    internal static AppConfig Load(string configFile)
     {
         if (!File.Exists(configFile))
         {
             Build(configFile);
+
+            Console.WriteLine(UsrMsg.MsgCreateConfig());
         }
 
-        return Du.DuJson.ImportFromLocalFile<Configuration>(configFile);
+        return Du.DuJson.ImportFromLocalFile<AppConfig>(configFile);
     }
 
     /// <summary>Creates a new DVN configuration file using default settings at the specified path.</summary>
     /// <param name="configFile">The file path where the DVN configuration will be created.</param>
     internal static void Build(string configFile)
     {
-        Du.DuJson.ExportToLocalFile<Configuration>(new Configuration(), $@"{configFile}");
+        Du.DuJson.ExportToLocalFile<AppConfig>(new AppConfig(), $@"{configFile}");
     }
 }

@@ -54,6 +54,6 @@ internal class DvnManifest
 
         Console.WriteLine(UsrMsg.MsgCreateManifest(manifestName));
 
-        Session.Stop();
+        AppState.Stop();
     }
 }

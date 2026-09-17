@@ -36,7 +36,7 @@ internal static class Arguments
     /// </list>
     /// </remarks>
     /// <param name="dvnSession">The <see cref="App.Session"/> instance.</param>
-    internal static void ParseCommand(Session dvnSession)
+    internal static void ParseCommand(AppState dvnSession)
     {
         switch (dvnSession.CommandLine.Command)
         {

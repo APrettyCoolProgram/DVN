@@ -24,13 +24,13 @@ internal class Framework
     /// <summary>Verifies that the DVN framework exists.</summary>
     /// <remarks>If the DVN framework does not exist, it will be created.</remarks>
     /// <param name="frameworkBase">The base path for the DVN framework.</param>
-    internal static void VerifyExists(string frameworkBase)
-    {
-        if (!Directory.Exists(frameworkBase))
-        {
-            CreateNew();
-        }
-    }
+    //internal static void VerifyExists(string frameworkBase)
+    //{
+    //    if (!Directory.Exists(frameworkBase))
+    //    {
+    //        CreateNew();
+    //    }
+    //}
 
     private static void CreateNew()
     {
@@ -40,7 +40,7 @@ internal class Framework
 
         Validate(dvnFramework);
 
-        Session.Stop();
+        AppState.Stop();
     }
 
     /// <summary>Constructs and returns a new instance of the <see cref="Framework"/> class.</summary>
@@ -71,13 +71,7 @@ internal class Framework
     {
         return new Dictionary<string, string>
         {
-            { "Root"         , @".\" },
-            { "Backups"      , @".\.dvn\bckp" },
-            { "Configs"      , @".\.dvn\cnfg" },
-            { "Manifests"    , @".\.dvn\mnfst" },
-            { "Staging"      , @".\.dvn\stg" },
-            { "Temporary"    , @".\.dvn\tmp" },
-            { "Trash"        , @".\.dvn\trsh" },
+            { "Config"      , @".\.dvn\cnfg" },
         };
     }
 
@@ -106,7 +100,7 @@ internal class Framework
     {
         if (!File.Exists(files["ConfigFile"]))
         {
-            Configuration.CreateNew(files["ConfigFile"]);
+            //AppConfig.CreateNew(files["ConfigFile"]);
         }
     }
 

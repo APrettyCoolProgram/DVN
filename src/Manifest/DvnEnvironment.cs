@@ -58,7 +58,7 @@ internal class DvnEnvironment
     {
         if (availableEnvironments.Count == 0)
         {
-            Session.Stop(UsrMsg.msg_EnvList("No environments found."));
+            AppState.Stop(UsrMsg.msg_EnvList("No environments found."));
         }
         else
         {
@@ -69,19 +69,19 @@ internal class DvnEnvironment
     /// <summary>Loads an environment manifest file.</summary>
     /// <remarks>If the specified manifest file does not exist, a new manifest file is created.</remarks>
     /// <param name="dvnSession">The session instance.</param>
-    internal static void LoadFromManifest(Session dvnSession)
+    internal static void LoadFromManifest(AppState dvnSession)
     {
-        if (File.Exists($@"{dvnSession.Framework.RequiredFolders["Manifests"]}\{dvnSession.CommandLine.Command}{dvnSession.Configuration.ManifestExtension}"))
+        if (File.Exists($@"{dvnSession.Framework.RequiredFolders["Manifests"]}\{dvnSession.CommandLine.Command}{dvnSession.AppConfig.ManifestExtension}"))
         {
-            Launch(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.Configuration.ManifestExtension,
-                   dvnSession.Framework.RequiredFolders["Staging"], dvnSession.CommandLine.Options, dvnSession.Configuration.ExcludedFiles,
-                   dvnSession.Configuration.ExcludedFolders);
+            Launch(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.AppConfig.ManifestExtension,
+                   dvnSession.Framework.RequiredFolders["Staging"], dvnSession.CommandLine.Options, dvnSession.AppConfig.ExcludedFiles,
+                   dvnSession.AppConfig.ExcludedFolders);
         }
         else
         {
-            DvnManifest.CreateDefault(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.Configuration.ManifestExtension);
+            DvnManifest.CreateDefault(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.CommandLine.Command, dvnSession.AppConfig.ManifestExtension);
 
-            Session.Stop();
+            AppState.Stop();
         }
     }
 
@@ -111,6 +111,6 @@ internal class DvnEnvironment
         DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
         DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
 
-        Session.Stop(UsrMsg.MsgExit());
+        AppState.Stop(UsrMsg.MsgExit());
     }
 }

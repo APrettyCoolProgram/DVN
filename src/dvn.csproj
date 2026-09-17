@@ -12,6 +12,7 @@
     <PublishTrimmed>False</PublishTrimmed>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <DocumentationFile>.\AppData\XMLDoc\generated.xml</DocumentationFile>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
   </PropertyGroup>
 
 </Project>

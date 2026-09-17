@@ -58,6 +58,16 @@ internal static class UsrMsg
         {MsgExit()}
      """;
 
+    /// <summary>The message displayed when creating a new DVN configuration file.</summary>
+    /// <returns>The new configuration file message.</returns>
+    public static string MsgCreateConfig() =>
+    $"""
+        The DVN configuration file did not exist, so a default
+        configuration file was created.
+
+     """;
+
+
     /// <summary>The help message.</summary>
     public static string MsgHelp =>
     $"""

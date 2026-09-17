@@ -21,10 +21,10 @@ namespace dvn.Core;
 ///     <br/>
 ///     When dvn is closed, the <i>Session instance</i> is disposed of.
 /// </remarks>
-internal class Session
+internal class AppState
 {
-    /// <summary>The <see cref="Core.Configuration"/> instance.</summary>
-    internal Configuration Configuration { get; set; }
+    /// <summary>The <see cref="Core.AppConfig"/> instance.</summary>
+    internal AppConfig AppConfig { get; set; }
 
     /// <summary>The <see cref="Core.CommandLine"/> component.</summary>
     internal CommandLine CommandLine { get; set; }
@@ -44,7 +44,7 @@ internal class Session
 
         Console.WriteLine(UsrMsg.MsgStart);
 
-        Framework.VerifyExists(@".\.dvn");
+        AppConfig.Load(@".\dvn.config");
 
         if (Arguments.DoExist(passedArguments))
         {
@@ -60,16 +60,16 @@ internal class Session
     /// <param name="passedArguments">The dvn <see cref="CommandLine.CommandLine"/> arguments passed to dvn.</param>
     internal static void InitializeNew(string[] passedArguments)
     {
-        var dvnSession = new Session
+        var dvnSession = new AppState
         {
             CommandLine = CommandLine.GetComponents(passedArguments),
             Framework   = Framework.Build()
         };
 
-        dvnSession.Configuration         = Configuration.LoadFromFile(dvnSession.Framework.RequiredFiles["ConfigFile"]);
-        dvnSession.AvailableEnvironments = DvnEnvironment.GetEnvironmentDetails(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.Configuration.ManifestExtension);
+        dvnSession.AppConfig         = AppConfig.Load(dvnSession.Framework.RequiredFiles["ConfigFile"]);
+        dvnSession.AvailableEnvironments = DvnEnvironment.GetEnvironmentDetails(dvnSession.Framework.RequiredFolders["Manifests"], dvnSession.AppConfig.ManifestExtension);
 
-        Framework.Validate(dvnSession.Framework);
+        //Framework.Validate(dvnSession.Framework);
 
         Arguments.ParseCommand(dvnSession);
     }

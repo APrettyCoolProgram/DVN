@@ -34,24 +34,27 @@ This release focuses on:
   What this is.
 
 * **Version number is now displayed**  
-  What this is
+  The version number is now displayed when running **DVN**.
 
-* **`dvn.Core.Resources` namespace**  
-  Which is the new standard location for blueprints, catalogs, etc.
+* **`Ns:dvn.Core.Resources`**  
+  This is the standard location for blueprints, catalogs, etc.
 
 ## Changed
-
-* Moved the following files from `Ns:dvn.Blueprint` to `Ns:dvn.Core.Resources`:
-  * `Catalog.cs`
-  * `UserMessage.cs` (renamed to `UsrMsg.cs`)
-
-* Changed the following method prefixes so they conform to the new naming conventions:
-  * `lst_` to `Lst` in `dvn.Core.Resources.UsrMsg.cs`
-  * `msg_` to `Msg` in `dvn.Core.Resources.UsrMsg.cs`
 
 * Updated `Du.DuJson.cs` from `b250801` to `b260909`
 
 * Cleaned up the text formatting in `dvn.Core.Resources.UsrMsg.cs`
+
+* Classes:
+  * `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
+  * `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
+
+* Methods:
+  * `AppConfig.LoadFromLocalFile()` -> `AppConfig.Load()`
+
+* Variables:
+  * `lst_` to `Lst` in `dvn.Core.Resources.UsrMsg.cs`
+  * `msg_` to `Msg` in `dvn.Core.Resources.UsrMsg.cs`
 
 ## Fixed
 
@@ -59,11 +62,17 @@ None.
 
 ## Removed
 
-None.
+* **`Ns:dvn.Blueprint`**  
+  This is the standard location for blueprints, catalogs, etc.
+
+* **Simplified the DVN framework**  
+  I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
+  * `dvn.exe`
+  * `dvn.config`
 
 # Known issues
 
-Please see the [Known issues](../) documentation.
+None.
 
 # Miscellaneous
 
