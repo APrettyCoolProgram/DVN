@@ -1,18 +1,15 @@
+❰ [DVN](../../README.md) ❬ Development
+
 <div align="center">
 
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="../../.github/logo/dark/repository-logo.jpg">
-    <source media="(prefers-color-scheme: light)" srcset="../../.github/logo/light/repository-logo.jpg">
-    <img alt="Fallback image description" src="../../.github/logo/light/repository-logo.jpg">
-  </picture>
+  <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  <h1>Sourcecode Documentation</h1>
+  <h2>Development</h2>
 
 </div>
 
+<br/>
+
 ***
 
-* [Class](class/README.md)
-* [Namespace](namespace/README.md)
-
-<!-- R26.6 -->
+❰ [DVN](../../README.md) ❬ Development
