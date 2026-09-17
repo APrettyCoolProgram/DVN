@@ -8,26 +8,15 @@
 
 </div>
 
-## Version 2.0 - 2026-9-17
+# Version 2.0 - 2026-9-17
 
-> This is a major update that introduces several new features and improvements.
+> This is a major update that focuses on simplifying the framework and integrating basic Scoop.sh functionality.
 >
 > Please see the [release notes](rn/rn2.0.md) for more details.
 
+**`NEW`** Basic Scoop.sh integration  
+**`NEW`** Display version number is displayed when DVN is executed  
 
-
-**NEW** Basic Scoop integration  
-**NEW** Display version number when DVN is executed  
-**ADDED** `Ns:dvn.Core.Resources`  
-**ADDED** Ns:dvn.Core.Resources  
-**[  ADDED]** Ns:dvn.Core.CommandLine  
-**[CHANGED]** dvn.Blueprint.Catalog.cs -> dvn.Core.Resources.Catalog.cs  
-**CHANGED** dvn.Blueprint.UserMessage.cs -> dvn.Core.Resources.UsrMsg.cs  
-**CHANGED** dvn.Core.Arguments.cs -> dvn.Core.CommandLine.Arguments.cs  
-**CHANGED** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
-**CHANGED** The `lst_` prefix -> `Lst` in dvn.Core.Resources.UsrMsg.cs  
-**CHANGED** The `msg_` prefix -> `Msg` in dvn.Core.Resources.UsrMsg.cs  
-**CHANGED** Text formatting in dvn.Core.Resources.UsrMsg.cs  
 
 
 ***

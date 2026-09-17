@@ -15,13 +15,14 @@
 | [Breaking changes](#breaking-changes) |
 | [Bug fixes](#bug-fixes)               |
 | [Known issues](#known-issues)         |
+| [Other changes](#other-changes)       |
 | [Miscellaneous](#miscellaneous)       |
 
 ***
 
 # Summary
 
-* Release date: June 6, 2024
+* Release date: 2026-9-17
 * [Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
 * [Manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
@@ -29,8 +30,10 @@
 
 # New features
 
-* **Scoop.sh**  
+* Scoop.sh   
   Basic integration with [Scoop](https://scoop.sh/) for easier installation and management of DVN.
+
+* Display version number is displayed when DVN is executed  
 
 # Breaking changes
 
@@ -45,9 +48,6 @@ None.
 None.
 
 # Miscellaneous
-
-## Changes from the **DVN** 1.x codebase
-
 
 
 * Variables:
@@ -80,7 +80,18 @@ None.
 # Miscellaneous
 
 
-**`FIXED`**  
+## Added
+**ADDED** `Ns:dvn.Core.Resources`  
+**ADDED** Ns:dvn.Core.Resources  
+**[  ADDED]** Ns:dvn.Core.CommandLine  
+**[CHANGED]** dvn.Blueprint.Catalog.cs -> dvn.Core.Resources.Catalog.cs  
+**CHANGED** dvn.Blueprint.UserMessage.cs -> dvn.Core.Resources.UsrMsg.cs  
+**CHANGED** dvn.Core.Arguments.cs -> dvn.Core.CommandLine.Arguments.cs  
+**CHANGED** AppConfig.LoadFromLocalFile() -> AppConfig.Load()  
+**CHANGED** The `lst_` prefix -> `Lst` in dvn.Core.Resources.UsrMsg.cs  
+**CHANGED** The `msg_` prefix -> `Msg` in dvn.Core.Resources.UsrMsg.cs  
+**CHANGED** Text formatting in dvn.Core.Resources.UsrMsg.cs  
+
 
 **`UPDATED`** Update from target framework from .NET 9 to .NET 10
 **`UPDATED`** Update XML documentation
