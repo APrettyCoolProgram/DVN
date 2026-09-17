@@ -20,11 +20,10 @@
 
 This release focuses on:
 
-* Added basic Scoop integration
-* Various quality of life additions
-* Various code refactors
-* Framework updates
-* Updated target .NET framework
+* Basic Scoop integration
+* Quality of life additions
+* Code refactors
+* .NET framework upgrade
 
 [Download DVN 1.3](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)  
 [DVN 1.3 manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)

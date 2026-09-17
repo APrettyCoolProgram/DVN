@@ -8,11 +8,10 @@
 
 > Please see the [release notes](rn/rn1.3.md) for more details.
 
-* Basic [Scoop](https://scoop.sh/) support
+* Basic Scoop integration
 * Quality of life additions
-* Update to .NET 10
 * Code refactors
-* Framework updates
+* .NET framework upgrade
 
 ***
 
