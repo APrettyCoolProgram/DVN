@@ -8,8 +8,6 @@
 
 </div>
 
-***
-
 * Release date: 2026-9-17
 * [Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)
 * [Manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
