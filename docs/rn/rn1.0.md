@@ -4,7 +4,7 @@
 
   <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  <h2>Version 1.0 Release notes</h2>
+  <h1>Version 1.0 Release notes</h1>
 
 </div>
 
@@ -13,12 +13,6 @@
 
 ***
 
-<div align="center">
-
-  [This release](#this-release)&nbsp;&bull;&nbsp;[Known Issues](#known-issues)&nbsp;&bull;&nbsp;[Miscellaneous](#miscellaneous)
-
-</div>
-
 | CONTENTS |
 |----------|
 | [This release](#this-release) |
@@ -26,31 +20,31 @@
 | [Miscellaneous](#miscellaneous) |
 
 ***
-## This release
+# This release
 
 This is the initial release of DVN.
 
-### Added
+## Added
 
 None.
 
-### Changed
+## Changed
 
 None.
 
-### Fixed
+## Fixed
 
 None.
 
-### Removed
+## Removed
 
 None.
 
-## Known issues
+# Known issues
 
 None.
 
-## Miscellaneous
+# Miscellaneous
 
 None.
 
