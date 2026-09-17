@@ -1,4 +1,4 @@
-❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 1.0
+❰ [DVN](../../README.md) ❬ Manual
 
 <div align="center">
 
@@ -276,4 +276,4 @@ $ dvn help
 
 ***
 
-❰ [DVN](../../README.md) ❬ [Release notes](./README.md) ❬ Version 1.0
+❰ [DVN](../../README.md) ❬ Manual
