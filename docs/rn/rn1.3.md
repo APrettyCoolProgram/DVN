@@ -28,11 +28,15 @@ This release focuses on:
 [Download DVN 1.3](https://github.com/APrettyCoolProgram/DVN/releases/tag/v1.3)  
 [DVN 1.3 manual](https://github.com/APrettyCoolProgram/DVN/tree/1.3/docs/man)
 
-# Added
+# New features
 
-## `NEW` Scoop integration
+## Scoop integration
 
 What this is.
+
+* **`ADDED`** Namespace: `dvn.Core.Resources`
+* **`ADDED`** Namespace: `dvn.Core.CommandLine`
+* **`ADDED`** Display version number when DVN is executed
 
 # Updates
 
@@ -78,9 +82,7 @@ None.
 
 # Miscellaneous
 
-* **`NEW`** Namespace: `dvn.Core.Resources`
-* **`NEW`** Namespace: `dvn.Core.CommandLine`
-* **`NEW`** Display version number when DVN is executed
+
 * **`CHANGED`** Text formatting in `dvn.Core.Resources.UsrMsg.cs`
 * **`UPDATED`** Update from target framework from .NET 9 to .NET 10
 * **`UPDATED`** Update XML documentation
