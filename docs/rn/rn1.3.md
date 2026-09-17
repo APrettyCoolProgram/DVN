@@ -34,23 +34,22 @@ This release focuses on:
 
 What this is.
 
-### Other additions
+## Updates
 
-
+None.
 
 ## Changes
 
-* Classes:
-  * `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
-  * `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
-  * `dvn.Core.Arguments.cs` -> `dvn.Core.CommandLine.Arguments.cs`
+* `dvn.Blueprint.Catalog.cs` -> `dvn.Core.Resources.Catalog.cs`
+* `dvn.Blueprint.UserMessage.cs` -> `dvn.Core.Resources.UsrMsg.cs`
+* `dvn.Core.Arguments.cs` -> `dvn.Core.CommandLine.Arguments.cs`
 
 * Methods:
-  * `AppConfig.LoadFromLocalFile()` -> `AppConfig.Load()`
+* `AppConfig.LoadFromLocalFile()` -> `AppConfig.Load()`
 
 * Variables:
-  * `lst_` to `Lst` in `dvn.Core.Resources.UsrMsg.cs`
-  * `msg_` to `Msg` in `dvn.Core.Resources.UsrMsg.cs`
+* `lst_` to `Lst` in `dvn.Core.Resources.UsrMsg.cs`
+* `msg_` to `Msg` in `dvn.Core.Resources.UsrMsg.cs`
 
 ## Fixed
 
@@ -58,16 +57,20 @@ None.
 
 ## Removed
 
-* **.dvn/**  
-  I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
-  * `dvn.exe`
-  * `dvn.config`
+### **`.dvn/`**
 
-* **`dvn.Core.Framework.cs`**  
+I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
+* `dvn.exe`
+* `dvn.config`
+
+**`dvn.Core.Framework.cs`**  
   This file has been removed as part of the simplification of the DVN framework.
 
 * **`list` command**  
   DVN now stores environment information per-project, so the `list` command has been removed.
+
+* **`REMOVED`**  `Ns:dvn.Blueprint`
+* **`REMOVED`**  `dvn.Core.Framework.cs`
 
 # Known issues
 
@@ -78,12 +81,11 @@ None.
 * **`NEW`** Namespace: `dvn.Core.Resources`
 * **`NEW`** Namespace: `dvn.Core.CommandLine`
 * **`NEW`** Display version number when DVN is executed
+* **`CHANGED`** Text formatting in `dvn.Core.Resources.UsrMsg.cs`
 * **`UPDATED`** Update from target framework from .NET 9 to .NET 10
 * **`UPDATED`** Update XML documentation
 * **`UPDATED`** `Du.DuJson.cs` from `b250801` to `b260909`
-* **`UPDATED`** Text formatting in `dvn.Core.Resources.UsrMsg.cs`
-* **`REMOVED`**  `Ns:dvn.Blueprint`
-* **`REMOVED`**  `dvn.Core.Framework.cs`
+
 
 
 # Repository
