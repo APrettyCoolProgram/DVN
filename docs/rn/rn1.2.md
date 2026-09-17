@@ -13,11 +13,15 @@
 >
 > Please see the DVN [manual](../man/README.md) for more information.
 
+***
+
 | CONTENTS |
 |----------|
 | [This release](#this-release) |
 | [Known Issues](#known-issues) |
 | [Miscellaneous](#miscellaneous) |
+
+***
 
 ## This release
 
