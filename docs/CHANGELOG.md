@@ -8,7 +8,10 @@
 
 </div>
 
-## Version 2.0 - 2026-9-17
+## Version 2.0 - 2026-10-DD
+
+> [!IMPORTANT]
+> dvn 2.0 will only work on Windows operating systems; MacOS/Linux support will return in a future update.
 
 > This is a major update that focuses on simplifying the framework and integrating basic Scoop.sh functionality.
 >
