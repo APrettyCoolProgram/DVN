@@ -8,7 +8,7 @@
 
 Release date: 2026-10-DD
 [Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v2.0)  
-[Manual](https://github.com/APrettyCoolProgram/DVN/tree/main/docs/man)
+[Manual](../man/README.md)
 
 </div>
 
