@@ -10,12 +10,12 @@
 
 ## Version 2.0 - 2026-10-DD
 
-> [!IMPORTANT]
-> dvn 2.0 will only work on Windows operating systems; MacOS/Linux support will return in a future update.
-
 > This is a major update that focuses on simplifying the framework and integrating basic Scoop.sh functionality.
 >
 > Please see the [release notes](rn/rn2.0.md) for more details.
+
+> [!IMPORTANT]
+> DVN2.0 will only work on Windows operating systems; MacOS/Linux support will return in a future update.
 
 * **NEW** Basic Scoop.sh integration
 * **NEW** Display version number is displayed when DVN is executed
