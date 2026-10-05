@@ -1,13 +1,13 @@
-﻿// 260917_code
-// 260917_documentation
+﻿// 261005_code
+// 261005_documentation
 
 using dvn.Core.Manifest;
 using dvn.Core.Resources;
 
-namespace dvn.Core.CommandLine;
+namespace dvn.Core;
 
 /// <summary>Methods for handling and processing arguments passed via the command line.</summary>
-internal class Arguments
+internal class AppArgument
 {
     /// <summary>The DVN command.</summary>
     /// <remarks>There can only be one command, and it is always the first argument.</remarks>
@@ -28,22 +28,19 @@ internal class Arguments
     /// <value>The parsed options.</value>
     internal List<string> Options { get; set; }
 
-    /// <summary>Determines whether any arguments were passed via the command line.</summary>
-    /// <param name="passedArguments">Passed arguments.</param>
-    /// <returns><see langword="true"/> if one or more arguments were provided; otherwise, <see langword="false"/>.</returns>
-    internal static bool DoExist(string[] passedArguments) => passedArguments != null && passedArguments.Length != 0;
-
     /// <summary>Parses the specified command-line arguments into a <see cref="CommandLine"/> object.</summary>
     /// <param name="passedArguments">The arguments passed via the command line.</param>
-    /// <returns>A <see cref="Arguments"/> object containing the parsed command and, potentially, options.</returns>
-    internal static Arguments GetComponents(string[] passedArguments) =>
-    new()
+    /// <returns>A <see cref="AppArgument"/> object containing the parsed command and, potentially, options.</returns>
+    internal static AppArgument GetComponents(string[] passedArguments)
     {
-        Command = passedArguments[0].ToLower().Trim(),
-        Options = passedArguments.Length < 2
-                    ? []
-                    : [.. passedArguments[1..].Select(arg => arg.ToLower().Trim())]
-    };
+        return new AppArgument
+        {
+            Command = passedArguments[0].ToLower().Trim(),
+            Options = passedArguments.Length >= 2
+                        ? [.. passedArguments[1..].Select(arg => arg.ToLower().Trim())]
+                        : []
+        };
+    }
 
     /// <summary>Parses the command component of the arguments passed via the command-line.</summary>
     /// <remarks>
@@ -53,10 +50,10 @@ internal class Arguments
     /// <item>If a <c>"%command%.dvn"</c> file does not exist, create it with default values.</item>
     /// </list>
     /// </remarks>
-    /// <param name="appState">The <see cref="AppState"/> instance.</param>
+    /// <param name="appState">The <see cref="ApplicationState"/> instance.</param>
     internal static void Parse(AppState appState)
     {
-        switch (appState.Arguments.Command)
+        switch (appState.AppArgs.Command)
         {
             case "about":
                 Console.WriteLine(UsrMsg.MsgAbout);

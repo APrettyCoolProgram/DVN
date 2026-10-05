@@ -1,69 +1,57 @@
-﻿// 260917_code
-// 260917_documentation
+﻿// 261005_code
+// 261005_documentation
 
-using dvn.Core.CommandLine;
-using dvn.Core.Manifest;
 using dvn.Core.Resources;
 
 namespace dvn.Core;
 
-/// <summary>Session logic.</summary>
+/// <summary>AppState logic.</summary>
 /// <remarks>
-/// A <c>session</c> is a single instance of DVN.<br/>
+/// Each time DVN is executed, a new <i>session</i> is initialized.<br/>
 /// <br/>
-/// When DVN is executed, a <i>Session instance</i> is created, which contains all the necessary components that DVN
-/// needs to do its job, including:
+/// The <c>AppState</c> instance contains all of the information that a DVN <i>session</i> needs to do its job, including:
 /// <list type="bullet">
-/// <item>The DVN <see cref="App.Configuration">configuration</see></item>
-/// <item>The <see cref="App.CommandLine">arguments</see> passed to DVN</item>
-/// <item>The DVN <see cref="App.Framework">framework</see> information</item>
-/// <item>The list of available <see cref="DvnEnvironment">environments</see></item>
+/// <item>The DVN <see cref="AppConfig">configuration</see></item>
+/// <item>The <see cref="AppArgs">arguments</see> passed to DVN</item>
+/// <item>The list of available DVN <see cref="AvailableEnvironments">environments</see></item>
 /// </list>
 /// <br/>
-/// When DVN is closed, the <i>Session instance</i> is disposed of.
+/// When DVN exits, the session ends and the <c>AppState</c> instance is disposed of.
 /// </remarks>
 internal class AppState
 {
     /// <summary>The <see cref="Core.AppConfig"/> instance.</summary>
-    internal AppConfig AppConfig { get; set; }
+    /// <remarks>
+    /// The <c>AppConfig</c> contains the configuration settings, and is loaded from the <c>".\.dvn\dvn.config"</c> file.
+    /// </remarks>
+    internal AppConfiguration AppConfig { get; set; }
 
-    /// <summary>The <see cref="Core.CommandLine.Arguments"/> component.</summary>
-    internal Arguments Arguments { get; set; }
+    /// <summary>The <see cref="Core.AppArgument"/> component.</summary>
+    /// <remarks>
+    /// The <c>AppArguments</c> component contains the command and options passed to DVN via the command line.
+    /// </remarks>
+    internal AppArgument AppArgs { get; set; }
 
     /// <summary>A list of the available environment names and descriptions.</summary>
-    internal Dictionary<string, string> AvailableEnvironments { get; set; }
+    internal Dictionary<string, string> DvnEnvs { get; set; }
 
     /// <summary>Starts a new DVN session.</summary>
     /// <remarks>The <c>".\.dvn"</c> folder is hard-coded here, since the DVN framework hasn't been initialized yet.</remarks>
-    /// <param name="passedArguments">The DVN <see cref="CommandLine.Arguments"/> arguments passed to DVN.</param>
+    /// <param name="passedArguments">The DVN <see cref="AppArgument"/> arguments passed to DVN.</param>
     internal static void Start(string[] passedArguments)
     {
         Console.Clear();
 
         Console.WriteLine(UsrMsg.MsgStart);
 
-        AppConfig.Load(@".\dvn.config");
-
-        if (Arguments.DoExist(passedArguments))
-        {
-            InitializeNew(passedArguments);
-        }
-        else
+        if (passedArguments == null || passedArguments.Length == 0)
         {
             Stop(UsrMsg.MsgMissingArguments);
         }
-    }
-
-    /// <summary>Initializes a new DVN session.</summary>
-    /// <param name="passedArguments">The DVN <see cref="CommandLine.CommandLine"/> arguments passed to DVN.</param>
-    internal static void InitializeNew(string[] passedArguments)
-    {
-        var appState = new AppState
+        else
         {
-            Arguments = Arguments.GetComponents(passedArguments),
-        };
-
-        Arguments.Parse(appState);
+            NewSession(passedArguments);
+        }
     }
 
     /// <summary>Terminates the application with an optional exit message.</summary>
@@ -74,4 +62,18 @@ internal class AppState
 
         Environment.Exit(0);
     }
+
+    private static void NewSession(string[] passedArguments)
+    {
+        var appState = new AppState
+        {
+            AppConfig = AppConfiguration.Load(@".\dvn.config"),
+            AppArgs   = AppArgument.GetComponents(passedArguments),
+            DvnEnvs   = [] // TODO
+        };
+
+        AppArgument.Parse(appState);
+    }
+
+
 }

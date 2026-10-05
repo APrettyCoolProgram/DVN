@@ -6,7 +6,7 @@
 
   <h2>Version 2.0 Release notes</h2>
 
-Release date: 2026-10-DD
+Release date: 2026-10-DD  
 [Download](https://github.com/APrettyCoolProgram/DVN/releases/tag/v2.0)  
 [Manual](../man/README.md)
 
@@ -28,9 +28,17 @@ Release date: 2026-10-DD
 ## Framework simplification
 
 I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
+
 * `dvn.exe`
 * `dvn.config`
 * `manifest/`
+
+## Miscellaneous
+
+* Minor refactoring to improve code readability and maintainability
+* Added `AppData/` folder
+* Added `AppData/XMLDoc` folder for storing XML documentation files
+* Added `AppData/XMLDoc/NsDoc.xml` file for storing XML documentation for namespaces
 
 <br/>
 

@@ -4,7 +4,6 @@
 
 </div>
 
-
 * Fix the "line" spelling mistake in the info display
 * Open remote sessions
 
