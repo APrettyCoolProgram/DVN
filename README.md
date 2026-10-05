@@ -1,13 +1,10 @@
-<!--
-  260910_code
-  260617_documentation
--->
+<!-- 261005 -->
 
 <div align="center">
 
   <img src="./.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  ![RELEASE](https://img.shields.io/badge/version-1.3-teal)&nbsp;
+  ![RELEASE](https://img.shields.io/badge/version-2.0-teal)&nbsp;
   ![LICENSE](https://img.shields.io/badge/license-apache-blue)&nbsp;
   ![Platform](https://img.shields.io/badge/platform-windows-lightgrey)&nbsp;
 
