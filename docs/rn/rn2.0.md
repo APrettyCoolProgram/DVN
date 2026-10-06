@@ -41,7 +41,6 @@ I've decided to simplify the configuration system by hardcoding the `ManifestPat
 
 ## Miscellaneous
 
-* Configuration file is created even if arguments are not passed
 * Minor refactoring to improve code readability and maintainability
 * Added `AppData/` folder
 * Added `AppData/XMLDoc` folder for storing XML documentation files

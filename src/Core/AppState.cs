@@ -13,7 +13,7 @@ namespace dvn.Core;
 /// <list type="bullet">
 /// <item>The DVN <see cref="AppConfig">configuration</see></item>
 /// <item>The <see cref="AppArgs">arguments</see> passed to DVN</item>
-/// <item>The list of available DVN <see cref="AvailableEnvironments">environments</see></item>
+/// <item>The list of available DVN <see cref="DvnEnvs">environments</see></item>
 /// </list>
 /// <br/>
 /// When DVN exits, the session ends and the <c>AppState</c> instance is disposed of.
@@ -35,11 +35,7 @@ internal class AppState
     /// <summary>A list of the available environment names and descriptions.</summary>
     internal Dictionary<string, string>? DvnEnvs { get; set; }
 
-    private static AppConfiguration? _appConfig;
-
-    /// <summary>Starts a new DVN session.</summary>
-    /// <remarks>
-    /// </remarks>
+    /// <summary>Starts the DVN application.</summary>
     /// <param name="passedArguments">The DVN <see cref="AppArgument"/> arguments passed to DVN.</param>
     internal static void Start(string[] passedArguments)
     {
@@ -47,15 +43,13 @@ internal class AppState
 
         Console.WriteLine(UsrMsg.MsgStart);
 
-        _appConfig = AppConfiguration.Load(@".\dvn.config");
-
         if (passedArguments == null || passedArguments.Length == 0)
         {
             Stop(UsrMsg.MsgMissingArguments);
         }
         else
         {
-            NewSession(passedArguments, _appConfig);
+            NewSession(passedArguments);
         }
     }
 
@@ -71,8 +65,10 @@ internal class AppState
     /// <summary>Initializes a new DVN session by loading the configuration, parsing the arguments, and setting up the available environments.</summary>
     /// <param name="passedArguments">The DVN <see cref="AppArgument"/> arguments passed to DVN.</param>
     /// <param name="appConfig">The DVN <see cref="AppConfiguration"/> configuration.</param>
-    private static void NewSession(string[] passedArguments, AppConfiguration appConfig)
+    private static void NewSession(string[] passedArguments)
     {
+        var appConfig = AppConfiguration.Load(@".\dvn.config");
+
         if (appConfig.ScoopEnabled)
         {
             AppExtension.Scoop();
