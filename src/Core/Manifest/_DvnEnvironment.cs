@@ -7,49 +7,49 @@ using dvn.Du;
 namespace dvn.Core.Manifest;
 
 /// <summary>Logic for development environments.</summary>
-internal class DvnEnvironment
+internal class _DvnEnvironment
 {
-    /// <summary>The environment name.</summary>
-    public string Name { get; set; }
+    /////// <summary>The environment name.</summary>
+    ////public string Name { get; set; }
 
-    /// <summary>The environment description.</summary>
-    public string Description { get; set; }
+    /////// <summary>The environment description.</summary>
+    ////public string Description { get; set; }
 
-    /// <summary>Indicates whether data should be backed up.</summary>
-    public bool BackupEnabled { get; set; }
+    /////// <summary>Indicates whether data should be backed up.</summary>
+    ////public bool BackupEnabled { get; set; }
 
-    /// <summary>The source directories to back up.</summary>
-    public List<string> BackupSources { get; set; }
+    /////// <summary>The source directories to back up.</summary>
+    ////public List<string> BackupSources { get; set; }
 
-    /// <summary>The destination path for backups.</summary>
-    public string BackupLocation { get; set; }
+    /////// <summary>The destination path for backups.</summary>
+    ////public string BackupLocation { get; set; }
 
     /// <summary>Gets the details for the available development environments.</summary>
     /// <remarks>
     ///     The details we are interested in are:
     ///     <list type="bullet">
-    ///         <item>The environment <see cref="DvnManifest.EnvironmentName">name</see></item>
-    ///         <item>The environment <see cref="DvnManifest.EnvironmentDescription">description</see></item>
+    ///         <item>The environment <see cref="_DvnManifest.EnvironmentName">name</see></item>
+    ///         <item>The environment <see cref="_DvnManifest.EnvironmentDescription">description</see></item>
     ///     </list>
     /// </remarks>
     /// <param name="manifestFolder">The folder that contains the dvn manifest files.</param>
     /// <param name="manifestExtension">The file extension used for manifest files.</param>
     /// <returns>The names and descriptions of available environments.</returns>
-    internal static Dictionary<string, string> GetEnvironmentDetails(string manifestFolder, string manifestExtension)
-    {
-        var manifestFiles = Directory.GetFiles(manifestFolder, $"*{manifestExtension}", SearchOption.AllDirectories);
+    ////internal static Dictionary<string, string> GetEnvironmentDetails(string manifestFolder, string manifestExtension)
+    ////{
+    ////    var manifestFiles = Directory.GetFiles(manifestFolder, $"*{manifestExtension}", SearchOption.AllDirectories);
 
-        Dictionary<string, string> environmentDetails = [];
+    ////    Dictionary<string, string> environmentDetails = [];
 
-        foreach (var manifestFile in manifestFiles)
-        {
-            DvnManifest manifest = DuJson.ImportFromLocalFile<DvnManifest>(manifestFile);
+    ////    foreach (var manifestFile in manifestFiles)
+    ////    {
+    ////        DvnManifest manifest = DuJson.ImportFromLocalFile<DvnManifest>(manifestFile);
 
-            environmentDetails[manifest.DevelopmentEnvironment.Name] = manifest.DevelopmentEnvironment.Description;
-        }
+    ////        environmentDetails[manifest.DevelopmentEnvironment.Name] = manifest.DevelopmentEnvironment.Description;
+    ////    }
 
-        return environmentDetails;
-    }
+    ////    return environmentDetails;
+    ////}
 
     /// <summary>Displays a list of available environments to the console.</summary>
     /// <param name="availableEnvironments">A dictionary containing environment names and descriptions.</param>
@@ -94,21 +94,21 @@ internal class DvnEnvironment
     /// <param name="excludedFolders">A list of folder names to exclude from backup operations.</param>
     internal static void Launch(string manifestFolder, string manifestName, string manifestExtension, string stagingPath, List<string> dvnOptions, List<string> excludedFiles, List<string> excludedFolders)
     {
-        DvnManifest dvnManifest = DuJson.ImportFromLocalFile<DvnManifest>($@"{manifestFolder}\{manifestName}{manifestExtension}");
+        _DvnManifest dvnManifest = DuJson.ImportLocalFile<_DvnManifest>($@"{manifestFolder}\{manifestName}{manifestExtension}");
 
-        Console.WriteLine($"{Environment.NewLine}  Launching environment: {dvnManifest.DevelopmentEnvironment.Description}");
+        //Console.WriteLine($"{Environment.NewLine}  Launching environment: {dvnManifest.DevelopmentEnvironment.Description}");
 
-        if (Archiver.BackupData.IsBackupEnabled(dvnManifest.DevelopmentEnvironment.BackupEnabled, dvnOptions))
-        {
-            Archiver.BackupData.BackupFolders(dvnManifest.DevelopmentEnvironment.BackupSources, dvnManifest.DevelopmentEnvironment.BackupLocation, stagingPath, excludedFiles, excludedFolders);
-        }
-        else
-        {
-            Console.WriteLine("  Data backup functionality is disabled.");
-        }
+        //if (Archiver.BackupData.IsBackupEnabled(dvnManifest.DevelopmentEnvironment.BackupEnabled, dvnOptions))
+        //{
+        //    Archiver.BackupData.BackupFolders(dvnManifest.DevelopmentEnvironment.BackupSources, dvnManifest.DevelopmentEnvironment.BackupLocation, stagingPath, excludedFiles, excludedFolders);
+        //}
+        //else
+        //{
+        //    Console.WriteLine("  Data backup functionality is disabled.");
+        //}
 
-        DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
-        DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
+        //_DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
+        //_DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
 
         AppState.Stop(UsrMsg.MsgExit());
     }

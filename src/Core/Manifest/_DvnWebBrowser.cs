@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace dvn.Core.Manifest;
 
 /// <summary>Represents browser page configuration for a dvn manifest.</summary>
-internal class DvnWebBrowser
+internal class _DvnWebBrowser
 {
     /// <summary>A dictionary containing browser names and their associated pages.</summary>
     /// <remarks>

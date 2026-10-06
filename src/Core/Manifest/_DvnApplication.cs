@@ -6,7 +6,7 @@ using System.Diagnostics;
 namespace dvn.Core.Manifest;
 
 /// <summary>Represents an application defined in a dvn manifest.</summary>
-internal class DvnApplication
+internal class _DvnApplication
 {
     /// <summary>The application name.</summary>
     public string Name { get; set; }
@@ -25,10 +25,10 @@ internal class DvnApplication
 
     /// <summary>Starts each application in the supplied list.</summary>
     /// <remarks>Currently this functionality only works on Windows systems.</remarks>
-    /// <param name="applications">A list of <see cref="DvnApplication"/> instances.</param>
-    internal static void StartApplications(List<DvnApplication> applications)
+    /// <param name="applications">A list of <see cref="_DvnApplication"/> instances.</param>
+    internal static void StartApplications(List<_DvnApplication> applications)
     {
-        foreach (DvnApplication app in applications)
+        foreach (_DvnApplication app in applications)
         {
             if (string.IsNullOrEmpty(app.FileName))
             {

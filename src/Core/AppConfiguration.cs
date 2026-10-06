@@ -9,21 +9,13 @@ namespace dvn.Core;
 /// <remarks>
 /// The <see cref="AppConfiguration"/> class defines the structure of the DVN configuration file, which includes:
 /// <list type="bullet">
-/// <item>The <see cref="ManifestPath"> manifest path</see> used for DVN manifest files.</item>
-/// <item>The <see cref="ManifestExtension"> manifest extension</see> used for DVN manifest files.</item>
 /// <item>The <see cref="ExcludedFiles"> excluded files</see> during backup operations.</item>
 /// <item>The <see cref="ExcludedFolders"> excluded folders</see> during backup operations.</item>
 /// </list>
 /// </remarks>
 internal class AppConfiguration
 {
-    /// <summary>The path to the location of the DVN manifest files.</summary>
-    /// <value>The default path is <c>".\manifest"</c>.</value>
-    public string ManifestPath { get; set; } = @".\manifest";
-
-    /// <summary>The file extension used for manifest files.</summary>
-    /// <value>The default extension is <c>".dvn"</c>.</value>
-    public string ManifestExtension { get; set; } = ".dvn";
+    public bool ScoopEnabled { get; set; } = false;
 
     /// <summary>The list of files that are excluded when backing up data.</summary>
     /// <remarks>
@@ -52,7 +44,7 @@ internal class AppConfiguration
             Console.WriteLine(UsrMsg.MsgCreateConfig());
         }
 
-        return Du.DuJson.ImportFromLocalFile<AppConfiguration>(configFile);
+        return Du.DuJson.ImportLocalFile<AppConfiguration>(configFile);
     }
 
     /// <summary>Creates a new DVN configuration file using default settings at the specified path.</summary>
@@ -62,6 +54,6 @@ internal class AppConfiguration
     /// <param name="configFile">The file path where the DVN configuration will be created.</param>
     internal static void Build(string configFile)
     {
-        Du.DuJson.ExportToLocalFile<AppConfiguration>(new AppConfiguration(), $@"{configFile}");
+        Du.DuJson.ExportLocalFile<AppConfiguration>(new AppConfiguration(), $@"{configFile}");
     }
 }

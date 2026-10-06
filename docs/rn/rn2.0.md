@@ -33,8 +33,13 @@ I've decided that I want DVN to focus on just managing environments, not handlin
 * `dvn.config`
 * `manifest/`
 
+## Configuration simplification
+
+I've decided to simplify the configuration system by hardcoding the `ManifestPath` and `ManifestExtension`, since I can't really think of a reason these would need to be configurable.
+
 ## Miscellaneous
 
+* Configuration file is created even if arguments are not passed
 * Minor refactoring to improve code readability and maintainability
 * Added `AppData/` folder
 * Added `AppData/XMLDoc` folder for storing XML documentation files

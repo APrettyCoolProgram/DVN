@@ -1,0 +1,12 @@
+﻿// 261006_code
+// 261006_documentation
+
+namespace dvn.Core;
+
+internal class AppExtension
+{
+    internal static void Scoop()
+    {
+        Du.DuCmdExe.Run("scoop update *", true);
+    }
+}

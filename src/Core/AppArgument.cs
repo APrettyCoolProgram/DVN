@@ -64,12 +64,12 @@ internal class AppArgument
                 break;
 
             case "list":
-                var environmentList = DvnEnvironment.GetEnvironmentDetails(appState.AppConfig.ManifestPath, appState.AppConfig.ManifestExtension);
-                DvnEnvironment.DisplayAvailable(environmentList);
+                //var environmentList = DvnEnvironment.GetEnvironmentDetails(appState.AppConfig.ManifestPath, appState.AppConfig.ManifestExtension);
+                //DvnEnvironment.DisplayAvailable(environmentList);
                 break;
 
             default:
-                DvnEnvironment.LoadFromManifest(appState);
+                //DvnEnvironment.LoadFromManifest(appState);
                 break;
         }
     }

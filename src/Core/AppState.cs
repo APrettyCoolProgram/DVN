@@ -1,5 +1,5 @@
-﻿// 261005_code
-// 261005_documentation
+﻿// 261006_code
+// 261006_documentation
 
 using dvn.Core.Resources;
 
@@ -24,19 +24,22 @@ internal class AppState
     /// <remarks>
     /// The <c>AppConfig</c> contains the configuration settings, and is loaded from the <c>".\.dvn\dvn.config"</c> file.
     /// </remarks>
-    internal AppConfiguration AppConfig { get; set; }
+    internal AppConfiguration? AppConfig { get; set; }
 
-    /// <summary>The <see cref="Core.AppArgument"/> component.</summary>
+    /// <summary>The <see cref="AppArgument"/> component.</summary>
     /// <remarks>
     /// The <c>AppArguments</c> component contains the command and options passed to DVN via the command line.
     /// </remarks>
-    internal AppArgument AppArgs { get; set; }
+    internal AppArgument? AppArgs { get; set; }
 
     /// <summary>A list of the available environment names and descriptions.</summary>
-    internal Dictionary<string, string> DvnEnvs { get; set; }
+    internal Dictionary<string, string>? DvnEnvs { get; set; }
+
+    private static AppConfiguration? _appConfig;
 
     /// <summary>Starts a new DVN session.</summary>
-    /// <remarks>The <c>".\.dvn"</c> folder is hard-coded here, since the DVN framework hasn't been initialized yet.</remarks>
+    /// <remarks>
+    /// </remarks>
     /// <param name="passedArguments">The DVN <see cref="AppArgument"/> arguments passed to DVN.</param>
     internal static void Start(string[] passedArguments)
     {
@@ -44,13 +47,15 @@ internal class AppState
 
         Console.WriteLine(UsrMsg.MsgStart);
 
+        _appConfig = AppConfiguration.Load(@".\dvn.config");
+
         if (passedArguments == null || passedArguments.Length == 0)
         {
             Stop(UsrMsg.MsgMissingArguments);
         }
         else
         {
-            NewSession(passedArguments);
+            NewSession(passedArguments, _appConfig);
         }
     }
 
@@ -63,17 +68,23 @@ internal class AppState
         Environment.Exit(0);
     }
 
-    private static void NewSession(string[] passedArguments)
+    /// <summary>Initializes a new DVN session by loading the configuration, parsing the arguments, and setting up the available environments.</summary>
+    /// <param name="passedArguments">The DVN <see cref="AppArgument"/> arguments passed to DVN.</param>
+    /// <param name="appConfig">The DVN <see cref="AppConfiguration"/> configuration.</param>
+    private static void NewSession(string[] passedArguments, AppConfiguration appConfig)
     {
+        if (appConfig.ScoopEnabled)
+        {
+            AppExtension.Scoop();
+        }
+
         var appState = new AppState
         {
-            AppConfig = AppConfiguration.Load(@".\dvn.config"),
+            AppConfig = appConfig,
             AppArgs   = AppArgument.GetComponents(passedArguments),
             DvnEnvs   = [] // TODO
         };
 
         AppArgument.Parse(appState);
     }
-
-
 }
