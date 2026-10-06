@@ -3,10 +3,10 @@
 
 namespace dvn.Core;
 
-internal class AppExtension
+internal static class AppExtension
 {
     internal static void Scoop()
     {
-        Du.DuCmdExe.Run("scoop update *", true);
+        Du.DuCmdExe.RunCommand("scoop update *", true);
     }
 }

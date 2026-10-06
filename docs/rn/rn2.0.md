@@ -25,6 +25,8 @@ Release date: 2026-10-DD
 
 **DVN** now has basic integration with [Scoop.sh](https://scoop.sh/).
 
+For now, if the `ScoopEnabled` setting is enabled in the configuration, DVN will update scoop (`scoop update *`) when it runs.
+
 ## Framework simplification
 
 I've decided that I want DVN to focus on just managing environments, not handling other tasks, so I've removed the `.dvn/` framework structure. Now DVN just consists of the following two files:
