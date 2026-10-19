@@ -4,7 +4,7 @@
 
   <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  ![RELEASE](https://img.shields.io/badge/version-1.3-teal)&nbsp;
+  ![RELEASE](https://img.shields.io/badge/version-2.0-teal)&nbsp;
 
   <h1>Manual</h1>
 
@@ -47,13 +47,44 @@ To create the **DVN** framework:
 $ dvn
 ```
 
-Since this is the first time you are executing **DVN**, you will see a message letting you know that the **DVN framework** will be created.
+Since this is the first time you are executing **DVN**, the a default `dvn.config` configuration file will be created, and **DVN** will exit.
 
 # Configuring
 
-The `.\.dvn\configs\dvn.config` file contains the configuration settings for **DVN**.
+The `dvn.config` file contains the configuration settings for **DVN**, and by default looks like this:
 
-Currently this file only contains a list of files and folders that are ignored when the data backup functionality is enabled (to keep file sizes are kept to a minimum), so there isn't much to configure.
+```json
+{
+  "ScoopEnabled": false,
+  "ExcludedFiles": [
+    ".DS_Store",
+    "Thumbs.db",
+    "desktop.ini",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    "npm-shrinkwrap.json"
+  ],
+  "ExcludedFolders": [
+    "node_modules",
+    "bin",
+    "obj",
+    ".git",
+    ".vs",
+    ".vscode",
+    ".idea",
+    "packages"
+  ]
+}
+```
+
+## Scoop integration
+
+If you have Scoop installed, you can enable Scoop integration by setting `"ScoopEnabled": true` in the `dvn.config` file. This allows **DVN** to automatically update Scoop-installed applications whenever it manages your development environments.
+
+## Excluded files and folders
+
+The `ExcludedFiles` and `ExcludedFolders` sections in the `dvn.config` file specify which files and folders should be ignored by **DVN** when performing data backup operations. This helps to keep backup sizes manageable and avoids unnecessary backups of temporary or irrelevant files.
 
 # The manifest file
 
