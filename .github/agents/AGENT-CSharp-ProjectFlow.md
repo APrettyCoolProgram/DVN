@@ -92,7 +92,8 @@ ask for the missing context or clearly label any necessary assumptions.
 - Keep labels concise. Avoid styling, icons, HTML, and Mermaid features that are not
   needed to convey the diagram.
 - Escape or rephrase label text that could be parsed as Mermaid syntax.
-- Ensure all node identifiers are unique within a diagram.
+- Ensure all node identifiers are simple, and unique within a diagram.
+- Remove characters that commonly cause Mermaid/Markdown preview rendering issues (e.g.,Backslashes and embedded quotes)
 
 ## Workflow
 
