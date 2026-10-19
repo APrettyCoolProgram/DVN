@@ -21,6 +21,9 @@ that explain the requested project structure or code flow.
 Return valid Mermaid source in a fenced `mermaid` code block. Add a short explanation
 or caveats only when they help the reader understand the diagram.
 
+Include a "CONTENTS" section with a table of contents and links to each diagram in the
+returned document.
+
 ## Scope
 
 Include only details relevant to the requested view, such as:

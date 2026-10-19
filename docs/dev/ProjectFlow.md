@@ -1,8 +1,23 @@
 # DVN Project Flow
 
 This page documents the current DVN codebase flow with Mermaid diagrams only.
-The diagrams are based on the present source tree and the runtime paths that are
+The diagrams are grounded in the present source tree and the runtime paths that are
 implemented today.
+
+Relevant source files:
+
+- `src/Program.cs`
+- `src/Core/AppState.cs`
+- `src/Core/AppArgument.cs`
+- `src/Core/AppConfiguration.cs`
+- `src/Core/DvnEnvironment.cs`
+- `src/Core/Manifest/_DvnManifest.cs`
+- `src/Core/Manifest/_DvnApplication.cs`
+- `src/Core/Manifest/_DvnWebBrowser.cs`
+- `src/Archiver/BackupData.cs`
+- `src/Du/DuJson.cs`
+- `src/Du/DuDirectory.cs`
+- `src/Du/DuCmdExe.cs`
 
 ## Runtime flow
 
@@ -30,8 +45,8 @@ flowchart TD
 	O --> P{Command}
 	P -- about --> Q[Print about message]
 	P -- help --> R[Print help message]
-	P -- list --> S[Environment listing path]
-	P -- other --> T[Manifest / environment path]
+	P -- list --> S[Stubbed environment listing path]
+	P -- other --> T[Stubbed manifest / environment path]
 
 	Q --> E
 	R --> E
