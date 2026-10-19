@@ -105,15 +105,15 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-	A[DvnEnvironment.GetAvailable] --> B[Scan .\\manifest for *.dvn files]
+	A[DvnEnvironment.GetAvailable] --> B[Scan ./manifest for *.dvn files]
 	B --> C[Build environment name/description map]
 	C --> D[Return Dictionary<string, string>]
 
-	E[_DvnEnvironment.DisplayAvailable] --> F{Any environments?}
-	F -- No --> G[Stop with "No environments found"]
+	E[DvnEnvironment.DisplayAvailable] --> F{Any environments?}
+	F -- No --> G[Stop with No environments found]
 	F -- Yes --> H[Format and print list]
 
-	I[_DvnEnvironment.LoadFromManifest] --> J[Currently commented placeholder]
+	I[DvnEnvironment.LoadFromManifest] --> J[Currently commented placeholder]
 	J --> K[Future: load manifest and launch environment]
 ```
 
