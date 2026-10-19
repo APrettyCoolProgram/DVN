@@ -19,6 +19,17 @@ Relevant source files:
 - `src/Du/DuDirectory.cs`
 - `src/Du/DuCmdExe.cs`
 
+## Contents
+
+- [Runtime flow](#runtime-flow)
+- [Command handling](#command-handling)
+- [Configuration and defaults](#configuration-and-defaults)
+- [Environment and manifest flow](#environment-and-manifest-flow)
+- [Manifest runtime actions](#manifest-runtime-actions)
+- [Backup flow](#backup-flow)
+- [Utility layer](#utility-layer)
+- [Notes](#notes)
+
 ## Runtime flow
 
 ```mermaid
