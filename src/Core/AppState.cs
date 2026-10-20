@@ -1,5 +1,5 @@
-﻿// 261006_code
-// 261006_documentation
+﻿// 261020_code
+// 261020_documentation
 
 using dvn.Core.Resources;
 
@@ -37,7 +37,7 @@ internal class AppState
 
     /// <summary>Starts the DVN application.</summary>
     /// <param name="passedArguments">The DVN <see cref="AppArgument"/> arguments passed to DVN.</param>
-    internal static void Start(string[] passedArguments)
+    internal static void SpinUp(string[] passedArguments)
     {
         Console.Clear();
 
@@ -45,7 +45,7 @@ internal class AppState
 
         if (passedArguments == null || passedArguments.Length == 0)
         {
-            Stop(UsrMsg.MsgMissingArguments);
+            SpinDown(UsrMsg.MsgMissingArguments);
         }
         else
         {
@@ -53,18 +53,6 @@ internal class AppState
         }
     }
 
-    /// <summary>Terminates the application with an optional exit message.</summary>
-    /// <param name="exitMessage">The message to display before the application exits.</param>
-    internal static void Stop(string exitMessage = "")
-    {
-        Console.WriteLine(exitMessage);
-
-        Environment.Exit(0);
-    }
-
-    /// <summary>Initializes a new DVN session by loading the configuration, parsing the arguments, and setting up the available environments.</summary>
-    /// <param name="passedArguments">The DVN <see cref="AppArgument"/> arguments passed to DVN.</param>
-    /// <param name="appConfig">The DVN <see cref="AppConfiguration"/> configuration.</param>
     private static void NewSession(string[] passedArguments)
     {
         var appConfig = AppConfiguration.Load(@".\dvn.config");
@@ -82,5 +70,17 @@ internal class AppState
         };
 
         AppArgument.Parse(appState);
+    }
+
+    /// <summary>Terminates the application with an optional exit message.</summary>
+    /// <param name="exitMessage">The message to display before the application exits.</param>
+    /// <remarks>
+    /// TBD
+    /// </remarks>
+    internal static void SpinDown(string exitMessage = "")
+    {
+        Console.WriteLine(exitMessage);
+
+        Environment.Exit(0);
     }
 }

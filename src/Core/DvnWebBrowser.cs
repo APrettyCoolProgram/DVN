@@ -11,5 +11,4 @@ internal class DvnWebBrowser
     ///     where the keys are page titles and the values are URLs.
     /// </remarks>
     public Dictionary<string, Dictionary<string, string>> BrowserPages { get; set; }
-
 }

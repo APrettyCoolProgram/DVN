@@ -30,16 +30,14 @@ internal class AppArgument
     /// <summary>Parses the specified command-line arguments into a <see cref="CommandLine"/> object.</summary>
     /// <param name="passedArguments">The arguments passed via the command line.</param>
     /// <returns>A <see cref="AppArgument"/> object containing the parsed command and, potentially, options.</returns>
-    internal static AppArgument GetComponents(string[] passedArguments)
-    {
-        return new AppArgument
+    internal static AppArgument GetComponents(string[] passedArguments) =>
+        new()
         {
             Command = passedArguments[0].ToLower().Trim(),
             Options = passedArguments.Length >= 2
                         ? [.. passedArguments[1..].Select(arg => arg.ToLower().Trim())]
                         : []
         };
-    }
 
     /// <summary>Parses the command component of the arguments passed via the command-line.</summary>
     /// <remarks>
@@ -63,9 +61,8 @@ internal class AppArgument
                 break;
 
             case "list":
-                DvnEnvironment.DisplayAvailableNames();
-                //var environmentList = DvnEnvironment.GetEnvironmentDetails(appState.AppConfig.ManifestPath, appState.AppConfig.ManifestExtension);
-                //DvnEnvironment.DisplayAvailable(environmentList);
+                //DvnEnvironment.DisplayAvailableNames(); // TODO - Remove for release
+                DvnEnvironment.DisplayDetails();
                 break;
 
             case "new":

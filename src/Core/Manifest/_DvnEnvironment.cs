@@ -2,69 +2,12 @@
 // 260917_documentation
 
 using dvn.Core.Resources;
-using dvn.Du;
 
 namespace dvn.Core.Manifest;
 
 /// <summary>Logic for development environments.</summary>
 internal class _DvnEnvironment
 {
-    /////// <summary>The environment name.</summary>
-    ////public string Name { get; set; }
-
-    /////// <summary>The environment description.</summary>
-    ////public string Description { get; set; }
-
-    /////// <summary>Indicates whether data should be backed up.</summary>
-    ////public bool BackupEnabled { get; set; }
-
-    /////// <summary>The source directories to back up.</summary>
-    ////public List<string> BackupSources { get; set; }
-
-    /////// <summary>The destination path for backups.</summary>
-    ////public string BackupLocation { get; set; }
-
-    /// <summary>Gets the details for the available development environments.</summary>
-    /// <remarks>
-    ///     The details we are interested in are:
-    ///     <list type="bullet">
-    ///         <item>The environment <see cref="_DvnManifest.EnvironmentName">name</see></item>
-    ///         <item>The environment <see cref="_DvnManifest.EnvironmentDescription">description</see></item>
-    ///     </list>
-    /// </remarks>
-    /// <param name="manifestFolder">The folder that contains the dvn manifest files.</param>
-    /// <param name="manifestExtension">The file extension used for manifest files.</param>
-    /// <returns>The names and descriptions of available environments.</returns>
-    ////internal static Dictionary<string, string> GetEnvironmentDetails(string manifestFolder, string manifestExtension)
-    ////{
-    ////    var manifestFiles = Directory.GetFiles(manifestFolder, $"*{manifestExtension}", SearchOption.AllDirectories);
-
-    ////    Dictionary<string, string> environmentDetails = [];
-
-    ////    foreach (var manifestFile in manifestFiles)
-    ////    {
-    ////        DvnManifest manifest = DuJson.ImportFromLocalFile<DvnManifest>(manifestFile);
-
-    ////        environmentDetails[manifest.DevelopmentEnvironment.Name] = manifest.DevelopmentEnvironment.Description;
-    ////    }
-
-    ////    return environmentDetails;
-    ////}
-
-    /// <summary>Displays a list of available environments to the console.</summary>
-    /// <param name="availableEnvironments">A dictionary containing environment names and descriptions.</param>
-    internal static void DisplayAvailable(Dictionary<string, string> availableEnvironments)
-    {
-        if (availableEnvironments.Count == 0)
-        {
-            AppState.Stop(UsrMsg.MsgEnvList("No environments found."));
-        }
-        else
-        {
-            Console.WriteLine(UsrMsg.MsgEnvList(DuDictionary.ConvertToString(availableEnvironments, "    ", "")));
-        }
-    }
-
     /// <summary>Loads an environment manifest file.</summary>
     /// <remarks>If the specified manifest file does not exist, a new manifest file is created.</remarks>
     /// <param name="dvnSession">The session instance.</param>
@@ -94,7 +37,7 @@ internal class _DvnEnvironment
     /// <param name="excludedFolders">A list of folder names to exclude from backup operations.</param>
     internal static void Launch(string manifestFolder, string manifestName, string manifestExtension, string stagingPath, List<string> dvnOptions, List<string> excludedFiles, List<string> excludedFolders)
     {
-        _DvnManifest dvnManifest = DuJson.ImportLocalFile<_DvnManifest>($@"{manifestFolder}\{manifestName}{manifestExtension}");
+        //_DvnManifest dvnManifest = DuJson.ImportLocalFile<_DvnManifest>($@"{manifestFolder}\{manifestName}{manifestExtension}");
 
         //Console.WriteLine($"{Environment.NewLine}  Launching environment: {dvnManifest.DevelopmentEnvironment.Description}");
 
@@ -110,6 +53,6 @@ internal class _DvnEnvironment
         //_DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
         //_DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
 
-        AppState.Stop(UsrMsg.MsgExit());
+        AppState.SpinDown(UsrMsg.MsgExit());
     }
 }
