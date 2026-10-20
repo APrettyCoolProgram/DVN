@@ -51,7 +51,7 @@ internal static class UsrMsg
     /// <returns>The new manifest message.</returns>
     public static string MsgCreateManifest(string environmentName) =>
     $"""
-        ".dvn/manifest/{environmentName}.dvn" was created, and must be edited manually.
+        "{environmentName}.dvn" was created, and must be edited manually.
 
         For more information, please refer to the documentation:
         https://github.com/APrettyCoolProgram/DVN
@@ -80,6 +80,7 @@ internal static class UsrMsg
         Commands:
 
           %environment%   Start/create a development environment manifest
+          new             Create an empty manifest file for a new environment
           help            Display the DVN help screen
           about           Display information about DVN
 

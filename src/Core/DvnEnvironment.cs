@@ -1,5 +1,8 @@
-﻿// 261006_code
-// 261006_documentation
+﻿// 261020_code
+// 261020_documentation
+
+using dvn.Core.Resources;
+using dvn.Du;
 
 namespace dvn.Core;
 
@@ -20,19 +23,61 @@ internal class DvnEnvironment
     /// <summary>The destination path for backups.</summary>
     public string BackupLocation { get; set; }
 
-    internal static Dictionary<string, string> GetAvailable()
+    internal static string[] GetEnvironmentNames()
     {
-        var manifestList = Directory.GetFiles(@".\manifest", $"*.dvn", SearchOption.AllDirectories);
+        return Directory.GetFiles(".", "*.dvn", SearchOption.TopDirectoryOnly)
+                        .Select(Path.GetFileNameWithoutExtension)
+                        .ToArray();
+    }
 
-        Dictionary<string, string> environmentDetails = [];
+    //internal static Dictionary<string, string> GetAvailableDetails)
+    //{
+    //    //var manifestList = Directory.GetFiles(@".\manifest", $"*.dvn", SearchOption.AllDirectories);
+    //    var manifestList = Directory.GetFiles(".", "*.dvn", SearchOption.TopDirectoryOnly);
 
-        foreach (var manifest in manifestList)
+    //    Dictionary<string, string> environmentDetails = new Dictionary<string, string>();
+
+    //    foreach (var manifest in manifestList)
+    //    {
+    //        DvnManifest manifest = DuJsonSystemTextJson.ImportFromLocalFile<DvnManifest>(manifest);
+
+    //        environmentDetails[manifest.DevelopmentEnvironment.Name] = manifest.DevelopmentEnvironment.Description;
+    //    }
+
+    //    return environmentDetails;
+    //}
+
+    /// <summary>Displays a list of available environment names.</summary>
+    /// <param name="availableNames">An array containing the names of available environments.</param>
+    /// <remarks>
+    /// This is mostly used for development troubleshooting and testing.
+    /// </remarks>
+    internal static void DisplayAvailableNames()
+    {
+        string[] availableNames = GetEnvironmentNames();
+
+        if (availableNames.Length == 0)
         {
-            //DvnManifest manifest = DuJsonSystemTextJson.ImportFromLocalFile<DvnManifest>(manifest);
-
-            //environmentDetails[manifest.DevelopmentEnvironment.Name] = manifest.DevelopmentEnvironment.Description;
+            AppState.Stop(UsrMsg.MsgEnvList("No environments found."));
         }
+        else
+        {
+            Console.WriteLine($"{availableNames.Length} environment(s) found:");
+            Console.WriteLine(string.Join(Environment.NewLine, availableNames));
+        }
+    }
 
-        return environmentDetails;
+    /// <summary>Displays a list of available environments to the console.</summary>
+    /// <param name="availableEnvironments">A dictionary containing environment names and descriptions.</param>
+    internal static void DisplayAvailableDetails(Dictionary<string, string> availableEnvironments)
+    {
+        if (availableEnvironments.Count == 0)
+        {
+            AppState.Stop(UsrMsg.MsgEnvList("No environments found."));
+        }
+        else
+        {
+            Console.WriteLine(UsrMsg.MsgEnvList(DuDictionary.ConvertToString(availableEnvironments, "    ", "")));
+        }
     }
 }

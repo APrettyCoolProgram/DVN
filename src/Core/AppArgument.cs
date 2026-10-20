@@ -1,7 +1,6 @@
 ﻿// 261005_code
 // 261005_documentation
 
-using dvn.Core.Manifest;
 using dvn.Core.Resources;
 
 namespace dvn.Core;
@@ -64,8 +63,13 @@ internal class AppArgument
                 break;
 
             case "list":
+                DvnEnvironment.DisplayAvailableNames();
                 //var environmentList = DvnEnvironment.GetEnvironmentDetails(appState.AppConfig.ManifestPath, appState.AppConfig.ManifestExtension);
                 //DvnEnvironment.DisplayAvailable(environmentList);
+                break;
+
+            case "new":
+                DvnManifest.CreateEmpty();
                 break;
 
             default:
