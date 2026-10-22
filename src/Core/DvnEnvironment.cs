@@ -23,6 +23,29 @@ internal class DvnEnvironment
     /// <summary>The destination path for backups.</summary>
     public string BackupLocation { get; set; }
 
+    //internal static void Launch(string manifestFolder, string manifestName, string manifestExtension, string stagingPath, List<string> dvnOptions, List<string> excludedFiles, List<string> excludedFolders)
+    internal static void Launch(DvnManifest dvnManifest, AppState appState)
+    {
+        //DvnManifest dvnManifest = DuJson.ImportLocalFile<DvnManifest>($@"{manifestFolder}\{manifestName}{manifestExtension}");
+
+        Console.WriteLine($"{Environment.NewLine}  Launching environment: {dvnManifest.DevelopmentEnvironment.Description}");
+
+        if (Archiver.BackupData.IsBackupEnabled(dvnManifest.DevelopmentEnvironment.BackupEnabled, appState.AppArgs.Options))
+        {
+            //Archiver.BackupData.BackupFolders(dvnManifest.DevelopmentEnvironment.BackupSources, dvnManifest.DevelopmentEnvironment.BackupLocation, stagingPath, excludedFiles, excludedFolders);
+        }
+        else
+        {
+            Console.WriteLine("  Data backup functionality is disabled.");
+        }
+
+        DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
+        DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
+
+        AppState.SpinDown(UsrMsg.MsgExit());
+    }
+
+
     /// <summary>Displays a list of available environments to the console.</summary>
     internal static void DisplayDetails()
     {
@@ -34,19 +57,19 @@ internal class DvnEnvironment
         }
         else
         {
-            Console.WriteLine(UsrMsg.MsgEnvList(DuDictionary.ConvertToString(environmentDetails, "    ", "")));
+            Console.WriteLine(UsrMsg.MsgEnvList(DuDictionary.ConvertToString(environmentDetails, "  ", "")));
         }
     }
 
     /// <summary>Get environment details</summary>
     /// <returns>
-    /// TBD
+    /// A dictionary containing environment names as keys and their descriptions as values.
     /// </returns>
     private static Dictionary<string, string> GetDetails()
     {
         var manifestFiles = Directory.GetFiles(".", "*.dvn", SearchOption.TopDirectoryOnly);
 
-        Dictionary<string, string> environmentDetails = new Dictionary<string, string>();
+        Dictionary<string, string> environmentDetails = [];
 
         foreach (var manifestFile in manifestFiles)
         {
@@ -56,33 +79,5 @@ internal class DvnEnvironment
         }
 
         return environmentDetails;
-    }
-
-    // TODO - Remove before release
-    /// <summary>Displays a list of available environment names.</summary>
-    /// <remarks>
-    /// This is mostly used for development troubleshooting and testing.
-    /// </remarks>
-    internal static void DisplayNames()
-    {
-        string[] availableNames = GetNames();
-
-        if (availableNames.Length == 0)
-        {
-            AppState.SpinDown(UsrMsg.MsgEnvList("No environments found."));
-        }
-        else
-        {
-            Console.WriteLine($"{availableNames.Length} environment(s) found:");
-            Console.WriteLine(string.Join(Environment.NewLine, availableNames));
-        }
-    }
-
-    // TODO - Remove before release
-    private static string[] GetNames()
-    {
-        return Directory.GetFiles(".", "*.dvn", SearchOption.TopDirectoryOnly)
-                        .Select(Path.GetFileNameWithoutExtension)
-                        .ToArray();
     }
 }

@@ -14,6 +14,22 @@ internal class DvnManifest
     /// <summary>The web browser configuration for the environment.</summary>
     public DvnWebBrowser? WebBrowser { get; set; }
 
+    internal static void Load(AppState appState)
+    {
+        string manifestPath = $@".\{appState.AppArgs.Command}.dvn";
+
+        if (!File.Exists(manifestPath))
+        {
+            AppState.SpinDown();
+        }
+        else
+        {
+            var dvnManifest = Du.DuJson.ImportLocalFile<DvnManifest>(manifestPath);
+            DvnEnvironment.Launch(dvnManifest, appState);
+
+        }
+    }
+
     /// <summary>Creates a default instance of the <see cref="DvnManifest"/> class.</summary>
     internal static void CreateEmpty()
     {

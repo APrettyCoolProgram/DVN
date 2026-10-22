@@ -21,11 +21,15 @@ Release date: 2026-10-DD
 >
 > **DVN 2.0** will only work on Windows operating systems; MacOS/Linux support will return in a future update.
 
-## Scoop.sh integration
+## Extension library framework
 
-**DVN** now has basic integration with [Scoop.sh](https://scoop.sh/).
+I've added a new `dvn.Extensions` namespace for organizing and managing extension methods and related functionality within the DVN framework.
 
-For now, if the `ScoopEnabled` setting is enabled in the configuration, DVN will update scoop (`scoop update *`) when it runs.
+### New extension: `ScoopSh`
+
+**DVN** now has basic integration with [Scoop.sh](https://scoop.sh/), via the `dvn.Extensions.ScoopSh` extension.
+
+Currently, the `ScoopSh` extension only supports updating Scoop when DVN runs.
 
 ## Framework simplification
 
@@ -38,6 +42,12 @@ I've decided that I want DVN to focus on just managing environments, not handlin
 ## Configuration simplification
 
 I've decided to simplify the configuration system by hardcoding the `ManifestPath` and `ManifestExtension`, since I can't really think of a reason these would need to be configurable.
+
+## Hardcoded values/resources
+
+I've moved a number of values that were previously passed to methods or read from the configuration into hardcoded values within the code. For example, `AppConfiguration.Load()` now directly defines the configuration file path instead of having it passed (e.g., `AppConfiguration.Load("dvn.config")`).
+
+Since these are file paths and other resources that are unlikely to change frequently, I think it makes more sense to have them defined as close where they are used as possible.
 
 ## Miscellaneous
 

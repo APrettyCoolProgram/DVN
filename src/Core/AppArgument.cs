@@ -1,5 +1,5 @@
 ﻿// 261005_code
-// 261005_documentation
+// 261021_documentation
 
 using dvn.Core.Resources;
 
@@ -9,27 +9,33 @@ namespace dvn.Core;
 internal class AppArgument
 {
     /// <summary>The DVN command.</summary>
-    /// <remarks>There can only be one command, and it is always the first argument.</remarks>
-    /// <value>The command portion of the input.</value>
-    internal string Command { get; set; }
-
-    /// <summary>The DVN options.</summary>
     /// <remarks>
-    /// There can be any number of options, but only valid options are processed.<br/>
-    /// <br/>
-    /// Options must:
+    /// The DVN command:
     /// <list type="bullet">
-    /// <item>Be a single character</item>
-    /// <item>Start with the <c>-</c> character</item>
-    /// <item>Be separated by a space</item>
+    /// <item>Is required</item>
+    /// <item>Is the first argument passed via the command line</item>
     /// </list>
     /// </remarks>
-    /// <value>The parsed options.</value>
-    internal List<string> Options { get; set; }
+    /// <value>Examples include <c>about</c>, <c>help</c>, <c>list</c>, and <c>new</c>.</value>
+    public string? Command { get; set; }
 
-    /// <summary>Parses the specified command-line arguments into a <see cref="CommandLine"/> object.</summary>
+    /// <summary>The DVN option(s).</summary>
+    /// <remarks>
+    /// Options must:
+    /// <list type="bullet">
+    /// <item>Start with the "<c>-</c>" character</item>
+    /// <item>Be a single character (e.g. "<c>b</c>")</item>
+    /// <item>Be separated by a space</item>
+    /// </list>
+    /// For example: "dvn %environment% <b><c>-a</c> <c>-b</c></b>" <br/> <br/> There can be any number of options, but
+    /// only valid options are processed.<br/>
+    /// </remarks>
+    /// <value>Examples include <c>-b</c></value>
+    public List<string> Options { get; set; }
+
+    /// <summary>Builds an <see cref="AppArgument"/> instance.</summary>
     /// <param name="passedArguments">The arguments passed via the command line.</param>
-    /// <returns>A <see cref="AppArgument"/> object containing the parsed command and, potentially, options.</returns>
+    /// <returns>An <see cref="AppArgument"/> object containing the parsed command and, potentially, options.</returns>
     internal static AppArgument GetComponents(string[] passedArguments) =>
         new()
         {
@@ -47,7 +53,7 @@ internal class AppArgument
     /// <item>If a <c>"%command%.dvn"</c> file does not exist, create it with default values.</item>
     /// </list>
     /// </remarks>
-    /// <param name="appState">The <see cref="ApplicationState"/> instance.</param>
+    /// <param name="appState">The current <see cref="AppState"/> instance being initialized.</param>
     internal static void Parse(AppState appState)
     {
         switch (appState.AppArgs.Command)
@@ -61,7 +67,6 @@ internal class AppArgument
                 break;
 
             case "list":
-                //DvnEnvironment.DisplayAvailableNames(); // TODO - Remove for release
                 DvnEnvironment.DisplayDetails();
                 break;
 
@@ -70,7 +75,7 @@ internal class AppArgument
                 break;
 
             default:
-                //DvnEnvironment.LoadFromManifest(appState);
+                DvnManifest.Load(appState);
                 break;
         }
     }

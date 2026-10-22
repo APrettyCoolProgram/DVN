@@ -1,42 +1,35 @@
-﻿// 261020_code
-// 261020_documentation
+﻿// 261022_code
+// 261022_documentation
 
 using dvn.Core.Resources;
+using dvn.Extensions;
 
 namespace dvn.Core;
 
-/// <summary>AppState logic.</summary>
+/// <summary>Represents the application runtime state.</summary>
 /// <remarks>
-/// Each time DVN is executed, a new <i>session</i> is initialized.<br/>
-/// <br/>
-/// The <c>AppState</c> instance contains all of the information that a DVN <i>session</i> needs to do its job, including:
+/// The <see cref="AppState"/> class:
 /// <list type="bullet">
-/// <item>The DVN <see cref="AppConfig">configuration</see></item>
-/// <item>The <see cref="AppArgs">arguments</see> passed to DVN</item>
-/// <item>The list of available DVN <see cref="DvnEnvs">environments</see></item>
+/// <item>The information DVN needs to operate (configuration, arguments, and environments)</item>
+/// <item>Starting and stopping the DVN application</item>
+/// <item>Initializing a new DVN session</item>
 /// </list>
-/// <br/>
-/// When DVN exits, the session ends and the <c>AppState</c> instance is disposed of.
 /// </remarks>
 internal class AppState
 {
-    /// <summary>The <see cref="Core.AppConfig"/> instance.</summary>
-    /// <remarks>
-    /// The <c>AppConfig</c> contains the configuration settings, and is loaded from the <c>".\.dvn\dvn.config"</c> file.
-    /// </remarks>
-    internal AppConfiguration? AppConfig { get; set; }
+    /// <summary>The DVN configuration settings.</summary>
+    public AppConfiguration? AppConfig { get; set; }
 
-    /// <summary>The <see cref="AppArgument"/> component.</summary>
-    /// <remarks>
-    /// The <c>AppArguments</c> component contains the command and options passed to DVN via the command line.
-    /// </remarks>
-    internal AppArgument? AppArgs { get; set; }
+    //internal ScoopConfiguration ScoopConfig { get; set; }
 
-    /// <summary>A list of the available environment names and descriptions.</summary>
-    internal Dictionary<string, string>? DvnEnvs { get; set; }
+    /// <summary>The command-line arguments that are passed to DVN at runtime.</summary>
+    public AppArgument? AppArgs { get; set; }
+
+    /// <summary>The existing environment that DVN manages.</summary>
+    public Dictionary<string, string>? DvnEnvs { get; set; }
 
     /// <summary>Starts the DVN application.</summary>
-    /// <param name="passedArguments">The DVN <see cref="AppArgument"/> arguments passed to DVN.</param>
+    /// <param name="passedArguments">The command-line arguments passed to DVN at runtime.</param>
     internal static void SpinUp(string[] passedArguments)
     {
         Console.Clear();
@@ -53,13 +46,15 @@ internal class AppState
         }
     }
 
+    /// <summary>Initializes a new DVN session.</summary>
+    /// <param name="passedArguments">The command-line arguments passed to DVN at runtime.</param>
     private static void NewSession(string[] passedArguments)
     {
-        var appConfig = AppConfiguration.Load(@".\dvn.config");
+        var appConfig = AppConfiguration.Load();
 
-        if (appConfig.ScoopEnabled)
+        if (appConfig.ScoopSh.Enabled)
         {
-            AppExtension.Scoop();
+            ScoopSh.Roundhouse(appConfig.ScoopSh);
         }
 
         var appState = new AppState
@@ -72,10 +67,10 @@ internal class AppState
         AppArgument.Parse(appState);
     }
 
-    /// <summary>Terminates the application with an optional exit message.</summary>
-    /// <param name="exitMessage">The message to display before the application exits.</param>
+    /// <summary>Stops the DVN application.</summary>
+    /// <param name="exitMessage">The message to display before the DVN application exits.</param>
     /// <remarks>
-    /// TBD
+    /// If a custom message is not provided, the default message will be displayed.
     /// </remarks>
     internal static void SpinDown(string exitMessage = "")
     {

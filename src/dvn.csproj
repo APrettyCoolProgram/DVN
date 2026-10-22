@@ -15,4 +15,8 @@
     <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Core\Manifest\" />
+  </ItemGroup>
+
 </Project>

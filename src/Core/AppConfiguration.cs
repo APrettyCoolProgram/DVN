@@ -1,7 +1,8 @@
-﻿// 261005_code
-// 261005_documentation
+// 261022_code
+// 261022_documentation
 
 using dvn.Core.Resources;
+using dvn.Extensions;
 
 namespace dvn.Core;
 
@@ -15,45 +16,50 @@ namespace dvn.Core;
 /// </remarks>
 internal class AppConfiguration
 {
-    public bool ScoopEnabled { get; set; } = false;
-
     /// <summary>The list of files that are excluded when backing up data.</summary>
+    /// <value>The collection of file paths ignored during backup operations.</value>
     /// <remarks>
-    /// When backup operations are performed, the files specified in this list will be ignored and not included in the backup process.
+    /// When backup operations are performed, the files specified in this list will be ignored and not included in the
+    /// backup process.
     /// </remarks>
     public List<string> ExcludedFiles { get; set; } = Catalog.LstIgnoredFiles();
 
     /// <summary>The list of folders that are excluded when backing up data.</summary>
+    /// <value>The collection of folder paths ignored during backup operations.</value>
     /// <remarks>
-    /// When backup operations are performed, the folders specified in this list will be ignored and not included in the backup process.
+    /// When backup operations are performed, the folders specified in this list will be ignored and not included in th
+    /// backup process.
     /// </remarks>
     public List<string> ExcludedFolders { get; set; } = Catalog.LstIgnoredFolders();
 
-    /// <summary>Loads the DVN configuration from a local file.</summary>
+    public ScoopSh ScoopSh { get; set; } = new ScoopSh();
+
+    /// <summary>Loads the DVN configuration from the <c>dvn.config</c> file.</summary>
     /// <remarks>
-    /// If the specified configuration file does not exist, a new configuration file is created with default values.
+    /// If the <c>dvn.config</c> file does not exist, a new configuration file is created with default values.
     /// </remarks>
-    /// <param name="configFile">The path to the DVN configuration file.</param>
-    /// <returns>An <see cref="AppConfiguration"/> object representing the DVN configuration.</returns>
-    internal static AppConfiguration Load(string configFile)
+    /// <returns>
+    /// An <see cref="AppConfiguration"/> instance populated from the file, or the default configuration if the file is
+    /// missing.
+    /// </returns>
+    internal static AppConfiguration Load()
     {
+        var configFile = @".\dvn.config";
+
         if (!File.Exists(configFile))
         {
             Build(configFile);
-
-            Console.WriteLine(UsrMsg.MsgCreateConfig());
         }
 
         return Du.DuJson.ImportLocalFile<AppConfiguration>(configFile);
     }
 
-    /// <summary>Creates a new DVN configuration file using default settings at the specified path.</summary>
-    /// <remarks>
-    /// If the specified configuration file already exists, it will be overwritten with the default settings.
-    /// </remarks>
-    /// <param name="configFile">The file path where the DVN configuration will be created.</param>
+    /// <summary>Creates a new DVN configuration file using default settings.</summary>
+    /// <param name="configFile">The configuration file path.</param>
     internal static void Build(string configFile)
     {
-        Du.DuJson.ExportLocalFile<AppConfiguration>(new AppConfiguration(), $@"{configFile}");
+        Du.DuJson.ExportLocalFile<AppConfiguration>(new AppConfiguration(), $"{configFile}");
+
+        Console.WriteLine(UsrMsg.MsgCreateConfig());
     }
 }
