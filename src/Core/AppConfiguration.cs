@@ -60,6 +60,6 @@ internal class AppConfiguration
     {
         Du.DuJson.ExportLocalFile<AppConfiguration>(new AppConfiguration(), $"{configFile}");
 
-        Console.WriteLine(UsrMsg.MsgCreateConfig());
+        Console.WriteLine(UsrMsg.MsgCreateConfig);
     }
 }

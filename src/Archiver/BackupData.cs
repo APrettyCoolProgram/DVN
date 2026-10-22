@@ -30,18 +30,17 @@ internal static class BackupData
     /// <summary>Backs up repository data.</summary>
     /// <param name="backupSources">The repository sources to back up.</param>
     /// <param name="target">Where the backups will be stored.</param>
-    /// <param name="staging">The staging location.</param>
     /// <param name="excludeFiles">The file names to exclude while staging.</param>
     /// <param name="excludeDirs">The directory names to exclude while staging.</param>
-    internal static void BackupFolders(List<string> backupSources, string target, string staging, List<string> excludeFiles, List<string> excludeDirs)
+    internal static void BackupFolders(List<string> backupSources, string target, List<string> excludeFiles, List<string> excludeDirs)
     {
-        var s = @"./.temp";
+        var staging = @".\.staging";
 
         //CopyToStaging(backupSources, staging, excludeFiles, excludeDirs);
-        CopyToStaging(backupSources, s, excludeFiles, excludeDirs);
+        CopyToStaging(backupSources, staging, excludeFiles, excludeDirs);
 
         //foreach (var subDirectory in Directory.GetDirectories(staging))
-        foreach (var subDirectory in Directory.GetDirectories(s))
+        foreach (var subDirectory in Directory.GetDirectories(staging))
         {
             Console.WriteLine($"  Backing up {subDirectory}...please wait...");
             var subDirectoryName = Path.GetFileName(subDirectory);
@@ -49,6 +48,8 @@ internal static class BackupData
             var backupLocation   = Path.Combine(target, $"{subDirectoryName}_{dateTimeStamp}.zip");
 
             ZipFile.CreateFromDirectory(subDirectory, backupLocation);
+
+            Directory.Delete(staging, true);
         }
     }
 
@@ -62,17 +63,15 @@ internal static class BackupData
     /// <param name="excludeDirs">A list of directory names to exclude from the copy operation.</param>
     internal static void CopyToStaging(List<string> sources, string staging, List<string> excludeFiles, List<string> excludeDirs)
     {
-        var s =  @"./.temp";
-
         //DuDirectory.Reset(staging);
-        DuDirectory.Reset(s);
+        DuDirectory.Reset(staging);
 
         foreach (var source in sources)
         {
             var namer = source.Split("\\").Last();
 
             //DuDirectory.CopyExclude(source, $@"{staging}\{namer}", excludeFiles, excludeDirs, true);
-            DuDirectory.CopyExclude(source, $@"{s}\{namer}", excludeFiles, excludeDirs, true);
+            DuDirectory.CopyExclude(source, $@"{staging}\{namer}", excludeFiles, excludeDirs, true);
         }
     }
 }

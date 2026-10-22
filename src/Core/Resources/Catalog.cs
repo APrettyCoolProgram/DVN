@@ -22,11 +22,6 @@ internal static class Catalog
         "npm-shrinkwrap.json"
     ];
 
-    ///// <summary>Other files that should not be backed up.</summary>
-    //internal static List<string> LstOtherIgnoredFiles =>
-    //[
-    //];
-
     /// <summary>Folders that should be excluded from the backup process.</summary>
     internal static List<string> LstExcludedFolders() =>
     [
@@ -39,27 +34,4 @@ internal static class Catalog
         ".idea",
         "packages"
     ];
-
-    ///// <summary>Other folders that should not be backed up.</summary>
-    //internal static List<string> LstOtherIgnoredFolders =>
-    //[
-    //];
-
-    ///// <summary>Combines the configured file ignore lists.</summary>
-    ///// <remarks>This is the list that is stored in the dvn.config file.</remarks>
-    ///// <returns>A list of file names that should be ignored when copying.</returns>
-    //internal static List<string> LstIgnoredFiles() =>
-    //[.. LstRepositoryIgnoredFiles
-    //    .Concat(LstOtherIgnoredFiles)
-    //    .Distinct()
-    //];
-
-    ///// <summary>Combines the configured folder ignore lists.</summary>
-    ///// <remarks>This is the list that is stored in the dvn.config file.</remarks>
-    ///// <returns>A list of folder names that should be ignored when copying.</returns>
-    //internal static List<string> LstIgnoredFolders() =>
-    //[.. LstRepositoryIgnoredFolders
-    //    .Concat(LstOtherIgnoredFolders)
-    //    .Distinct()
-    //];
 }

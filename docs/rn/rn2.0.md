@@ -39,6 +39,8 @@ I've decided that I want DVN to focus on just managing environments, not handlin
 * `dvn.config`
 * `manifest/`
 
+The staging area for backups is now `./.staging`. This folder is removed automatically after the backup process is complete.
+
 ## Configuration simplification
 
 I've decided to simplify the configuration system by hardcoding the `ManifestPath` and `ManifestExtension`, since I can't really think of a reason these would need to be configurable.
@@ -53,6 +55,8 @@ Since these are file paths and other resources that are unlikely to change frequ
 
 ## Miscellaneous
 
+* Migrated `Core.DvnWebBrowser.cs` to `Core.DvnManifest.cs` and `Core.DvnEnvironment.cs`
+* Migrated code from `Core.DvnApplication.cs` to `Core.DvnManifest.cs` and `Core.DvnEnvironment.cs`
 * Minor refactoring to improve code readability and maintainability
 * Added `AppData/` folder
 * Added `AppData/XMLDoc` folder for storing XML documentation files

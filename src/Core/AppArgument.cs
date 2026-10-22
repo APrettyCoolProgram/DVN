@@ -2,6 +2,7 @@
 // 261021_documentation
 
 using dvn.Core.Resources;
+using dvn.DevelopmentEnvironment;
 
 namespace dvn.Core;
 
@@ -67,16 +68,16 @@ internal class AppArgument
                 break;
 
             case "list":
-                DvnEnvironment.DisplayDetails();
+                Launcher.DisplayDetails();
                 break;
 
             case "new":
-                DvnManifest.CreateEmpty();
+                Manifest.CreateEmpty();
                 break;
 
             default:
-                appState.DvnManifest = DvnManifest.Load(appState);
-                DvnEnvironment.Launch(appState);
+                appState.DvnManifest = Manifest.Load(appState);
+                Launcher.Launch(appState);
                 break;
         }
     }

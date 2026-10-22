@@ -24,21 +24,21 @@ internal static class UsrMsg
     /// <returns>The missing arguments message.</returns>
     internal static string MsgMissingArguments =>
     $"""
-        ERROR: Missing arguments.
+     ERROR: Missing arguments.
 
-        Please type "dvn help" for more information.
-        {MsgExit()}
+     Please type "dvn help" for more information.
+     {MsgExit()}
      """;
 
     /// <summary>The message displayed when creating a new DVN configuration file.</summary>
     /// <returns>The new configuration file message.</returns>
-    public static string MsgCreateConfig() =>
-    $"""
-        The DVN configuration file did not exist.
+    public static string MsgCreateConfig =>
+    """
+    The DVN configuration file did not exist.
 
-        A default configuration file was created.
+    A default configuration file was created.
 
-     """;
+    """;
 
     /// <summary>The help message.</summary>
     public static string MsgHelp =>

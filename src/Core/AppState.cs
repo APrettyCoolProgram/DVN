@@ -2,6 +2,7 @@
 // 261022_documentation
 
 using dvn.Core.Resources;
+using dvn.DevelopmentEnvironment;
 using dvn.Extensions;
 
 namespace dvn.Core;
@@ -25,7 +26,7 @@ internal class AppState
     /// <summary>The command-line arguments that are passed to DVN at runtime.</summary>
     public AppArgument? AppArgs { get; set; }
 
-    public DvnManifest? DvnManifest { get; set; }
+    public Manifest? DvnManifest { get; set; }
 
     /// <summary>Starts the DVN application.</summary>
     /// <param name="passedArguments">The command-line arguments passed to DVN at runtime.</param>
