@@ -25,8 +25,7 @@ internal class AppState
     /// <summary>The command-line arguments that are passed to DVN at runtime.</summary>
     public AppArgument? AppArgs { get; set; }
 
-    /// <summary>The existing environment that DVN manages.</summary>
-    public Dictionary<string, string>? DvnEnvs { get; set; }
+    public DvnManifest? DvnManifest { get; set; }
 
     /// <summary>Starts the DVN application.</summary>
     /// <param name="passedArguments">The command-line arguments passed to DVN at runtime.</param>
@@ -59,9 +58,9 @@ internal class AppState
 
         var appState = new AppState
         {
-            AppConfig = appConfig,
-            AppArgs   = AppArgument.GetComponents(passedArguments),
-            DvnEnvs   = [] // TODO
+            AppConfig   = appConfig,
+            AppArgs     = AppArgument.GetComponents(passedArguments),
+            DvnManifest = null
         };
 
         AppArgument.Parse(appState);

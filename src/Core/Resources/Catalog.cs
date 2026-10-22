@@ -1,13 +1,17 @@
-﻿// 260910_code
-// 260910_documentation
+﻿// 260922_code
+// 260922_documentation
 
 namespace dvn.Core.Resources;
 
-/// <summary>Provides predefined data structures.</summary>
+/// <summary>Predefined resources and data structures.</summary>
+/// <remarks>
+/// The <see cref="Catalog"/> class contains predefined resources and data structures that are used throughout the
+/// source code, providing a centralized location for commonly used data, and allowing easy access and modification.
+/// </remarks>
 internal static class Catalog
 {
-    /// <summary>Repository files that should not be backed up.</summary>
-    internal static List<string> LstRepositoryIgnoredFiles =>
+    /// <summary>Files that should be excluded from the backup process.</summary>
+    internal static List<string> LstExcludedFiles() =>
     [
         ".DS_Store",
         "Thumbs.db",
@@ -18,13 +22,13 @@ internal static class Catalog
         "npm-shrinkwrap.json"
     ];
 
-    /// <summary>Other files that should not be backed up.</summary>
-    internal static List<string> LstOtherIgnoredFiles =>
-    [
-    ];
+    ///// <summary>Other files that should not be backed up.</summary>
+    //internal static List<string> LstOtherIgnoredFiles =>
+    //[
+    //];
 
-    /// <summary>Repository folders that should not be backed up.</summary>
-    internal static List<string> LstRepositoryIgnoredFolders =>
+    /// <summary>Folders that should be excluded from the backup process.</summary>
+    internal static List<string> LstExcludedFolders() =>
     [
         "node_modules",
         "bin",
@@ -36,26 +40,26 @@ internal static class Catalog
         "packages"
     ];
 
-    /// <summary>Other folders that should not be backed up.</summary>
-    internal static List<string> LstOtherIgnoredFolders =>
-    [
-    ];
+    ///// <summary>Other folders that should not be backed up.</summary>
+    //internal static List<string> LstOtherIgnoredFolders =>
+    //[
+    //];
 
-    /// <summary>Combines the configured file ignore lists.</summary>
-    /// <remarks>This is the list that is stored in the dvn.config file.</remarks>
-    /// <returns>A list of file names that should be ignored when copying.</returns>
-    internal static List<string> LstIgnoredFiles() =>
-    [.. LstRepositoryIgnoredFiles
-        .Concat(LstOtherIgnoredFiles)
-        .Distinct()
-    ];
+    ///// <summary>Combines the configured file ignore lists.</summary>
+    ///// <remarks>This is the list that is stored in the dvn.config file.</remarks>
+    ///// <returns>A list of file names that should be ignored when copying.</returns>
+    //internal static List<string> LstIgnoredFiles() =>
+    //[.. LstRepositoryIgnoredFiles
+    //    .Concat(LstOtherIgnoredFiles)
+    //    .Distinct()
+    //];
 
-    /// <summary>Combines the configured folder ignore lists.</summary>
-    /// <remarks>This is the list that is stored in the dvn.config file.</remarks>
-    /// <returns>A list of folder names that should be ignored when copying.</returns>
-    internal static List<string> LstIgnoredFolders() =>
-    [.. LstRepositoryIgnoredFolders
-        .Concat(LstOtherIgnoredFolders)
-        .Distinct()
-    ];
+    ///// <summary>Combines the configured folder ignore lists.</summary>
+    ///// <remarks>This is the list that is stored in the dvn.config file.</remarks>
+    ///// <returns>A list of folder names that should be ignored when copying.</returns>
+    //internal static List<string> LstIgnoredFolders() =>
+    //[.. LstRepositoryIgnoredFolders
+    //    .Concat(LstOtherIgnoredFolders)
+    //    .Distinct()
+    //];
 }

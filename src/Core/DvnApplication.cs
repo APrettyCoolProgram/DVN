@@ -24,7 +24,7 @@ internal class DvnApplication
 
     /// <summary>Starts each application in the supplied list.</summary>
     /// <remarks>Currently this functionality only works on Windows systems.</remarks>
-    /// <param name="applications">A list of <see cref="_DvnApplication"/> instances.</param>
+    /// <param name="applications">A list of <see cref="DvnApplication"/> instances.</param>
     internal static void StartApplications(List<DvnApplication> applications)
     {
         foreach (DvnApplication app in applications)

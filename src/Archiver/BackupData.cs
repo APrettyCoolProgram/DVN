@@ -35,9 +35,13 @@ internal static class BackupData
     /// <param name="excludeDirs">The directory names to exclude while staging.</param>
     internal static void BackupFolders(List<string> backupSources, string target, string staging, List<string> excludeFiles, List<string> excludeDirs)
     {
-        CopyToStaging(backupSources, staging, excludeFiles, excludeDirs);
+        var s = @"./.temp";
 
-        foreach (var subDirectory in Directory.GetDirectories(staging))
+        //CopyToStaging(backupSources, staging, excludeFiles, excludeDirs);
+        CopyToStaging(backupSources, s, excludeFiles, excludeDirs);
+
+        //foreach (var subDirectory in Directory.GetDirectories(staging))
+        foreach (var subDirectory in Directory.GetDirectories(s))
         {
             Console.WriteLine($"  Backing up {subDirectory}...please wait...");
             var subDirectoryName = Path.GetFileName(subDirectory);
@@ -58,13 +62,17 @@ internal static class BackupData
     /// <param name="excludeDirs">A list of directory names to exclude from the copy operation.</param>
     internal static void CopyToStaging(List<string> sources, string staging, List<string> excludeFiles, List<string> excludeDirs)
     {
-        DuDirectory.Reset(staging);
+        var s =  @"./.temp";
+
+        //DuDirectory.Reset(staging);
+        DuDirectory.Reset(s);
 
         foreach (var source in sources)
         {
             var namer = source.Split("\\").Last();
 
-            DuDirectory.CopyExclude(source, $@"{staging}\{namer}", excludeFiles, excludeDirs, true);
+            //DuDirectory.CopyExclude(source, $@"{staging}\{namer}", excludeFiles, excludeDirs, true);
+            DuDirectory.CopyExclude(source, $@"{s}\{namer}", excludeFiles, excludeDirs, true);
         }
     }
 }

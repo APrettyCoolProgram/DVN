@@ -22,7 +22,7 @@ internal class AppConfiguration
     /// When backup operations are performed, the files specified in this list will be ignored and not included in the
     /// backup process.
     /// </remarks>
-    public List<string> ExcludedFiles { get; set; } = Catalog.LstIgnoredFiles();
+    public List<string> ExcludedFiles { get; set; } = Catalog.LstExcludedFiles();
 
     /// <summary>The list of folders that are excluded when backing up data.</summary>
     /// <value>The collection of folder paths ignored during backup operations.</value>
@@ -30,7 +30,7 @@ internal class AppConfiguration
     /// When backup operations are performed, the folders specified in this list will be ignored and not included in th
     /// backup process.
     /// </remarks>
-    public List<string> ExcludedFolders { get; set; } = Catalog.LstIgnoredFolders();
+    public List<string> ExcludedFolders { get; set; } = Catalog.LstExcludedFolders();
 
     public ScoopSh ScoopSh { get; set; } = new ScoopSh();
 

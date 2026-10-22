@@ -24,23 +24,21 @@ internal class DvnEnvironment
     public string BackupLocation { get; set; }
 
     //internal static void Launch(string manifestFolder, string manifestName, string manifestExtension, string stagingPath, List<string> dvnOptions, List<string> excludedFiles, List<string> excludedFolders)
-    internal static void Launch(DvnManifest dvnManifest, AppState appState)
+    internal static void Launch(AppState appState)
     {
-        //DvnManifest dvnManifest = DuJson.ImportLocalFile<DvnManifest>($@"{manifestFolder}\{manifestName}{manifestExtension}");
+        Console.WriteLine($"{Environment.NewLine}  Launching environment: {appState.DvnManifest.DevelopmentEnvironment.Description}");
 
-        Console.WriteLine($"{Environment.NewLine}  Launching environment: {dvnManifest.DevelopmentEnvironment.Description}");
-
-        if (Archiver.BackupData.IsBackupEnabled(dvnManifest.DevelopmentEnvironment.BackupEnabled, appState.AppArgs.Options))
+        if (Archiver.BackupData.IsBackupEnabled(appState.DvnManifest.DevelopmentEnvironment.BackupEnabled, appState.AppArgs.Options))
         {
-            //Archiver.BackupData.BackupFolders(dvnManifest.DevelopmentEnvironment.BackupSources, dvnManifest.DevelopmentEnvironment.BackupLocation, stagingPath, excludedFiles, excludedFolders);
+            Archiver.BackupData.BackupFolders(appState.DvnManifest.DevelopmentEnvironment.BackupSources, appState.DvnManifest.DevelopmentEnvironment.BackupLocation, "", appState.AppConfig.ExcludedFiles, appState.AppConfig.ExcludedFolders);
         }
         else
         {
             Console.WriteLine("  Data backup functionality is disabled.");
         }
 
-        DvnApplication.StartApplications(dvnManifest.EnvironmentApplications);
-        DvnWebBrowser.OpenPages(dvnManifest.WebBrowser.BrowserPages);
+        DvnApplication.StartApplications(appState.DvnManifest.EnvironmentApplications);
+        DvnWebBrowser.OpenPages(appState.DvnManifest.WebBrowser.BrowserPages);
 
         AppState.SpinDown(UsrMsg.MsgExit());
     }
@@ -53,11 +51,11 @@ internal class DvnEnvironment
 
         if (environmentDetails.Count == 0)
         {
-            AppState.SpinDown(UsrMsg.MsgEnvList("No environments found."));
+            AppState.SpinDown(UsrMsg.MsgEnvironmentList("No environments found."));
         }
         else
         {
-            Console.WriteLine(UsrMsg.MsgEnvList(DuDictionary.ConvertToString(environmentDetails, "  ", "")));
+            Console.WriteLine(UsrMsg.MsgEnvironmentList(DuDictionary.ConvertToString(environmentDetails, "  ", "")));
         }
     }
 

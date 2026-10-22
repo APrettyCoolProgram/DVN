@@ -43,6 +43,8 @@ I've decided that I want DVN to focus on just managing environments, not handlin
 
 I've decided to simplify the configuration system by hardcoding the `ManifestPath` and `ManifestExtension`, since I can't really think of a reason these would need to be configurable.
 
+I've also removed the `LstOtherIgnoredFiles` and `LstOtherIgnoredFolders` settings from the configuration because I would need to use placeholders so they would be written to the configuration file. This would create unnecessary complexity, when the existing settings already cover most common use cases (and can be modified, if necessary).
+
 ## Hardcoded values/resources
 
 I've moved a number of values that were previously passed to methods or read from the configuration into hardcoded values within the code. For example, `AppConfiguration.Load()` now directly defines the configuration file path instead of having it passed (e.g., `AppConfiguration.Load("dvn.config")`).

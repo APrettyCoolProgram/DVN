@@ -75,7 +75,8 @@ internal class AppArgument
                 break;
 
             default:
-                DvnManifest.Load(appState);
+                appState.DvnManifest = DvnManifest.Load(appState);
+                DvnEnvironment.Launch(appState);
                 break;
         }
     }
