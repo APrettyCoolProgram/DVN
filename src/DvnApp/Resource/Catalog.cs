@@ -1,7 +1,7 @@
-﻿// 260922_code
-// 260922_documentation
+﻿// 261023_code
+// 261023_documentation
 
-namespace dvn.Core.Resources;
+namespace dvn.DvnApp.Resource;
 
 /// <summary>Predefined resources and data structures.</summary>
 /// <remarks>
@@ -10,7 +10,6 @@ namespace dvn.Core.Resources;
 /// </remarks>
 internal static class Catalog
 {
-    /// <summary>Files that should be excluded from the backup process.</summary>
     internal static List<string> LstExcludedFiles() =>
     [
         ".DS_Store",
@@ -22,7 +21,6 @@ internal static class Catalog
         "npm-shrinkwrap.json"
     ];
 
-    /// <summary>Folders that should be excluded from the backup process.</summary>
     internal static List<string> LstExcludedFolders() =>
     [
         "node_modules",

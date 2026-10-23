@@ -16,7 +16,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\Manifest\" />
+    <Compile Remove="DvnApp\Manifest\**" />
+    <EmbeddedResource Remove="DvnApp\Manifest\**" />
+    <None Remove="DvnApp\Manifest\**" />
   </ItemGroup>
 
 </Project>

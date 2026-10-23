@@ -1,9 +1,9 @@
-﻿// 261022_code
-// 261022_documentation
+﻿// 261023_code
+// 261023_documentation
 
-namespace dvn.DevelopmentEnvironment;
+namespace dvn.Deven;
 
-internal class AppDetail
+internal class DevenApp
 {
     /// <summary>The application name.</summary>
     public string Name { get; set; }

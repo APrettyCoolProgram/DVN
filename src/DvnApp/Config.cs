@@ -1,20 +1,20 @@
-// 261022_code
-// 261022_documentation
+// 261023_code
+// 261023_documentation
 
-using dvn.Core.Resources;
-using dvn.Extensions;
+using dvn.DvnApp.Resource;
+using dvn.Extension;
 
-namespace dvn.Core;
+namespace dvn.DvnApp;
 
 /// <summary>Provides logic for DVN configuration settings.</summary>
 /// <remarks>
-/// The <see cref="AppConfiguration"/> class defines the structure of the DVN configuration file, which includes:
+/// The <see cref="Config"/> class defines the structure of the DVN configuration file, which includes:
 /// <list type="bullet">
 /// <item>The <see cref="ExcludedFiles"> excluded files</see> during backup operations.</item>
 /// <item>The <see cref="ExcludedFolders"> excluded folders</see> during backup operations.</item>
 /// </list>
 /// </remarks>
-internal class AppConfiguration
+internal class Config
 {
     /// <summary>The list of files that are excluded when backing up data.</summary>
     /// <value>The collection of file paths ignored during backup operations.</value>
@@ -39,10 +39,10 @@ internal class AppConfiguration
     /// If the <c>dvn.config</c> file does not exist, a new configuration file is created with default values.
     /// </remarks>
     /// <returns>
-    /// An <see cref="AppConfiguration"/> instance populated from the file, or the default configuration if the file is
+    /// An <see cref="Config"/> instance populated from the file, or the default configuration if the file is
     /// missing.
     /// </returns>
-    internal static AppConfiguration Load()
+    internal static Config Load()
     {
         var configFile = @".\dvn.config";
 
@@ -51,14 +51,14 @@ internal class AppConfiguration
             Build(configFile);
         }
 
-        return Du.DuJson.ImportLocalFile<AppConfiguration>(configFile);
+        return Du.DuJson.ImportLocalFile<Config>(configFile);
     }
 
     /// <summary>Creates a new DVN configuration file using default settings.</summary>
-    /// <param name="configFile">The configuration file path.</param>
-    internal static void Build(string configFile)
+    /// <param name="configPath">The configuration file path.</param>
+    internal static void Build(string configPath)
     {
-        Du.DuJson.ExportLocalFile<AppConfiguration>(new AppConfiguration(), $"{configFile}");
+        Du.DuJson.ExportLocalFile<Config>(new Config(), $"{configPath}");
 
         Console.WriteLine(UsrMsg.MsgCreateConfig);
     }

@@ -47,6 +47,19 @@ I've decided to simplify the configuration system by hardcoding the `ManifestPat
 
 I've also removed the `LstOtherIgnoredFiles` and `LstOtherIgnoredFolders` settings from the configuration because I would need to use placeholders so they would be written to the configuration file. This would create unnecessary complexity, when the existing settings already cover most common use cases (and can be modified, if necessary).
 
+# Namespace restructure
+
+I've restructured the namespaces within the DVN framework to better organize the code and improve maintainability.
+
+```text
+dvn.Deven
+dvn.Du
+dvn.DvnApp
+dvn.DvnApp.Resource
+dvn.Extension
+```
+
+
 ## Hardcoded values/resources
 
 I've moved a number of values that were previously passed to methods or read from the configuration into hardcoded values within the code. For example, `AppConfiguration.Load()` now directly defines the configuration file path instead of having it passed (e.g., `AppConfiguration.Load("dvn.config")`).
@@ -58,6 +71,7 @@ Since these are file paths and other resources that are unlikely to change frequ
 * Migrated `Core.DvnWebBrowser.cs` to `Core.DvnManifest.cs` and `Core.DvnEnvironment.cs`
 * Migrated code from `Core.DvnApplication.cs` to `Core.DvnManifest.cs` and `Core.DvnEnvironment.cs`
 * Minor refactoring to improve code readability and maintainability
+* Added `UsrMsg.ManifestNotFound()`
 * Added `AppData/` folder
 * Added `AppData/XMLDoc` folder for storing XML documentation files
 * Added `AppData/XMLDoc/NsDoc.xml` file for storing XML documentation for namespaces

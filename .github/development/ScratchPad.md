@@ -48,6 +48,3 @@
 
 
 ***
-
-
-Show environment names and descriptions from local .dvn manifests instead of filenames. Rename lifecycle methods to SpinUp/SpinDown, update manifest models to use DvnApplication and nullable properties, and switch the debug profile to list.
