@@ -1,5 +1,5 @@
 ﻿// 261023_code
-// 261023_documentation
+// 261026_documentation
 
 using dvn.Deven;
 using dvn.DvnApp.Resource;
@@ -25,22 +25,14 @@ internal class FlightPath
         {
             TheState theState = TheState.NewState(args);
 
-            if (theState.Config.ScoopSh.Enabled)
-            {
-                ScoopSh.Roundhouse(theState.Config.ScoopSh);
-            }
-
             Roundhouse(theState);
         }
     }
 
-    /// <summary>Parses the command component of the arguments passed via the command-line.</summary>
+    /// <summary>Determines what action to take based on the command/options provided.</summary>
     /// <remarks>
-    /// Entering a command that does not match any of the case statements will either:
-    /// <list type="bullet">
-    /// <item>Start the <c>%command%</c> environment, if a <c>"%command%.dvn"</c> file exists.</item>
-    /// <item>If a <c>"%command%.dvn"</c> file does not exist, create it with default values.</item>
-    /// </list>
+    /// If the users enters a command that does not match any of the case statements, DVN will attempt to load a development environment
+    /// manifest file with the name of the command provided.
     /// </remarks>
     /// <param name="theState">The current <see cref="TheState"/> instance being initialized.</param>
     internal static void Roundhouse(TheState theState)
@@ -48,7 +40,7 @@ internal class FlightPath
         switch (theState.Args.Command)
         {
             case "about":
-                Console.WriteLine(UsrMsg.MsgAboutDvn);
+                Console.WriteLine(UsrMsg.MsgAboutDvn(theState.Config.ScoopSh.Enabled, theState.Config.ScoopSh.Update));
                 break;
 
             case "help":
@@ -64,16 +56,22 @@ internal class FlightPath
                 break;
 
             default:
-                theState.Manifest = Manifest.Load($@".\{theState.Args.Command}.dvn");
+                // TODO - Move this closer to when a valid manifest is loaded.
+                if (theState.Config.ScoopSh.Enabled)
+                {
+                    ScoopSh.Roundhouse(theState.Config.ScoopSh);
+                }
+
+                theState.Manifest = Manifest.Load($@".\{theState.Args.Command}.deven");
                 Launcher.Launch(theState.Manifest, theState.Args.Options, theState.Config.ExcludedFiles, theState.Config.ExcludedFolders);
                 break;
         }
     }
 
-    /// <summary>Stops the DVN application.</summary>
+    /// <summary>Exits the DVN application.</summary>
     /// <param name="exitMessage">The message to display before the DVN application exits.</param>
     /// <remarks>
-    /// If a custom message is not provided, the default message will be displayed.
+    /// If a custom message is not provided, no message will be displayed.
     /// </remarks>
     internal static void SpinDown(string exitMessage = "")
     {

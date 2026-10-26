@@ -1,4 +1,4 @@
-﻿// 261023_code
+﻿// 261026_code
 // 261023_documentation
 
 using dvn.DvnApp;
@@ -34,6 +34,8 @@ internal class Manifest
     /// </remarks>
     public Dictionary<string, Dictionary<string, string>> Webpages { get; set; }
 
+    public string Logging { get; set; }
+
     internal static Manifest Load(string manifestPath)
     {
         if (File.Exists(manifestPath))
@@ -53,9 +55,15 @@ internal class Manifest
     {
         var manifest = new Manifest()
         {
-            Name          = "Name",
-            Description   = "Description.",
+            Name           = "Name",
+            Description    = "Description.",
             ArchiveEnabled = false,
+            ArchiveSource =
+            [
+                "Path\\To\\Source1",
+                "Path\\To\\Source2"
+             ],
+            ArchiveTarget  = "Path\\To\\Target",
             Apps =
             [
                 new()
@@ -65,10 +73,11 @@ internal class Manifest
                 { "Chrome",   new Dictionary<string, string>() },
                 { "Firefox",  new Dictionary<string, string>() },
                 { "IExplore", new Dictionary<string, string>() }
-            }
+            },
+            Logging = "disabled"
         };
 
-        Du.DuJson.ExportLocalFile(manifest, "new.dvn");
+        Du.DuJson.ExportLocalFile(manifest, "new.deven");
 
         Console.WriteLine(UsrMsg.MsgCreateManifest("new"));
 

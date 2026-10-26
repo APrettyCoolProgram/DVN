@@ -1,5 +1,5 @@
 ﻿// 261023_code
-// 261023_documentation
+// 261026_documentation
 
 using dvn.Deven;
 
@@ -7,11 +7,11 @@ namespace dvn.DvnApp;
 
 /// <summary>Represents the application runtime state.</summary>
 /// <remarks>
-/// The <see cref="TheState"/> class:
+/// The <see cref="TheState"/> class encapsulates the current state of the DVN application, including:
 /// <list type="bullet">
-/// <item>The information DVN needs to operate (configuration, arguments, and environments)</item>
-/// <item>Starting and stopping the DVN application</item>
-/// <item>Initializing a new DVN session</item>
+/// <item>The DVN <see cref="Config">configuration settings</see></item>
+/// <item>The command-line <see cref="Args">arguments</see> passed to DVN at runtime</item>
+/// <item>DVN development environment <see cref="Manifest">manifest</see></item>
 /// </list>
 /// </remarks>
 internal class TheState

@@ -13,12 +13,14 @@ internal static class Archiver
     {
         if (IsArchiveEnabled(manifest.ArchiveEnabled, dvnOptions))
         {
-            ArchiveDeven(manifest.ArchiveSource, manifest.ArchiveTarget, excludedFiles, excludedDirs);
+            ArchiveDeven(manifest.ArchiveSource, manifest.ArchiveTarget, excludedFiles, excludedDirs, manifest.Logging);
         }
         else
         {
-            Console.WriteLine("  Data archive functionality is disabled."); // TODO UsrMsg
+            Console.WriteLine("  Data archive functionality is disabled."); // TODO - UsrMsg
         }
+
+        var h=0;
     }
 
     /// <summary>Determines whether the data backup functionality is enabled.</summary>
@@ -44,15 +46,23 @@ internal static class Archiver
     /// <param name="target">Where the archives will be stored.</param>
     /// <param name="excludeFiles">The file names to exclude while staging.</param>
     /// <param name="excludeFolders">The directory names to exclude while staging.</param>
-    internal static void ArchiveDeven(List<string> sources, string target, List<string> excludeFiles, List<string> excludeFolders)
+    /// <param name="logging">The logging configuration.</param>
+    internal static void ArchiveDeven(List<string> sources, string target, List<string> excludeFiles, List<string> excludeFolders, string logging)
     {
+        Console.WriteLine("Archiving data..."); // TODO - UsrMsg
+
         const string staging = @".\.staging";
 
-        CopyToStaging(sources, staging, excludeFiles, excludeFolders);
+        CopyToStaging(sources, staging, excludeFiles, excludeFolders, logging);
 
         foreach (var subDirectory in Directory.GetDirectories(staging))
         {
-            Console.WriteLine($"  Archiving {subDirectory}...please wait...");
+            if (logging.ToLower() == "enabled")
+            {
+                Console.WriteLine($"  Archiving {subDirectory}...please wait..."); // TODO - UsrMsg
+            }
+
+            Console.WriteLine($"TEST");
 
             var subDirectoryName = Path.GetFileName(subDirectory);
             var dateTimeStamp    = DateTime.Now.ToString("yyyyMMdd-HHmmss");
@@ -62,6 +72,10 @@ internal static class Archiver
 
             Directory.Delete(staging, true);
         }
+
+        var t=0;
+
+        var d=0;
     }
 
     /// <summary>Copies specified source directories to a staging directory.</summary>
@@ -72,12 +86,23 @@ internal static class Archiver
     /// <param name="staging">The path to the staging directory where the source directories will be copied.</param>
     /// <param name="excludeFiles">A list of file names to exclude from the copy operation.</param>
     /// <param name="excludeFolders">A list of directory names to exclude from the copy operation.</param>
-    internal static void CopyToStaging(List<string> sources, string staging, List<string> excludeFiles, List<string> excludeFolders)
+    /// <param name="logging">The logging configuration.</param>
+    internal static void CopyToStaging(List<string> sources, string staging, List<string> excludeFiles, List<string> excludeFolders, string logging)
     {
         DuDirectory.Reset(staging);
 
+        if (logging.ToLower() == "enabled")
+        {
+            Console.WriteLine($"Copy to staging..."); // TODO - UsrMsg
+        }
+
         foreach (var source in sources)
         {
+            if (logging.ToLower() == "enabled")
+            {
+                Console.WriteLine($"Copying {source} - \"{staging}\\{source.Split("\\").Last()}\"..."); // TODO - UsrMsg
+            }
+
             DuDirectory.CopyExclude(source, $@"{staging}\{source.Split("\\").Last()}", excludeFiles, excludeFolders, true);
         }
     }

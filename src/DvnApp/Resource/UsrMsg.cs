@@ -1,4 +1,4 @@
-﻿// 261023_code
+﻿// 261026_code
 // 261023_documentation
 
 using System.Reflection;
@@ -57,16 +57,18 @@ internal static class UsrMsg
        dvn list            Display a list of available development environments
        dvn MyProject -b    Start the MyProject environment and force a data backup
 
-     For more information, please refer to the documentation:
-         https://github.com/APrettyCoolProgram/DVN
+     More information: https://github.com/APrettyCoolProgram/DVN
      {MsgExitDvn()}
      """;
 
-    internal static string MsgAboutDvn =>
+    internal static string MsgAboutDvn(bool scoopEnabled, bool scoopUpdate) =>
     $"""
     DVN is a command line utility for managing development environments.
 
     Version {Assembly.GetExecutingAssembly().GetName().Version}
+
+    Scoop enabled: {scoopEnabled}
+    Scoop update: {scoopUpdate}
 
     Repository: https://github.com/APrettyCoolProgram/DVN
 
@@ -93,7 +95,7 @@ internal static class UsrMsg
 
     internal static string MsgCreateManifest(string deven) =>
     $"""
-     The "{deven}.dvn" manifest file was created.
+     The "{deven}.deven" manifest file was created.
 
      This file must be edited manually.
 
@@ -103,10 +105,10 @@ internal static class UsrMsg
      """;
 
     public static string MsgListDevens(string devens) =>
-       $"""
-        The following development environments are available:
+    $"""
+    The following development environments are available:
 
-        {devens}
-        {MsgExitDvn()}
-        """;
+    {devens}
+    {MsgExitDvn()}
+    """;
 }

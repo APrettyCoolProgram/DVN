@@ -1,5 +1,5 @@
 ﻿// 261023_code
-// 261023_documentation
+// 261026_documentation
 
 namespace dvn.Extension;
 
@@ -24,6 +24,8 @@ internal class ScoopSh
     {
         if (scoopSh.Update)
         {
+            Console.WriteLine($"Updating Scoop...{Environment.NewLine}"); // TODO - UsrMsg
+
             ScoopShCommand(scoopSh.UpdateCmd);
         }
     }

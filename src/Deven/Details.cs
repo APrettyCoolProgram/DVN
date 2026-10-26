@@ -1,4 +1,4 @@
-﻿// 261023_code
+﻿// 261026_code
 // 261023_documentation
 
 using dvn.Du;
@@ -16,7 +16,7 @@ internal class Details
 
         if (environmentDetails.Count == 0)
         {
-            FlightPath.SpinDown(UsrMsg.MsgListDevens("No environments found."));
+            FlightPath.SpinDown(UsrMsg.MsgListDevens("No environments found.")); // TODO - UsrMsg
         }
         else
         {
@@ -30,7 +30,7 @@ internal class Details
     /// </returns>
     private static Dictionary<string, string> GetDetails()
     {
-        var manifestFiles = Directory.GetFiles(".", "*.dvn", SearchOption.TopDirectoryOnly);
+        var manifestFiles = Directory.GetFiles(".", "*.deven", SearchOption.TopDirectoryOnly);
 
         Dictionary<string, string> environmentDetails = [];
 
