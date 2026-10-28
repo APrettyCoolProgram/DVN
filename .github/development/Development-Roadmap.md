@@ -4,16 +4,15 @@
 
 </div>
 
-* Fix the "line" spelling mistake in the info display
-* Open remote sessions
+## v2.1
 
-# Common
+* More UsrMsg
+* Move ScoopSh.Update closer to loading a manifest
+* Better formatted `dvn list`
 
-* `NEW` The ability to install applications using the `install` command
+## Queue
 
-* `MODIFIED` Both `help` and `list` are now `Options`, and are more robust
-* make sure all "\" are "\\"
-
+* The ability to install applications using the `install` command
 * Install apps
 * Update apps
 * Auto update dvn

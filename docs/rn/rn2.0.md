@@ -59,7 +59,6 @@ dvn.DvnApp.Resource
 dvn.Extension
 ```
 
-
 ## Hardcoded values/resources
 
 I've moved a number of values that were previously passed to methods or read from the configuration into hardcoded values within the code. For example, `AppConfiguration.Load()` now directly defines the configuration file path instead of having it passed (e.g., `AppConfiguration.Load("dvn.config")`).
