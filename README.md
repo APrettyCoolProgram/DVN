@@ -4,7 +4,7 @@
 
   <img src="./.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  ![RELEASE](https://img.shields.io/badge/Version-2.0-teal)&nbsp;
+  ![RELEASE](https://img.shields.io/badge/Version-2.0--rc.1-teal)&nbsp;
   ![LICENSE](https://img.shields.io/badge/License-Apache-blue)&nbsp;
   ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)&nbsp;
 
