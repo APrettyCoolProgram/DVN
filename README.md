@@ -4,9 +4,9 @@
 
   <img src="./.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  ![RELEASE](https://img.shields.io/badge/version-2.0-teal)&nbsp;
-  ![LICENSE](https://img.shields.io/badge/license-apache-blue)&nbsp;
-  ![Platform](https://img.shields.io/badge/platform-windows-lightgrey)&nbsp;
+  ![RELEASE](https://img.shields.io/badge/Version-2.0-teal)&nbsp;
+  ![LICENSE](https://img.shields.io/badge/License-Apache-blue)&nbsp;
+  ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)&nbsp;
 
   <h2>A utility for managing development environments</h2>
 
@@ -30,33 +30,22 @@
 
 **DVN** is a command-line utility for managing development environments.
 
-Let's say you are working something called "MyProject", which requires:
+Let's say you have a project called "MyProject".
+
+You're development environment for MyProject includes:
 
 * A Visual Studio 2022/2026 solution named "**MyProject**"
-* A Visual Studio Code workspace named "**MyProject-Documentation**"
-* A Visual Studio Code workspace named "**Other-Documentation**"
-* GitHub Desktop
+* A Visual Code Code workspace named "**MyProject-Documentation**"
+* A file named "**Scratchpad.txt**"
+* The GitHub Desktop application
 * A webpage containing API documentation
-* Additional project-related specific data that should be backed up
 
-You could do all of the above steps manually, ***or*** you could let **dvn** do it for you by typing: `dvn myproject`
+In addition, you may want to:
 
-<!--
-### Features
+* Backup your project before working on it
+* Update your [scoopsh](https://scoop.sh/) installation/applications.
 
-* Feature — What it does and why it matters.
-* Feature — What it does and why it matters.
-* Feature — What it does and why it matters.
--->
-
-<!--
-### Built With
-
-* [Technology or framework](URL)  - Role it plays in the project.
-* [Technology or framework](URL)  - Role it plays in the project.
-* [Technology or framework](URL)  - Role it plays in the project.
-
--->
+You could do all of the above manually, ***or*** you could let **DVN** do it for you by typing: `dvn myproject`
 
 # The DVN manual
 
