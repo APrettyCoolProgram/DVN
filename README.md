@@ -43,7 +43,7 @@ You're development environment for MyProject includes:
 In addition, you may want to:
 
 * Backup your project before working on it
-* Update your [scoopsh](https://scoop.sh/) installation/applications.
+* Update your [scoopsh](https://scoop.sh/) installation/applications
 
 You could do all of the above manually, ***or*** you could let **DVN** do it for you by typing: `dvn myproject`
 

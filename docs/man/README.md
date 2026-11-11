@@ -4,7 +4,7 @@
 
   <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  ![RELEASE](https://img.shields.io/badge/version-2.0-teal)&nbsp;
+  ![RELEASE](https://img.shields.io/badge/Version-2.0-teal)&nbsp;
 
   <h1>Manual</h1>
 
@@ -12,15 +12,10 @@
 
 | CONTENTS                                |
 |-----------------------------------------|
-| [About DVN](#about-dvn)                 |
 | [Installing](#installing)               |
 | [Configuring](#configuring)             |
 | [The manifest file](#the-manifest-file) |
 | [Usage](#usage)                         |
-
-# About DVN
-
-**DVN** is a command-line utility for managing development environments.
 
 # Installing
 
@@ -29,8 +24,8 @@
 
 **DVN** is a portable application, so "installing" is simple:
 
-1. Download the [latest release](https://github.com/APrettyCoolProgram/dvn/releases).
-2. Extract the contents of the downloaded file to a folder of your choice.
+1. Download the [latest release](https://github.com/APrettyCoolProgram/dvn/releases)
+2. Extract the contents of the downloaded file to a folder of your choice
 
 You'll notice that the folder you extracted to contains a single item: `dvn.exe`
 
@@ -205,13 +200,6 @@ This is what a completed manifest file looks like:
     "WorkingDirectory": "\\path\\to\\VisualStudioCode"
     },
     {
-    "Name": "Visual Studio Code - Other documentation",
-    "Description": "Other documentation",
-    "FileName": "Code.exe",
-    "Arguments": "Other-documentation.code-workspace | exit /b",
-    "WorkingDirectory": "\\path\\to\\VisualStudioCode"
-    },
-    {
       "Name": "GitHub Desktop",
       "Description": "GitHub Desktop",
       "FileName": "GitHubDesktop.exe",
@@ -236,7 +224,7 @@ This is what a completed manifest file looks like:
       "IExplore":
       {
         "Microsoft": "https://www.microsoft.com",
-		    "Xbox": "https://xbox.com"
+		    "Xbox": "https://apple.com"
       }
     }
   }
