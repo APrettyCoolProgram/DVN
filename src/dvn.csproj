@@ -8,10 +8,7 @@
     <DebugType>embedded</DebugType>
     <Version>2.0.0</Version>
     <FileVersion>2.0.0</FileVersion>
-    <PublishAot>False</PublishAot>
-    <PublishTrimmed>False</PublishTrimmed>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
-    <DocumentationFile>.\AppData\XMLDoc\generated.xml</DocumentationFile>
     <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
   </PropertyGroup>
 
