@@ -8,7 +8,7 @@
   ![LICENSE](https://img.shields.io/badge/License-Apache-blue)&nbsp;
   ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)&nbsp;
 
-  <h2>A command-line utility for managing development environments</h2>
+  <h3>A command-line utility for managing development environments</h3>
 
 </div>
 
