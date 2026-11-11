@@ -8,7 +8,7 @@
   ![LICENSE](https://img.shields.io/badge/License-Apache-blue)&nbsp;
   ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey)&nbsp;
 
-  <h2>A utility for managing development environments</h2>
+  <h2>A command-line utility for managing development environments</h2>
 
 </div>
 
@@ -27,8 +27,6 @@
 | [License](#license)               |
 
 # About DVN
-
-**DVN** is a command-line utility for managing development environments.
 
 Let's say you have a project called "MyProject".
 
