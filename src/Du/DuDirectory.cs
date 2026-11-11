@@ -79,7 +79,7 @@ internal static class DuDirectory
         }
     }
 
-    // [250801]
+    // [251026]
     /// <summary>Copies contents from the source directory to the target directory, excluding specified files and directories.</summary>
     /// <remarks>
     ///     This method ensures that the <paramref name="target"/> directory exists before copying.
@@ -91,6 +91,7 @@ internal static class DuDirectory
     /// <param name="excludeFiles">A list of file names to exclude from copying. File names should not include path information.</param>
     /// <param name="excludeDirs">A list of directory names to exclude from copying. Directory names should not include path information.</param>
     /// <param name="recursive">A value indicating whether subdirectories should be copied recursively. <see langword="true"/> to copy subdirectories; otherwise, <see langword="false"/>.</param>
+    /// <param name="logging">A value indicating whether logging is enabled. <see langword="true"/> to enable logging; otherwise, <see langword="false"/>.</param>
     /// <exception cref="DirectoryNotFoundException">Thrown if the <paramref name="source"/> directory does not exist.</exception>
     public static void CopyExclude(string source, string target, List<string> excludeFiles, List<string> excludeDirs, bool recursive = true)
     {
@@ -109,6 +110,7 @@ internal static class DuDirectory
             }
 
             var destFile = Path.Combine(target, Path.GetFileName(file));
+
             File.Copy(file, destFile, true);
         }
 
@@ -122,6 +124,7 @@ internal static class DuDirectory
                 }
 
                 var destSubDir = Path.Combine(target, Path.GetFileName(subDir));
+
                 CopyExclude(subDir, destSubDir, excludeFiles, excludeDirs, true);
             }
         }

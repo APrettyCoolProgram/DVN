@@ -1,8 +1,26 @@
 <div align="center">
 
-  <h1>dvn: Development - Notes</h1>
+  <h1>DVN: Development - Notes</h1>
 
 </div>
+
+## Copilot prompt for flowcharts
+
+You are an experienced software developer and technical writer.
+
+Create a new document named `docs/dev/flow.md`.
+
+This file will contain mermaid.js flowcharts that detail the flow of the DVN project sourcecode.
+
+Ensure that:
+
+* The flowcharts should be easy to understand.
+* Each flowchart should focus on a specific aspect of the DVN project.
+* Use clear and descriptive labels for all nodes and connections.
+* Keep the flowcharts up-to-date with the latest changes in the source code.
+* Ensure that the flowcharts are properly formatted and render correctly in the documentation.
+
+
 
 ## Notes from v1.2
 
@@ -53,7 +71,3 @@ Other changes
 97415 80386 52335 93889 06784 16341 21547 00466 21863 32642 25331 23123 51546 57167 44410 02844 78239 50283 30238 38626 52401 11952 79948 29018 39342 00523 56948 20823 82802 73315 62862 46322 80175 03398 49508 92525 55950 82129 27532
 
 ***
-
-<br>
-
-<sub>Last updated:260617</sub>

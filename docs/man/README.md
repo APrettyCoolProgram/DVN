@@ -1,300 +1,296 @@
-<!--
-  README.md template GUI application manuals.
-  R26.4.0.0-171330
-  260417_code
-  260417_documentation
--->
-
-<!-- [WARNING] =========================================================
-* Warning
----------------------------------------------------------------------------- -->
-
-> [!WARNING]  
-> This is a warning everyone should see, or remove this section entirely.
-
-<!--
-This divider separates the this section from the rest of the README. If you are
-not using the this section, comment this divider out.
---->
----
-
-<!-- ============================================================ [ WARNING] -->
-
-<!-- [INTRO] ===========================================================
-* Project logo
-  There are references for both a "light" and "dark" images. The dark image
-  should have a background of HEX #0d1117, to match the dark mode of GitHub.
-  The light image is the fallback.
-* Project title
-* Project badges
----------------------------------------------------------------------------- -->
+❰ [DVN](../../README.md) ❬ Manual
 
 <div align="center">
 
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset=".github/repository/logo/repository-logo-dark.jpg">
-    <source media="(prefers-color-scheme: light)" srcset=".github/repository/logo/repository-logo-light.jpg">
-    <img alt="Fallback image description" src=".github/repository/logo/repository-logo-light.jpg">
-  </picture>
+  <img src="../../.github/logo/dvn-Logo-384x184.png" alt="DVN">
 
-  <h1>%ProjectName Manual</h1>
+  ![RELEASE](https://img.shields.io/badge/Version-2.0-teal)&nbsp;
 
-  ![RELEASE](https://img.shields.io/badge/Release\/Version-25.0.0.0-teal)&nbsp;
+  <h1>Manual</h1>
 
 </div>
 
----
+| CONTENTS                                |
+|-----------------------------------------|
+| [Installing](#installing)               |
+| [Configuring](#configuring)             |
+| [The manifest file](#the-manifest-file) |
+| [Usage](#usage)                         |
 
-<!-- ============================================================= [ INTRO ] -->
+# Installing
 
-<!-- [TABLE OF CONTENTS] =======================================================
-* The Table of Contents
-  The Table of Contents.
----------------------------------------------------------------------------- -->
+> [!IMPORTANT]
+> DVN requires the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)!
 
-### CONTENTS
+**DVN** is a portable application, so "installing" is simple:
 
-* [About %ProjectName%](#about)<br>
-    * [Features](#features)<br>
-    * [What's New](#whats-new)<br>
-    * [Built With](#built-with)<br>
-* [How It Works](#how-it-works)<br>
-* [Getting Started](#getting-started)<br>
-    * [Before you begin](#before-you-begin)<br>
-    * [Requirements](#requirements)<br>
-* [Installing](#installing)<br>
-    * [Windows](#windows)<br>
-    * [MacOS](#macos)<br>
-    * [Linux](#linux)<br>
-    * [Other Operating Systems](#other-operating-systems)<br>
-* [Setup](#setup)<br>
-* [Configuration](#configuration)<br>
-    * [Required settings](#required-settings)<br>
-    * [Recommended settings](#recommended-settings)<br>
-    * [Optional settings](#optional-settings)<br>
-* [Additional Setup](#additional-setup)<br>
-* [Using](#using)<br>
+1. Download the [latest release](https://github.com/APrettyCoolProgram/dvn/releases)
+2. Extract the contents of the downloaded file to a folder of your choice
 
----
+You'll notice that the folder you extracted to contains a single item: `dvn.exe`
 
-<!-- =================================================== [TABLE OF CONTENTS] -->
+## Creating the DVN framework
 
-<!-- [REPOSITORY README CONTENTS] ==============================================
-This section contains the following components of the repository README:
-* About
-    * Features
-    * What's New
-    * Built With
-* How It Works
-=============================================== [REPOSITORY README CONTENTS] -->
+The **DVN *framework*** is comprised of the files and folders that are required by **DVN**. This framework doesn't exist yet, so we need to create it.
 
-<!-- [GETTING STARTED] =========================================================
-* Before you begin
-  Any prerequisites, assumptions, or other information a user should know before
-  getting started.
-* Prerequisites
-  List of software, hardware, or other requirements.
+To create the **DVN** framework:
 
-  If this section is only comprised of prerequisites, it can be merged with the
-  About section.
-============================================================================ -->
+1. Open a terminal in the the folder that contains `dvn.exe`
+2. Type
 
-## Getting Started
-
-A quick overview of how to get started with the project.
-
-### Before you begin
-
-Any assumptions, or other information a user should know before
-
-### Requirements
-
-| Requirement | Minimum version | Notes |
-|-------------|-----------------|-------|
-| [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) | 10.0 | Required to build and run. |
-| Requirement | | |
-| Requirement | | |
-
-<!-- ===================================================== [GETTING STARTED] -->
-
-<!-- [INSTALLING] ==============================================================
-* Windows
-* MacOS
-* Linux
-* Other Operating Systems
-============================================================================ -->
-
-## Installing
-
-A quick overview of how to install the project.
-
-### Windows
-
-Instructions for installing on Windows.
-
-### MacOS
-
-Instructions for installing on MacOS.
-
-### Linux
-
-Instructions for installing on Linux.
-
-### Other Operating Systems
-
-Instructions for installing on other operating systems.
-
-<!-- ========================================================= [INSTALLING] -->
-
-<!-- [SETUP] ==============================================================
-* Setup
-  Instructions for setting up the project after installation, generally
-  related to the initial execution of the project.
-============================================================================ -->
-
-## Setup
-
-Brief description of the setup process.
-
-<!-- ========================================================= [SETUP] -->
-
-<!-- [CONFIGURATION] ========================================================
-* Configuration
-  Instructions for configuring the project after installation, generally
-  related to the initial execution of the project.
-============================================================================ -->
-
-## Configuration
-
-Configuration file location: `path/to/config.file`
-
-### Required settings
-
-| Setting | Description | Default |
-|---------|-------------|---------|
-| `SettingName` | What this setting controls. | `default` |
-
-### Recommended settings
-
-| Setting | Description | Default |
-|---------|-------------|---------|
-| `SettingName` | What this setting controls. | `default` |
-
-### Optional settings
-
-| Setting | Description | Default |
-|---------|-------------|---------|
-| `SettingName` | What this setting controls. | `default` |
-
-<!-- ========================================================= [CONFIGURATION] -->
-
-<!-- [ADDITIONAL SETUP] ========================================================
-* Additional Setup
-  Instructions for additional setup steps after installation, generally
-  related to the initial execution of the project.
-============================================================================ -->
-
-## Additional Setup
-
-<!-- ========================================================= [ADDITIONAL SETUP] -->
-
-<!-- [USAGE] ========================================================
-* Usage
-  Instructions for using the project after installation and setup.
-============================================================================ -->
-
-## Using
-
-<!-- ========================================================= [USAGE] -->
-
-<!-- [UPDATING] ================================================================
-  Optional. Instructions for upgrading to a newer version.
-============================================================================ -->
-
-## Updating
-
-Instructions for updating from a previous version.
-
-1. Step one.
-2. Step two.
-3. Step three.
-
-<!-- ============================================================= [UPDATING] -->
-
-<!-- [UNINSTALLING] ============================================================
-  Optional. Instructions for removing the software cleanly.
-============================================================================ -->
-
-# Uninstalling
-
-Instructions for uninstalling.
-
-1. Step one.
-2. Step two.
-
-<!-- ========================================================= [UNINSTALLING] -->
-
-<!-- [BUILDING FROM SOURCE] ====================================================
-  Required for source code repositories. Cover restore, build, and deploy.
-============================================================================ -->
-
-# Building from source
-
-## Restore dependencies
-
-```shell
-dotnet restore
+```bash
+$ dvn
 ```
 
-## Build
+Since this is the first time you are executing **DVN**, the a default `dvn.config` configuration file will be created, and **DVN** will exit.
 
-```shell
-dotnet build --configuration Release
+# Configuring
+
+The `dvn.config` file contains the configuration settings for **DVN**, and by default looks like this:
+
+```json
+{
+  "ScoopEnabled": false,
+  "ExcludedFiles": [
+    ".DS_Store",
+    "Thumbs.db",
+    "desktop.ini",
+    "package-lock.json",
+    "yarn.lock",
+    "pnpm-lock.yaml",
+    "npm-shrinkwrap.json"
+  ],
+  "ExcludedFolders": [
+    "node_modules",
+    "bin",
+    "obj",
+    ".git",
+    ".vs",
+    ".vscode",
+    ".idea",
+    "packages"
+  ]
+}
 ```
 
-## Run
+## Scoop integration
 
-```shell
-dotnet run --project src/%ProjectName%.csproj
+If you have Scoop installed, you can enable Scoop integration by setting `"ScoopEnabled": true` in the `dvn.config` file. This allows **DVN** to automatically update Scoop-installed applications whenever it manages your development environments.
+
+## Excluded files and folders
+
+The `ExcludedFiles` and `ExcludedFolders` sections in the `dvn.config` file specify which files and folders should be ignored by **DVN** when performing data backup operations. This helps to keep backup sizes manageable and avoids unnecessary backups of temporary or irrelevant files.
+
+# The manifest file
+
+When you start an environment by typing...
+
+```bash
+$ dvn myproj
 ```
 
-## Publish / deploy
+...**DVN** looks for a manifest file named `.\.dvn\mnfst\myproj.mnfst`, which contains all of the information **DVN** needs to start the environment.
 
-```shell
-dotnet publish --configuration Release --output ./publish
+If the file does not exist, it is created using the default settings, which you will need to modify.
+
+> [!IMPORTANT]
+> Any `\` characters need to be escaped as `\\`!
+
+## The default manifest
+
+When a new manifest file is created, it looks like this:
+
+```json
+{
+  "DevelopmentEnvironment": {
+    "Name": "myproj",
+    "Description": "The MyProject project.",
+    "BackupEnabled": false,
+    "BackupSources": null,
+    "BackupLocation": null
+  },
+  "EnvironmentApplications": [
+    {
+      "Name": null,
+      "Description": null,
+      "FileName": null,
+      "Arguments": null,
+      "WorkingDirectory": null
+    }
+  ],
+  "WebBrowser": {
+    "BrowserPages": {
+      "Chrome": {},
+      "IExplore": {},
+      "Firefox": {}
+    }
+  }
+}
 ```
 
-<!-- ================================================= [BUILDING FROM SOURCE] -->
+## Manifest components
 
-<!-- [TESTING] =================================================================
-  Optional. Describe how to run the test suite.
-============================================================================ -->
+Manifest files contain the following components:
 
-# Testing
+* `Name`  
+The name of the environment (e.g., "myproj").
 
-## Running tests
+* `Description`  
+The description of the environment (e.g., "The MyProject project").
 
-```shell
-dotnet test
+* `BackupEnabled`  
+Determines if the data backup functionality is *enabled* ("true"), or *disabled* ("false").
+
+* `BackupSources`  
+Absolute paths to data that will be backed up, if the data backup functionality is enabled.  
+
+* `BackupLocation`  
+The absolute path where backups are created.
+
+* `EnvironmentApplication`  
+Each application that will be launched by **DVN** has it's own block with the following data:
+
+  * `Name`  
+  The name of the application
+
+  * `Description`  
+  Description of the application
+
+  * `FileName`  
+  The application file name
+
+  * `Arguments`  
+  Any command-line arguments
+
+  * `WorkingDirectory`  
+  The application working directory
+
+* `WebBrowser`  
+A list of webpages to be opened in specific web browsers
+
+## A completed manifest file
+
+This is what a completed manifest file looks like:
+
+```json
+{
+  "DevelopmentEnvironment": {
+    "Name": "myproj",
+    "Description": "The MyProject project",
+    "BackupEnabled": true,
+    "BackupSources": [
+      "C:\\repositories\\MyProject",
+      "C:\\data\\reports"
+    ],
+    "BackupLocation": "C:\\backups",
+  },
+  "EnvironmentApplications": [
+    {
+      "Name": "Visual Studio - MyProject",
+      "Description": "MyProject solution",
+      "FileName": "MyProject.sln",
+      "Arguments": null,
+      "WorkingDirectory": "C:\\repositories\\MyProject\\src"
+    },
+    {
+    "Name": "Visual Studio Code - MyProject documentation",
+    "Description": "MyProject documentation",
+    "FileName": "Code.exe",
+    "Arguments": "MyProject-documentation.code-workspace | exit /b",
+    "WorkingDirectory": "\\path\\to\\VisualStudioCode"
+    },
+    {
+      "Name": "GitHub Desktop",
+      "Description": "GitHub Desktop",
+      "FileName": "GitHubDesktop.exe",
+      "Arguments": null,
+      "WorkingDirectory": "C:\\Users\\JaneSmith\\AppData\\Local\\GitHubDesktop"
+    }
+  ],
+  "WebBrowser":
+  {
+    "BrowserPages":
+    {
+	  "Chrome":
+      {
+        "Wikipedia": "https://www.google.com",
+        "Weather.com": "https://www.weather.com"
+      },
+	  "Firefox":
+      {
+	      "Firefox": "https://www.firefox.com",
+        "Wikipedia": "https://www.wikipedia.com"
+      },
+      "IExplore":
+      {
+        "Microsoft": "https://www.microsoft.com",
+		    "Xbox": "https://apple.com"
+      }
+    }
+  }
+}
 ```
 
-## Test coverage
+The above manifest file will:
 
-Brief description of what is covered and what is not.
+1. Start the "**myproj**" development environment
+2. Backup the "**C:\repositories\MyProject**" and "**C:\data\reports**" to "**C:\backups**"
+3. Start the "**MyProject**" solution in Visual Studio
+4. Start the "**MyProject-Documentation**" workspace in Visual Studio Code
+5. Start the "**Other-Documentation**" workspace in Visual Studio Code
+6. Start the "**GitHub Desktop**" application
+7. Open various web pages in various web browsers
+
+# Usage
+
+This is the **DVN** syntax:
+
+```bash
+dvn <command> [-option01 -option02 ...]
+```
+
+## Commands
+
+**DVN** *requires* that you pass a valid `command`.
+
+In general, you'll use the `%environment%` command, which will start the specified development environment (or create a blank [manifest file](#the-manifest-file), if one doesn't exist).
+
+For example, to start/create the `myproj` environment, you would type:
+
+```bash
+$ dvn myproj
+```
+
+To get a list of valid commands, type:
+
+```bash
+$ dvn help
+```
+
+## Options
+
+**DVN** also accepts `options`, which are...optional
+
+Options:
+
+* Must be a single character
+* Start with the `-` (dash) character
+* Are separated by a space
+
+For example, you can force the data for the `myproj` environment to be backed up by typing:
+
+```bash
+$ dvn myproj -b
+```
+
+To get a list of valid options, type:
+
+```bash
+$ dvn help
+```
+
+<br/>
 
 ***
 
-<!-- ============================================================== [TESTING] -->
-
-<!-- [API] =====================================================================
-  Optional. Document the public API or link to generated API documentation.
-  Remove this section if the project has no public API.
-============================================================================ -->
-
-# API
-
-Brief description of the API.
-
-Full API reference: [docs/api/README.md](docs/api/README.md)
-
-***
+❰ [DVN](../../README.md) ❬ Manual

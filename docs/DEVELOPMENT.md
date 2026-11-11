@@ -1,25 +1,23 @@
+❰ [DVN](../README.md) ❬ Development
+
 <div align="center">
 
-  <h1>dvn: Development</h1>
+  <img src="../.github/logo/dvn-Logo-384x184.png" alt="DVN">
+
+  <h1>Development</h1>
 
 </div>
 
-A blurb about development goes here.
+DVN is an open source project, and contributions are welcome.
 
-## Contributing
-
-If you are interested in contributing to this project, please see the:
+If you are interested in contributing, please see the following documentation:
 
 * [Code of conduct](https://github.com/APrettyCoolProgram/.github/blob/main/.github/CODE_OF_CONDUCT.md)
 * [Contributing guidelines](https://github.com/APrettyCoolProgram/.github/blob/main/.github/CONTRIBUTING.md)
 * [Issue templates](https://github.com/APrettyCoolProgram/.github/blob/main/.github/ISSUE_TEMPLATE/)
 * [Pull request template](https://github.com/APrettyCoolProgram/.github/blob/main/.github/PULL_REQUEST_TEMPLATE/)
 
-## Contributing
-
-%ProjectName% is an open source project, and contributions are welcome.
-
-Please follow these steps:
+To contribute, please follow these steps:
 
 1. **Search existing issues** before opening a new one to avoid duplicates.
 2. **Open an issue** to discuss the change you want to make.
@@ -28,11 +26,8 @@ Please follow these steps:
 5. **Run the test suite** and ensure all tests pass before submitting.
 6. **Open a pull request** against `main` and fill in the pull request template.
 
-* [Code of conduct](https://github.com/APrettyCoolProgram/.github/blob/main/.github/CODE_OF_CONDUCT.md)
-* [Contributing guidelines](https://github.com/APrettyCoolProgram/.github/blob/main/.github/CONTRIBUTING.md)
-* [Issue templates](https://github.com/APrettyCoolProgram/.github/blob/main/.github/ISSUE_TEMPLATE/)
-* [Pull request template](https://github.com/APrettyCoolProgram/.github/blob/main/.github/PULL_REQUEST_TEMPLATE/)
+<br/>
 
 ***
 
-<sub>Last updated:260617</sub>
+❰ [DVN](../README.md) ❬ Development

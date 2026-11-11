@@ -1,29 +1,65 @@
+❰ [DVN](../README.md) ❬ Changelog
+
 <div align="center">
 
-  <h1>dvn: Changelog</h1>
+  <img src="../.github/logo/dvn-Logo-384x184.png" alt="DVN">
+
+  <h1>Changelog</h1>
 
 </div>
 
-## Version 1.2 (YYYY-MM-DD)
+## Version 2.0 - 2026-11-D11
 
-> Please see the [release notes](rel/V1.2-release-notes.md) for more details.
+> This is a major update that focuses on simplifying the framework and integrating basic Scoop.sh functionality.
+>
+> Please see the [release notes](rn/rn2.0.md) for more details.
 
-* Updated to .NET 10
-* Updated XML documentation
-* General code cleanup and refactoring
-
-***
-
-## Version 1.1 (YYYY-MM-DD)
-
-> Please see the [release notes](rel/V1.1-release-notes.md) for more details.
-
-* Can now open web pages in Chrome, Firefox, and Edge.
+* **NEW** Basic Scoop.sh integration
+* **NEW** Display version number is displayed when DVN is executed
+* **UPDATED** Target framework from `.NET 9` to `.NET 10`
+* **UPDATED** `Du.DuJson.cs` from `b250801` to `b260909`
+* **REMOVED** `List` command
 
 ***
 
-## Version 1.0 (YYYY-MM-DD)
+## Version 1.2
 
-> Please see the [release notes](rel/V1.0-release-notes.md) for more details.
+> This is a minor update with code refactors and framework updates.
+>
+> Please see the [release notes](rn/rn1.2.md) for more details.
 
-* Initial release of dvn.
+***
+
+## Version 1.1
+
+> This is a minor update with additional web browser support.
+>
+Please see the [release notes](rn/rn1.1.md) for more details.
+
+* **ADDED** Additional web browser support
+
+***
+
+## Version 1.0
+
+> This is the initial release of DVN.
+>
+> Please see the [release notes](rn/rn1.0.md) for more details.
+
+<br/>
+
+***
+
+❰ [DVN](../README.md) ❬ Changelog
+
+<!--
+New
+Added
+Changed
+Updated
+Fixed
+Depreciated
+Removed
+Security
+
+-->

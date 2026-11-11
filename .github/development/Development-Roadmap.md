@@ -1,20 +1,18 @@
 <div align="center">
 
-  <h1>dvn: Development - Roadmap</h1>
+  <h1>DVN: Development - Roadmap</h1>
 
 </div>
 
+## v2.1
 
-* Fix the "line" spelling mistake in the info display
-* Open remote sessions
+* More UsrMsg
+* Move ScoopSh.Update closer to loading a manifest
+* Better formatted `dvn list`
 
-# Common
+## Queue
 
-* `NEW` The ability to install applications using the `install` command
-
-* `MODIFIED` Both `help` and `list` are now `Options`, and are more robust
-* make sure all "\" are "\\"
-
+* The ability to install applications using the `install` command
 * Install apps
 * Update apps
 * Auto update dvn
@@ -35,7 +33,3 @@
 * Main functionality
 
 ***
-
-<br>
-
-<sub>Last updated: 260419</sub>
